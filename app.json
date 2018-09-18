@@ -1,23 +1,34 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/hl/hl"
+    "pages/hl/hl",
+    "pages/festival/festival",
+    "pages/fand/fand"
   ],
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#ce3e3e",
     "navigationBarTitleText": "万年历",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "backgroundColor":"#f2f2f2"
   },
   "tabBar": {
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "万年历"
       },
       {
         "pagePath": "pages/hl/hl",
-        "text": "日志"
+        "text": "黄历"
+      },
+      {
+        "pagePath": "pages/festival/festival",
+        "text": "节日"
+      },
+      {
+        "pagePath": "pages/fand/fand",
+        "text": "发现"
       }
     ]
   }

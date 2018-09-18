@@ -1,0 +1,35 @@
+<!--pages/fand/fand.wxml-->
+<view class='fand'>
+     <view class='fand-top'>
+        <image></image>
+        <text>51万年历</text>
+        <text>三亿用户真是选择</text>
+     </view>
+     <view class='fand-center'>
+        <text>三亿用户真是选择</text>
+        <text>三亿用户真是选择</text>
+        <text>三亿用户真是选择</text>
+     </view>
+     <view class='fand-bottom'>
+        <view class='fand-bottom-1 fand-bottom-lists'>
+          <text>官网</text>
+          <text>官网</text>
+          <text>官网</text>
+          <text>官网</text>
+        </view>
+        <view class='fand-bottom-2 fand-bottom-lists'>
+          <text>官网</text>
+          <text>官网</text>
+          <text>官网</text>
+          <text>官网</text>
+        </view>
+         <view class='fand-bottom-3 fand-bottom-lists'>
+          <image></image>
+        </view>
+     </view>
+</view>
+<view class='fand-text'>
+    <text>32232232232626616261+63616161651</text>
+    <text>saidiasdjiasdihasf safjsafasabjfsabjsafbsahifbjafn;oh</text>
+</view>
+
