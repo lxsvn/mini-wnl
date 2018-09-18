@@ -6,7 +6,7 @@ var aldstat = require("./utils/ald-stat.js");
 App({
   onLaunch: function () {
 
-    // 展示本    地存储能力
+    // 展示本    地存储能力2
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
