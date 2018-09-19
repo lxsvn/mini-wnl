@@ -1,21 +1,16 @@
 /* pages/fand/fand.wxss */
 .fand{
   width: 90%;
-  height:400px;
   background: #fff;
-  border: 1px solid #ccc;
-  margin: 20px auto 0
-}
-page{
-  height: 120%
-  overflow: hidden;
+  border: 1rpx solid #ccc;
+  margin: 40rpx auto 0
 }
 .fand-top image{
-  width: 30px;
-  height: 30px;
+  width: 120rpx;
+  height: 120rpx;
   display: block;
   background: olive;
-  margin: 30px auto 0
+  margin: 30rpx auto 0
 }
 .fand text{
   display: block;

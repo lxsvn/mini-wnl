@@ -13,22 +13,32 @@
     "backgroundColor":"#f2f2f2"
   },
   "tabBar": {
+    "selectedColor": "#0090ff",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "万年历"
+        "text": "万年历",
+        "iconPath": "/assets/imgs/tab_home.png",
+        "selectedIconPath": "/assets/imgs/tab_home_selected.png" 
       },
       {
         "pagePath": "pages/hl/hl",
-        "text": "黄历"
+        "text": "黄历",
+        "iconPath": "/assets/imgs/tab_inspect.png",
+        "selectedIconPath": "/assets/imgs/tab_inspect_selected.png"
       },
       {
         "pagePath": "pages/festival/festival",
-        "text": "节日"
+        "text": "节日",
+        "iconPath": "/assets/imgs/tab_loan.png",
+        "selectedIconPath": "/assets/imgs/tab_loan_selected.png"
       },
       {
         "pagePath": "pages/fand/fand",
-        "text": "发现"
+        "text": "发现",
+        "iconPath": "/assets/imgs/tab_me.png",
+        "selectedIconPath": "/assets/imgs/tab_me_selected.png"
+        
       }
     ]
   }

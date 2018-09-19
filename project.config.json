@@ -33,37 +33,24 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 4,
+			"current": 2,
 			"list": [
-				{
-					"id": -1,
-					"name": "centre",
-					"pathName": "pages/game_centre/game_centre",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "room",
-					"pathName": "pages/game_room/game_room",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "pro_detail",
-					"pathName": "pages/pro_detail/detail",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "user_center",
-					"pathName": "pages/user_center/user_index",
-					"query": ""
-				},
 				{
 					"id": -1,
 					"name": "fand",
 					"pathName": "pages/fand/fand",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "hl",
+					"pathName": "pages/hl/hl"
 				}
 			]
 		}

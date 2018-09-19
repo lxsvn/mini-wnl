@@ -4,183 +4,131 @@ const app = getApp()
 var config = require('../../config.js');
 var pageIndex = 1;
 Page({
+
+  /**
+   * 页面的初始数据
+   */
   data: {
-    imgUrls: [
-      '/assets/imgs/defalt_banner.jpg',
-    ],
-    proList: [],
-    hasNextPage: true
+    weather1:[],
+    weather2: [],
+    weather3: [],
+    data:[],
+    suit:[],
+    taboo:[],
+    weather:[],
+    high0:[],
+    low0:[],
+    high1: [],
+    low1: [],
+    high2: [],
+    low2: []
+  },
+  onChangeShowState: function () {
+
+    var that = this;
+
+    that.setData({
+
+      showView: (!that.data.showView)
+
+    })
+    that.setData({
+      ifture:(!that.data.ifture)
+    })
+
   },
   /**
-   * 前往产品详情页
+   * 生命周期函数--监听页面加载
    */
-  to_pro_detail: function (data) {
-    var index = data.currentTarget.dataset.index;
-
-    var proList = this.data.proList;
-
-    var s = proList[index]
-
-    wx.setStorage({
-      key: 'proDetail',
-      data: s,
-    })
-
-    wx.navigateTo({
-      url: '/pages/pro_detail/detail',
-    })
-
-  },
-
-  onLoad: function () {
-
-    app.aldstat.sendEvent('事件名称');
-
-    wx.showLoading({
-      title: '加载中',
-    })
-
-    getProLsit(this, pageIndex)
-
-    getHomeInfo(this)
-
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse) {
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
+  onLoad: function (options) {
+    
+    wx:wx.request({
+      url: 'https://www.sojson.com/open/api/weather/json.shtml?city=北京',
+      success:(msg)=>{
+        console.log(msg);
+        let high0 = msg.data.data.forecast[0].high.substring(2,5);
+        let low0 = msg.data.data.forecast[0].low.substring(2, 5);
+        let high1 = msg.data.data.forecast[1].high.substring(2, 5);
+        let low1 = msg.data.data.forecast[1].low.substring(2, 5);
+        let high2 = msg.data.data.forecast[2].high.substring(2, 5);
+        let low2 = msg.data.data.forecast[2].low.substring(2, 5);
+        
         this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
+          weather1: msg.data.data.forecast[0],
+          weather2: msg.data.data.forecast[1],
+          weather3: msg.data.data.forecast[2],
+          weather:msg.data,
+          high0: high0,
+          low0: low0,
+          high1: high1,
+          low1: low1,
+          high2: high2,
+          low2: low2,
         })
       }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
+    })
+    
   },
 
   /**
-   * 获取用户信息
+   * 生命周期函数--监听页面初次渲染完成
    */
-  getUserInfo: function (e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+  onReady: function () {
+    wx: wx.request({
+      url: 'https://www.sojson.com/open/api/lunar/json.shtml',
+      success: (msg) => {
+        let suit = msg.data.data.suit.replace(/[\,|\'|\"]/g, '   ');
+        let taboo = msg.data.data.taboo.replace(/[\,|\'|\"]/g, '   ');
+        
+        this.setData({
+          data: msg.data.data,
+          suit: suit,
+          taboo: taboo,
+
+        })
+      }
     })
   },
 
-sssss:function(){
-  if (e.detail.iv != undefined) {
-
-  }else{
-
-  }
-},
-
   /**
-   * 去用户中心
+   * 生命周期函数--监听页面显示
    */
-  go_to_user: function (e) {
-    app.goUserCenter();
+  onShow: function () {
+    
   },
-  
+
   /**
-    * 下拉刷新
-    */
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+    
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+    
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
   onPullDownRefresh: function () {
-    var that = this;
-    pageIndex = 1;
-    getProLsit(that, pageIndex);
+    
   },
+
   /**
-   * 上拉加载
+   * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
-    var that = this;
-    if (that.data.hasNextPage) {
-
-      wx.showLoading({
-        title: '拼命加载中',
-      })
-
-      pageIndex++;
-
-      getProLsit(that, pageIndex);
-    }
-
+    
   },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+    
+  }
 })
-
-/**
- * 请求产品列表数据
- */
-function getProLsit(that, pageIndex) {
-  var url = config.apis.productsListUrl;
-  wx.request({
-    url: url,
-    data: {
-      "pageIndex": pageIndex,
-      "pageNo": '20',
-      "sortBy": '0',
-      "channel": 'miniapp',
-    },
-    success: function (res) {
-      that.data.hasNextPage = res.data.HasNextPage;
-      if (pageIndex == 1) {
-        var oldProList = res.data.Models;
-        setTimeout(function () {
-          wx.stopPullDownRefresh();
-        }, 1000);
-
-      } else {
-        var oldProList = that.data.proList
-        var proList = res.data.Models;
-        for (var i = 0, len = proList.length; i < len; i++) {
-          oldProList.push(proList[i])
-        }
-      }
-
-      that.setData({
-        proList: oldProList
-      })
-      wx.hideLoading()
-    }
-  })
-}
-
-/**
- * 获取首页信息
- */
-
-function getHomeInfo(that){
-  var url = config.apis.homeInfoUrl;
-  wx.request({
-    url: url,
-    success: function (res) {
-      console.log(res.data)
-      var banners = [];
-      for (var i = 0, len = res.data.Banners.length; i < len; i++) {
-        banners.push(res.data.Banners[i].Image)
-      }
-      that.setData({
-        imgUrls: banners
-      })
-    }
-  })
-}

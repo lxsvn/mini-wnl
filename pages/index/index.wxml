@@ -1,6 +1,156 @@
 <!--index.wxml-->
 <view>
-   
+   <view class='index-data'>
+      <view class='index-data-top'>
+          <text>2018年9月</text>
+          <button bindtap="onChangeShowState">{{showView?'收起':'择吉日'}}</button>
+      </view>
+    <scroll-view scroll-x="true" style=" white-space: nowrap; display:flex"class='index-data-top-show' wx:if="{{ifture}}">
+        <button>结婚</button>
+        <button>出行</button>
+        <button>搬新房</button>
+        <button>订盟</button>
+        <button>理发</button>
+        <button>开业</button>
+        <button>会亲友</button>
+        <button>搬家</button>
+        <button>合婚订婚</button>
+        <button>打扫</button>
+</scroll-view>
+<view class='index-data-rl'>
+        <text>日历在这里</text>
+      </view>
+      <view class='index-data-yunshi'>
+          <view class='index-data-yunshi-top'>
+            <text class='index-data-yunshi-top-text'>{{data.day}}</text>
+            <view class='index-data-yunshi-top-center'>
+                <text>农历{{data.cnmonth}}{{data.cnday}} 第三十八周 处女座</text>
+                <text>{{data.hyear}}[{{data.animal}}]年 {{data.cyclicalMonth}}月 {{data.cyclicalDay}}日 </text>
+            </view>
+            <button>今日运势</button>
+          </view>
+          <view class='index-data-yunshi-bottom'>
+              <view class='index-data-yunshi-bottom-1'>
+                  <button>宜</button>
+                  <text>{{suit}}</text>
+              </view>
+              <view class='index-data-yunshi-bottom-1'>
+                  <button>忌</button>
+                  <text>{{taboo}}</text>
+              </view>
+          </view>
+      </view>
+   </view>
+   <view class='index-weather'>
+      <view class='index-weather-top'>
+        <view class='index-weather-top-1'>
+            <text>{{weather.count}}°</text>
+        </view>
+        <view class='index-weather-top-2'>
+            <view class='index-weather-top-text'>
+            <text>{{weather1.type}}</text>
+            <text>{{low0}}/{{high0}}°</text>
+            </view>
+            <button>{{weather.data.quality}} {{weather.data.pm10}}</button>
+        </view>
+        <view class='index-weather-top-3'>
+            <text>{{weather.city}}</text>
+            <text>{{weather1.fx}} | 湿度{{weather1.shidu}}</text>
+        </view>
+      </view>
+      <view class='index-weather-bottom'>
+          <view class='index-weather-bottom-left'>
+              <view class='index-weather-bottom-left-1'>
+                  <text>明天 <text>{{low1}}/{{high1}}°</text></text>
+                  <view class='index-weather-bottom-left-1-down'>
+                    <view></view><text>轻度</text>
+                  </view>
+              </view>
+              <view class='index-weather-bottom-left-2'>
+                  <image></image>
+                  <text>{{weather2.type}}</text>
+              </view>
+          </view>
+          <view class='index-weather-bottom-center'></view>
+          <view class='index-weather-bottom-left'>
+              <view class='index-weather-bottom-left-1'>
+                  <text>后天 <text>{{low2}}/{{high2}}°</text></text>
+                  <view class='index-weather-bottom-left-1-down'>
+                    <view></view><text>轻度</text>
+                  </view>
+              </view>
+              <view class='index-weather-bottom-left-2'>
+                  <image></image>
+                  <text>{{weather3.type}}</text>
+              </view>
+          </view>
+      </view>
+   </view>
+   <view class='index-tool'>
+      <view class='index-tool-title'>
+        <text>热门工具</text>
+      </view>
+      <view class='index-tool-center'>
+        <image></image>
+        <view class='index-tool-text'>
+          <text>塔伦感运势</text>
+          <text>精准占卜你的感情运势</text>
+        </view>
+        <view class='index-tool-center-btn'><button>立即测算</button></view>
+      </view>
+      <view class='index-bottom'>
+          <view>
+              <image></image>
+              <text>花间打开</text>
+          </view>
+          <view>
+              <image></image>
+              <text>花间打开</text>
+          </view>
+          <view>
+              <image></image>
+              <text>花间打开</text>
+          </view>
+          <view>
+              <image></image>
+              <text>花间打开</text>
+          </view> 
+      </view>
+   </view>
+   <view class='index-Constellation'>
+      <view class='index-Constellation-top'>
+        <view class='index-Constellation-top-key'>
+          <text>综合运势</text>
+          <text>幸运颜色</text>
+          <text>幸运数字</text>
+          <text>速配星座</text>
+        </view>
+        <view class='index-Constellation-top-key'>
+          <text></text>
+          <text>蘑菇灰</text>
+          <text>4</text>
+          <text>水瓶座</text>
+        </view>
+        <view class='index-Constellation-top-right'>
+          <text>白羊座</text>
+          <image></image>
+        </view>
+      </view>
+      <view class='index-Constellation-bottom'>
+        <text>微信小程序，简称小程序，英文名Mini Program，是一种不需要下载安装即可使用的应用，它实现了应用“触手可及”的梦想，用户扫一扫或搜一下即可打开应用。</text>
+      </view>     
+   </view>
+   <view class='index-datanews'>
+      <view class='index-datanews-title'>
+          <text>每日一言</text>
+      </view>
+      <view class='index-datanews-image'>
+        <image></image>
+      </view>
+      <view class='index-datanews-news'>
+      <text>微信小程序，简称小程序，英文名MiniProgram，是一种不需要下载安装即可使用的应用，它实现了应用“触手可及”的梦想，用户扫一扫或搜一下即可打开应用。</text>
+      </view>
+   </view>
 </view>
 
 
