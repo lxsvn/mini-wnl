@@ -23,6 +23,7 @@ page{
   line-height: 1.8rem
 }
 .index-data-top-show{
+  height: 90rpx;
   padding-top: 0.25rem;
   padding-left:0.25rem ;
   overflow: hidden;
@@ -41,7 +42,7 @@ page{
 }
 .index-data-rl{
   width: 100%;
-  height: 15rem;
+  height: 650rpx;
   margin-top: 0.5rem;
   background: #f2f2f2
 }
@@ -304,7 +305,6 @@ page{
   display: block;
   border-radius:50%; 
   background:olive;
-  display: block;
   margin: 40rpx auto 10rpx;
 }
 .index-bottom view text{
@@ -405,5 +405,19 @@ text-overflow:ellipsis;
 display:-webkit-box;
 -webkit-box-orient:vertical;
 -webkit-line-clamp:2;
-
 }
+.tui-picker-detail{
+  float: left;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+::-webkit-scrollbar{
+width: 0;
+height: 0;
+color: transparent;
+}
+
+
+
+
+

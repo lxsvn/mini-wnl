@@ -1,38 +1,39 @@
 <view>
     <view class='hl-data'>
-      <text>2018年9月19日</text>
+      <picker mode="date" value="{{date}}" start="1994-07-16" end="2055-07-16" bindchange="changeDate">
+    <view class="tui-picker-detail">
+      {{date}}
+    </view>
+  </picker>
       <view class='hl-data-center'>
-        <image></image>
-        <text>八月初十</text>
-        <image></image>
+        <image bindtap='left'></image>
+        <text>{{bigday}}</text>
+        <image bindtap='right'></image>
       </view>
-      <text>戊戌[狗]年 辛酉月 甲寅日 第三十八周</text>
+      <text>{{year.yinli}}</text>
     </view>
     <view class='hl-good'>
       <view class='hl-good-1'>
           <button>宜</button>
-          <text>沐浴 捕捉 入殓 除服 成服 破土 启攒 安葬</text>
+          <text>{{year.yi}}</text>
       </view>
       <view class='hl-good-1'>
           <button>忌</button>
-          <text>祭祀 嫁娶 安床 开市 入宅 探病 上梁</text>
+          <text>{{year.ji}}</text>
       </view>
     </view>
     <view class='hl-top'>
       <view>
           <text>五行</text>
-          <text>大溪水</text>
+          <text>{{year.wuxing}}</text>
       </view>
       <view>
           <text>冲煞</text>
-          <text>冲侯煞北</text>
+          <text>{{year.chongsha}}</text>
       </view>
-      <view>
-          <text>值神</text>
-          <text>青龙</text>
-      </view>
+      
     </view>
-    <view class='hl-time'>
+    <!-- <view class='hl-time'>
         <text>时辰吉凶</text>
         <text>甲子吉</text>
         <text>乙丑吉</text>
@@ -46,7 +47,7 @@
         <text>葵酉吉</text>
         <text>甲戌吉</text>
         <text>乙亥吉</text>
-    </view>
+    </view> -->
     <view class='hl-all'>
       <view class='hl-all-left'>
       <text>建除十二神</text>
@@ -55,21 +56,21 @@
       <view class='hl-all-center'>
           <view class='hl-all-center-top'>
               <view>
-                <text>一二三四</text>
-                <text>一二三四一二三四</text>
+                <text>吉神宜趋</text>
+                <text>{{year.jishen}}</text>
               </view>
               <view>
-                <text>一二三四</text>
+                <text>今日胎神</text>
                 <text>一二三四一二</text>
               </view>
               <view>
-                <text>一二三四</text>
-                <text>一二三四一二三四</text>
+                <text>凶神宜忌</text>
+                <text>{{year.xiongshen}}</text>
               </view>
           </view>
           <view class='hl-all-center-bottom'>
-                <text>一二三四</text>
-                <text>一二三四一二三四 一二三四一二三四</text>
+                <text>彭祖百忌</text>
+                <text>{{year.baiji}}</text>
           </view>
       </view>
       <view class='hl-all-right'>

@@ -2,7 +2,11 @@
 <view>
    <view class='index-data'>
       <view class='index-data-top'>
-          <text>2018年9月</text>
+          <picker mode="date" value="{{date}}" start="1994-07-16" end="2055-07-16" bindchange="changeDate">
+    <view class="tui-picker-detail">
+      {{date}}
+    </view>
+  </picker>
           <button bindtap="onChangeShowState">{{showView?'收起':'择吉日'}}</button>
       </view>
     <scroll-view scroll-x="true" style=" white-space: nowrap; display:flex"class='index-data-top-show' wx:if="{{ifture}}">
@@ -17,26 +21,39 @@
         <button>合婚订婚</button>
         <button>打扫</button>
 </scroll-view>
-<view class='index-data-rl'>
-        <text>日历在这里</text>
+      <view class='index-data-rl'>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       </view>
       <view class='index-data-yunshi'>
           <view class='index-data-yunshi-top'>
-            <text class='index-data-yunshi-top-text'>{{data.day}}</text>
+            <text class='index-data-yunshi-top-text'>{{day}}</text>
             <view class='index-data-yunshi-top-center'>
-                <text>农历{{data.cnmonth}}{{data.cnday}} 第三十八周 处女座</text>
-                <text>{{data.hyear}}[{{data.animal}}]年 {{data.cyclicalMonth}}月 {{data.cyclicalDay}}日 </text>
+                <text>{{year.yinli}} </text>
+                <!-- <text>{{data.hyear}}[{{data.animal}}]年 {{data.cyclicalMonth}}月 {{data.cyclicalDay}}日 </text> -->
             </view>
             <button>今日运势</button>
           </view>
           <view class='index-data-yunshi-bottom'>
               <view class='index-data-yunshi-bottom-1'>
                   <button>宜</button>
-                  <text>{{suit}}</text>
+                  <text>{{year.yi}}</text>
               </view>
               <view class='index-data-yunshi-bottom-1'>
                   <button>忌</button>
-                  <text>{{taboo}}</text>
+                  <text>{{year.ji}}</text>
               </view>
           </view>
       </view>
@@ -44,7 +61,7 @@
    <view class='index-weather'>
       <view class='index-weather-top'>
         <view class='index-weather-top-1'>
-            <text>{{weather.count}}°</text>
+            <text>{{weather.data.wendu}}°</text>
         </view>
         <view class='index-weather-top-2'>
             <view class='index-weather-top-text'>
@@ -55,7 +72,7 @@
         </view>
         <view class='index-weather-top-3'>
             <text>{{weather.city}}</text>
-            <text>{{weather1.fx}} | 湿度{{weather1.shidu}}</text>
+            <text>{{weather1.fx}} | 湿度{{weather.data.shidu}}</text>
         </view>
       </view>
       <view class='index-weather-bottom'>
@@ -151,6 +168,7 @@
       <text>微信小程序，简称小程序，英文名MiniProgram，是一种不需要下载安装即可使用的应用，它实现了应用“触手可及”的梦想，用户扫一扫或搜一下即可打开应用。</text>
       </view>
    </view>
+   
 </view>
 
 

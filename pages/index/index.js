@@ -1,5 +1,7 @@
 //index.js
 //获取应用实例
+
+var dateTimePicker = require('./dateTimePicker.js');
 const app = getApp()
 var config = require('../../config.js');
 var pageIndex = 1;
@@ -21,7 +23,10 @@ Page({
     high1: [],
     low1: [],
     high2: [],
-    low2: []
+    low2: [],
+    date: '2018-09-20',
+    year:[],   
+    day:[],
   },
   onChangeShowState: function () {
 
@@ -37,15 +42,25 @@ Page({
     })
 
   },
+  changeDate(e) {
+    
+    this.setData({ 
+      date: e.detail.value,
+       });
+  },
+  
+  
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     
     wx:wx.request({
+      
       url: 'https://www.sojson.com/open/api/weather/json.shtml?city=北京',
       success:(msg)=>{
-        console.log(msg);
+       
         let high0 = msg.data.data.forecast[0].high.substring(2,5);
         let low0 = msg.data.data.forecast[0].low.substring(2, 5);
         let high1 = msg.data.data.forecast[1].high.substring(2, 5);
@@ -74,17 +89,16 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    var time = dateTimePicker.formatTime(new Date());
+   
     wx: wx.request({
-      url: 'https://www.sojson.com/open/api/lunar/json.shtml',
+      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
       success: (msg) => {
-        let suit = msg.data.data.suit.replace(/[\,|\'|\"]/g, '   ');
-        let taboo = msg.data.data.taboo.replace(/[\,|\'|\"]/g, '   ');
-        
+        let day = msg.data.result.yangli.substring(8);
+        console.log(msg);
         this.setData({
-          data: msg.data.data,
-          suit: suit,
-          taboo: taboo,
-
+          year: msg.data.result,
+          day: day,
         })
       }
     })
@@ -94,7 +108,15 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    wx: wx.request({
+      url: 'http://web.juhe.cn:8080/constellation/getAll?consName=%E7%8B%AE%E5%AD%90%E5%BA%A7&type=today&key=48d0e29d484984c057193f9a85b05be3' ,
+      success: (msg) => {
+        console.log(msg);
+        this.setData({
+         
+        })
+      }
+    })
   },
 
   /**

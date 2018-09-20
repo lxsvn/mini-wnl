@@ -1,17 +1,65 @@
+var dateTimePicker = require('./dateTimePicker.js');
+const util = require('../../utils/util.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+    date: '2018-09-20',
+    year:[],
+    day:[],
+    bigday:[], 
   },
+  changeDate(e) {
 
+    this.setData({
+      date: e.detail.value,
+    });
+    let date=e.detail.value;
+    wx: wx.request({
+      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + date,
+      success: (msg) => {
+        let day = msg.data.result.yangli.substring(8);
+        let bigday = msg.data.result.yinli.substring(6)
+        this.setData({
+          year: msg.data.result,
+          day: day,
+          bigday: bigday
+        })
+      }
+    })
+  },
+  left(startDate, days) {
+    startDate = new Date(startDate);
+    startDate = +startDate + days * 1000 * 60 * 60 * 24;
+    startDate = new Date(startDate);
+    var nextStartDate = startDate.getFullYear() + "-" + (startDate.getMonth() + 1) + "-" + startDate.getDate();
+    console.log(startDate)
+  },
+  right() {
+      
+    console.log(1)
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    var time = dateTimePicker.formatTime(new Date());
+
+    wx: wx.request({
+      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
+      success: (msg) => {
+        // let day = msg.data.result.yangli.substring(8);
+        // let bigday = msg.data.result.yinli.substring(6)
+        // this.setData({
+        //   year: msg.data.result,
+        //   day: day,
+        //   bigday: bigday
+        // })
+        console.log(msg)
+      }
+    })
   },
 
   /**

@@ -4,6 +4,7 @@
     "pages/hl/hl",
     "pages/festival/festival",
     "pages/fand/fand"
+    
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -42,5 +43,6 @@
       }
     ]
   }
+ 
   
 }

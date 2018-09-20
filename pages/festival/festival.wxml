@@ -1,2 +1,132 @@
 <!--pages/festival/festival.wxml-->
-<text>pages/festival/festival.wxml</text>
+<view>
+    <view class='festival'>
+        <view class='festival-data' bindtap="onChangeShowState">
+          <image></image>
+          <text>法定节假日</text>
+          
+        </view>
+        <view class='festival-data-show' wx:if="{{ifture}}">
+            <view>
+                <view class='festival-data-show-left'>
+                  <text>中秋节</text>
+                  <text>09月24日</text>
+                </view>
+                <view class='festival-data-show-right'>
+                  <text>4天后</text>
+                </view>
+            </view>
+            <view>
+                <view class='festival-data-show-left'>
+                  <text>中秋节</text>
+                  <text>09月24日</text>
+                </view>
+                <view class='festival-data-show-right'>
+                  <text>4天后</text>
+                </view>
+            </view>
+            <view>
+                <view class='festival-data-show-left'>
+                  <text>中秋节</text>
+                  <text>09月24日</text>
+                </view>
+                <view class='festival-data-show-right'>
+                  <text>4天后</text>
+                </view>
+            </view>
+            <view>
+                <view class='festival-data-show-left'>
+                  <text>中秋节</text>
+                  <text>09月24日</text>
+                </view>
+                <view class='festival-data-show-right'>
+                  <text>4天后</text>
+                </view>
+            </view>
+        </view>
+        <view class='festival-two'  bindtap="onChangeShowtwo">
+          <image></image>
+          <text>二十四节气</text>
+        </view>
+        <view class='festival-data-show' wx:if="{{iftwo}}">
+            <view>
+                <view class='festival-data-show-left'>
+                  <text>中秋节</text>
+                  <text>09月24日</text>
+                </view>
+                <view class='festival-data-show-right'>
+                  <text>4天后</text>
+                </view>
+            </view>
+            <view>
+                <view class='festival-data-show-left'>
+                  <text>中秋节</text>
+                  <text>09月24日</text>
+                </view>
+                <view class='festival-data-show-right'>
+                  <text>4天后</text>
+                </view>
+            </view>
+            <view>
+                <view class='festival-data-show-left'>
+                  <text>中秋节</text>
+                  <text>09月24日</text>
+                </view>
+                <view class='festival-data-show-right'>
+                  <text>4天后</text>
+                </view>
+            </view>
+            <view>
+                <view class='festival-data-show-left'>
+                  <text>中秋节</text>
+                  <text>09月24日</text>
+                </view>
+                <view class='festival-data-show-right'>
+                  <text>4天后</text>
+                </view>
+            </view>
+        </view>
+        <view class='festival-hot' bindtap="onChangeShowhot">
+          <image></image>
+          <text>热门节日</text>
+        </view>
+        <view class='festival-data-show' wx:if="{{ifhot}}">
+            <view>
+                <view class='festival-data-show-left'>
+                  <text>中秋节</text>
+                  <text>09月24日</text>
+                </view>
+                <view class='festival-data-show-right'>
+                  <text>4天后</text>
+                </view>
+            </view>
+            <view>
+                <view class='festival-data-show-left'>
+                  <text>中秋节</text>
+                  <text>09月24日</text>
+                </view>
+                <view class='festival-data-show-right'>
+                  <text>4天后</text>
+                </view>
+            </view>
+            <view>
+                <view class='festival-data-show-left'>
+                  <text>中秋节</text>
+                  <text>09月24日</text>
+                </view>
+                <view class='festival-data-show-right'>
+                  <text>4天后</text>
+                </view>
+            </view>
+            <view>
+                <view class='festival-data-show-left'>
+                  <text>中秋节</text>
+                  <text>09月24日</text>
+                </view>
+                <view class='festival-data-show-right'>
+                  <text>4天后</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

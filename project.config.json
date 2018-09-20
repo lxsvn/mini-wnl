@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": -1,
 			"list": [
 				{
 					"id": -1,
@@ -50,7 +50,14 @@
 				{
 					"id": -1,
 					"name": "hl",
-					"pathName": "pages/hl/hl"
+					"pathName": "pages/hl/hl",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "festival",
+					"pathName": "pages/festival/festival",
+					"query": ""
 				}
 			]
 		}

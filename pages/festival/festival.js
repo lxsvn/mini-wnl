@@ -7,7 +7,36 @@ Page({
   data: {
 
   },
+  onChangeShowState: function () {
 
+    var that = this;
+
+    
+    that.setData({
+      ifture: (!that.data.ifture)
+    })
+
+  },
+  onChangeShowtwo: function () {
+
+    var that = this;
+
+
+    that.setData({
+      iftwo: (!that.data.iftwo)
+    })
+
+  },
+  onChangeShowhot: function () {
+
+    var that = this;
+
+
+    that.setData({
+      ifhot: (!that.data.ifhot)
+    })
+
+  },
   /**
    * 生命周期函数--监听页面加载
    */

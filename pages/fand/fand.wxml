@@ -1,5 +1,6 @@
 <!--pages/fand/fand.wxml-->
-<view class='fand'>
+<view class='content'>
+  <view class='fand'>
      <view class='fand-top'>
         <image></image>
         <text>51万年历</text>
@@ -11,25 +12,29 @@
         <text>三亿用户真是选择</text>
      </view>
      <view class='fand-bottom'>
-        <view class='fand-bottom-1 fand-bottom-lists'>
-          <text>官网</text>
-          <text>官网</text>
-          <text>官网</text>
-          <text>官网</text>
+        <view class=' fand-bottom-lists'>
+          <text>官网:</text>
+          <text>公众号:</text>
+          <text>QQ群:</text>
+          <text>微博:</text>
         </view>
-        <view class='fand-bottom-2 fand-bottom-lists'>
-          <text>官网</text>
-          <text>官网</text>
-          <text>官网</text>
-          <text>官网</text>
+        <view class=' fand-bottom-lists'>
+          <text>www.baodu.com</text>
+          <text>youtubi</text>
+          <text>763278661</text>
+          <text>weibo.com/qinghu</text>
         </view>
-         <view class='fand-bottom-3 fand-bottom-lists'>
+         <view class=' fand-bottom-lists'>
           <image></image>
+          <text>关注公众号</text>
         </view>
      </view>
+     
 </view>
 <view class='fand-text'>
-    <text>32232232232626616261+63616161651</text>
-    <text>saidiasdjiasdihasf safjsafasabjfsabjsafbsahifbjafn;oh</text>
+        <text>什么什么什么什么公司  版权所有</text>
+        <text>opyRight © 2004-2018 便民查询网 All Rights Reserved</text>
 </view>
+</view>
+
 
