@@ -2,7 +2,7 @@
 <view class='content'>
   <view class='fand'>
      <view class='fand-top'>
-        <image></image>
+        <image src='../../assets/imgs/logo.png'></image>
         <text>51万年历</text>
         <text>三亿用户真是选择</text>
      </view>
@@ -25,7 +25,7 @@
           <text>weibo.com/qinghu</text>
         </view>
          <view class=' fand-bottom-lists'>
-          <image></image>
+          <image src='../../assets/imgs/two-code.jpg'></image>
           <text>关注公众号</text>
         </view>
      </view>

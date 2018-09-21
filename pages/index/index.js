@@ -37,38 +37,52 @@ Page({
     currentDay: '',
     aaa: '2018年9月21 '
   },
+
+  //右上角的按钮 点击字体会在标签的内容中切换 并且会让一个影藏的 div 显现
   onChangeShowState: function () {
-
     var that = this;
-
     that.setData({
-
-      showView: (!that.data.showView)
-
-    })
-    that.setData({
+      showView: (!that.data.showView),
       ifture: (!that.data.ifture)
     })
 
   },
+  //点击弹出影藏的时间选择器
   changeDate(e) {
 
-    // 
+    // 点击时间切换接口 获取当日的万年历数据
     let aa = e.detail.value.replace(/^(.{4})(.{1})(.*)$/, '$1年$3');
+    //应为得到的是 2018-09-30 所有要让两个-换成 年月
     let aaa = aa.replace(/^(.{7})(.{1})(.*)$/, '$1月$3');
-    console.log(aaa)
-    this.setData({
-      aaa: aaa,
-    });
+    console.log(aaa);
+    let time = e.detail.value;
+    console.log(e.detail.value);
+        //获取当日的万年历数据
+    // wx: wx.request({
+    //   url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
+    //   success: (msg) => {
+    //     let day = msg.data.result.yangli.substring(8);
+    //     console.log(msg);
+        this.setData({
+          // year: msg.data.result,
+          // day: day,
+          aaa: aaa,
+        })
+    //   }
+    // })
   },
+  //点击弹出城市选择器
   changecity(e) {
+    //点击切换城市 换成不同的城市天气
     console.log(e.detail.value);
     this.setData({
+      //应为数据 上海市 上海市 虹口区 所有只需要最后一个即可  得到的是个数组
       dacity: e.detail.value[2],
     });
+    //这个数据也只是需要 最后一个地区作为参数即可
     let dacity = e.detail.value[2];
     wx: wx.request({
-
+      //天气接口
       url: 'https://www.sojson.com/open/api/weather/json.shtml?city=' + dacity,
       success: (msg) => {
         let high0 = msg.data.data.forecast[0].high.substring(2, 5);
@@ -77,7 +91,7 @@ Page({
         let low1 = msg.data.data.forecast[1].low.substring(2, 5);
         let high2 = msg.data.data.forecast[2].high.substring(2, 5);
         let low2 = msg.data.data.forecast[2].low.substring(2, 5);
-
+        //对数据的进行 删减转换 放在html里面
         this.setData({
           weather1: msg.data.data.forecast[0],
           weather2: msg.data.data.forecast[1],
@@ -93,24 +107,14 @@ Page({
       }
     })
   },
-  bindChange: function (e) {
-    const val = e.detail.value
-    this.setData({
-      year: this.data.years[val[0]],
-      month: this.data.months[val[1]],
-      day: this.data.days[val[2]]
-    })
-  },
+  //点击按钮弹出影藏的普通——星座选择器
   bindPickerChange(e) {
-
-    // this.setData({
-    //   date: e.detail.value,
-    // });
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       index: e.detail.value
     })
   },
+  //这个是引入的日历 左右两个按钮
   doDay: function (e) {
     var that = this
     var currentObj = that.data.currentObj
@@ -118,6 +122,7 @@ Page({
     var m = currentObj.getMonth() + 1;
     var d = currentObj.getDate();
     var str = ''
+    console.log(Y)
     if (e.currentTarget.dataset.key == 'left') {
       m -= 1
       if (m <= 0) {
@@ -190,32 +195,32 @@ Page({
     this.setData({
       day: day
     })
-    wx: wx.request({
+    // wx: wx.request({
 
-      url: 'https://www.sojson.com/open/api/weather/json.shtml?city=小店区',
-      success: (msg) => {
-        console.log(msg)
-        let high0 = msg.data.data.forecast[0].high.substring(2, 5);
-        let low0 = msg.data.data.forecast[0].low.substring(2, 5);
-        let high1 = msg.data.data.forecast[1].high.substring(2, 5);
-        let low1 = msg.data.data.forecast[1].low.substring(2, 5);
-        let high2 = msg.data.data.forecast[2].high.substring(2, 5);
-        let low2 = msg.data.data.forecast[2].low.substring(2, 5);
+    //   url: 'https://www.sojson.com/open/api/weather/json.shtml?city=小店区',
+    //   success: (msg) => {
+    //     console.log(msg)
+    //     let high0 = msg.data.data.forecast[0].high.substring(2, 5);
+    //     let low0 = msg.data.data.forecast[0].low.substring(2, 5);
+    //     let high1 = msg.data.data.forecast[1].high.substring(2, 5);
+    //     let low1 = msg.data.data.forecast[1].low.substring(2, 5);
+    //     let high2 = msg.data.data.forecast[2].high.substring(2, 5);
+    //     let low2 = msg.data.data.forecast[2].low.substring(2, 5);
 
-        this.setData({
-          weather1: msg.data.data.forecast[0],
-          weather2: msg.data.data.forecast[1],
-          weather3: msg.data.data.forecast[2],
-          weather: msg.data,
-          high0: high0,
-          low0: low0,
-          high1: high1,
-          low1: low1,
-          high2: high2,
-          low2: low2,
-        })
-      }
-    })
+    //     this.setData({
+    //       weather1: msg.data.data.forecast[0],
+    //       weather2: msg.data.data.forecast[1],
+    //       weather3: msg.data.data.forecast[2],
+    //       weather: msg.data,
+    //       high0: high0,
+    //       low0: low0,
+    //       high1: high1,
+    //       low1: low1,
+    //       high2: high2,
+    //       low2: low2,
+    //     })
+    //   }
+    // })
     var currentObj = this.getCurrentDayString()
     this.setData({
       currentDate: currentObj.getFullYear() + '年' + (currentObj.getMonth() + 1) + '月' + currentObj.getDate() + '日',

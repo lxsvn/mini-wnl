@@ -2,7 +2,7 @@
 <view>
     <view class='festival'>
         <view class='festival-data' bindtap="onChangeShowState">
-          <image></image>
+          <image src='../../assets/imgs/black_name.png'></image>
           <text>法定节假日</text>
           
         </view>
@@ -18,8 +18,8 @@
             </view>     
         </view>
         <view class='festival-two'  bindtap="onChangeShowtwo">
-          <image></image>
-          <text>二十四节气</text>
+          <image src='../../assets/imgs/black_sj.png'></image>
+          <text >二十四节气</text>
         </view>
         <view class='festival-data-show' wx:if="{{iftwo}}">
             <view>
@@ -60,7 +60,7 @@
             </view>
         </view>
         <view class='festival-hot' bindtap="onChangeShowhot">
-          <image></image>
+          <image src='../../assets/imgs/black_yzm.png'></image>
           <text>热门节日</text>
         </view>
         <view class='festival-data-show' wx:if="{{ifhot}}">
