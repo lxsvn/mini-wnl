@@ -42,7 +42,7 @@ page{
 }
 .index-data-rl{
   width: 100%;
-  height: 650rpx;
+  
   margin-top: 0.5rem;
   background: #f2f2f2
 }
@@ -140,21 +140,27 @@ page{
   float:left;
   margin-left: 0.25rem
 }
+.index-weather-top-2 {
+  position: relative
+}
 .index-weather-top-2 text{
   display: block;
   margin-top: 0.45rem;
-  font-size: 0.75rem;
+  font-size: 30rpx;
 }
 .index-weather-top-2 button{
-  padding: 0 0.6rem;
-  font-size: 0.6rem;
+  width: 200rpx;
+  font-size: 28rpx;
   height: 1.1rem;
   float: left;
   background: #9cec6b;
   line-height: 1.1rem;
-  margin-top: 1.5rem;
-  margin-left: 0.8rem;
-  color: #ffffff
+  display: block;
+  color: #ffffff;
+  position: absolute;
+  top: 20rpx;
+  left: 50%;
+  margin-left: -50rpx;
 }
 .index-weather-top-3{
   float: right;
@@ -317,9 +323,8 @@ page{
 }
 .index-Constellation{
   width: 95%;
-  height: 10rem;
-  margin-bottom:0.35rem;
-  margin: .35rem auto;
+  margin-bottom:40rpx;
+  margin: 40rpx auto;
   background: #ffffff;
   overflow: hidden ;
 }
@@ -371,9 +376,8 @@ page{
 }
 .index-datanews{
   width: 95%;
-  height: 13rem;
-  margin-bottom:0.35rem;
-  margin: .35rem auto;
+  margin-bottom:40rpx;
+  margin: 35rpx auto;
   background: #ffffff;
   overflow: hidden ;
 }
@@ -419,8 +423,48 @@ width: 0;
 height: 0;
 color: transparent;
 }
+.xinzuo-text text{
+  color: #ffffff;
+  font-size: 32rpx;
+}
 
 
 
 
-
+.box {
+  display: block;
+  margin: 10px;
+}
+ 
+.box-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+ 
+.flex-item {
+  flex-flow: nowrap;
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 14.2%;
+}
+ 
+.item-content {
+  margin: 5rpx;
+  padding: 0 20rpx;
+  text-align: center;
+  height: 2rem;
+  background: #ffffff;
+  line-height: 2rem;
+  color: #999999;
+}
+ 
+.bk-color-day {
+  background-color:#d6b72f;
+  color: #ffffff
+}
+ 
+.item-content-current-day {
+  flex-grow: 2;
+}
