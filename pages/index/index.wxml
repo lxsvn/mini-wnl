@@ -3,10 +3,10 @@
    <view class='index-data'>
       <view class='index-data-top'>
           <picker mode="date" value="{{date}}" start="1994-07-16" end="2055-07-16" bindchange="changeDate">
-    <view class="tui-picker-detail">
-      {{date}}
-    </view>
-  </picker>
+            <view class="tui-picker-detail">
+              {{date}}
+            </view>
+          </picker>
           <button bindtap="onChangeShowState">{{showView?'收起':'择吉日'}}</button>
       </view>
     <scroll-view scroll-x="true" style=" white-space: nowrap; display:flex"class='index-data-top-show' wx:if="{{ifture}}">
@@ -24,7 +24,7 @@
       <view class='index-data-rl'>
 
 
-
+      
 
 
 
@@ -71,7 +71,12 @@
             <button>{{weather.data.quality}} {{weather.data.pm10}}</button>
         </view>
         <view class='index-weather-top-3'>
-            <text>{{weather.city}}</text>
+        <picker mode="region" value="{{date}}"  bindchange="changecity">
+            <view class="tui-picker-det">
+              {{dacity}}
+            </view>
+          </picker>
+           
             <text>{{weather1.fx}} | 湿度{{weather.data.shidu}}</text>
         </view>
       </view>

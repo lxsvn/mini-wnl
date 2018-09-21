@@ -157,14 +157,17 @@ page{
   color: #ffffff
 }
 .index-weather-top-3{
-  float: right
+  float: right;
+  overflow: hidden;
 }
 .index-weather-top-3 text{
   font-size: 0.75rem;
-  display: block;
+  float: right;
   text-align: right;
   margin-top: 0.45rem;
-  margin-right: 0.45rem
+}
+.tui-picker-det{
+  float: right;
 }
 .index-weather-bottom{
   width: 95%;

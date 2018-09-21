@@ -27,6 +27,7 @@ Page({
     date: '2018-09-20',
     year:[],   
     day:[],
+    dacity:"北京"
   },
   onChangeShowState: function () {
 
@@ -48,7 +49,47 @@ Page({
       date: e.detail.value,
        });
   },
-  
+  changecity(e) {
+    console.log(e.detail.value);
+    this.setData({
+      dacity: e.detail.value[2],
+    });
+    let dacity = e.detail.value[2];
+    wx: wx.request({
+
+      url: 'https://www.sojson.com/open/api/weather/json.shtml?city=' + dacity,
+      success: (msg) => {
+        console.log(msg)
+        let high0 = msg.data.data.forecast[0].high.substring(2, 5);
+        let low0 = msg.data.data.forecast[0].low.substring(2, 5);
+        let high1 = msg.data.data.forecast[1].high.substring(2, 5);
+        let low1 = msg.data.data.forecast[1].low.substring(2, 5);
+        let high2 = msg.data.data.forecast[2].high.substring(2, 5);
+        let low2 = msg.data.data.forecast[2].low.substring(2, 5);
+
+        this.setData({
+          weather1: msg.data.data.forecast[0],
+          weather2: msg.data.data.forecast[1],
+          weather3: msg.data.data.forecast[2],
+          weather: msg.data,
+          high0: high0,
+          low0: low0,
+          high1: high1,
+          low1: low1,
+          high2: high2,
+          low2: low2,
+        })
+      }
+    })
+  },
+  bindChange: function (e) {
+    const val = e.detail.value
+    this.setData({
+      year: this.data.years[val[0]],
+      month: this.data.months[val[1]],
+      day: this.data.days[val[2]]
+    })
+  },
   
 
   /**
@@ -58,9 +99,9 @@ Page({
     
     wx:wx.request({
       
-      url: 'https://www.sojson.com/open/api/weather/json.shtml?city=北京',
+      url: 'https://www.sojson.com/open/api/weather/json.shtml?city=小店区',
       success:(msg)=>{
-       
+        console.log(msg)
         let high0 = msg.data.data.forecast[0].high.substring(2,5);
         let low0 = msg.data.data.forecast[0].low.substring(2, 5);
         let high1 = msg.data.data.forecast[1].high.substring(2, 5);
@@ -91,32 +132,24 @@ Page({
   onReady: function () {
     var time = dateTimePicker.formatTime(new Date());
    
-    wx: wx.request({
-      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
-      success: (msg) => {
-        let day = msg.data.result.yangli.substring(8);
-        console.log(msg);
-        this.setData({
-          year: msg.data.result,
-          day: day,
-        })
-      }
-    })
+    // wx: wx.request({
+    //   url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
+    //   success: (msg) => {
+    //     let day = msg.data.result.yangli.substring(8);
+    //     console.log(msg);
+    //     this.setData({
+    //       year: msg.data.result,
+    //       day: day,
+    //     })
+    //   }
+    // })
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    wx: wx.request({
-      url: 'http://web.juhe.cn:8080/constellation/getAll?consName=%E7%8B%AE%E5%AD%90%E5%BA%A7&type=today&key=48d0e29d484984c057193f9a85b05be3' ,
-      success: (msg) => {
-        console.log(msg);
-        this.setData({
-         
-        })
-      }
-    })
+   
   },
 
   /**

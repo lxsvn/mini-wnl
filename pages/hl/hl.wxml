@@ -2,7 +2,7 @@
     <view class='hl-data'>
       <picker mode="date" value="{{date}}" start="1994-07-16" end="2055-07-16" bindchange="changeDate">
     <view class="tui-picker-detail">
-      {{date}}
+      {{aaa}}
     </view>
   </picker>
       <view class='hl-data-center'>
@@ -10,44 +10,63 @@
         <text>{{bigday}}</text>
         <image bindtap='right'></image>
       </view>
-      <text>{{year.yinli}}</text>
+      <text>{{year.yinli}}戊戌年【狗年】</text>
     </view>
     <view class='hl-good'>
       <view class='hl-good-1'>
           <button>宜</button>
-          <text>{{year.yi}}</text>
+          <text>{{year.yi}}有很多宜</text>
       </view>
       <view class='hl-good-1'>
           <button>忌</button>
-          <text>{{year.ji}}</text>
+          <text>{{year.ji}}有很多忌</text>
+      </view>
+    </view>
+    <view class='hl-top2'>
+      <view>
+          <text>生肖</text>
+          <text>{{year.wuxing}}</text>
+      </view>
+      <view>
+          <text>季节</text>
+          <text>{{year.chongsha}}</text>
+      </view>
+      <view>
+          <text>星座</text>
+          <text>{{year.chongsha}}</text>
+      </view>
+    </view>
+    <view class='hl-jq'>
+      <view class='hl-jq-top'>
+        <view class='hl-jq-top-left'>
+          <text>儒略日</text>
+          <text>儒略日</text>
+        </view>
+        <view class='hl-jq-top-right'>
+          <text>伊斯兰历</text>
+          <text>伊斯兰历</text>
+        </view>
+      </view>
+      <view class='hl-jq-bottom'>
+          <text>节气</text>
+           <text>节气</text>
       </view>
     </view>
     <view class='hl-top'>
       <view>
-          <text>五行</text>
+          <text>年五行</text>
           <text>{{year.wuxing}}</text>
       </view>
       <view>
-          <text>冲煞</text>
+          <text>月五行</text>
           <text>{{year.chongsha}}</text>
       </view>
-      
+      <view>
+          <text>日五行</text>
+          <text>{{year.chongsha}}</text>
+      </view>
     </view>
-    <!-- <view class='hl-time'>
-        <text>时辰吉凶</text>
-        <text>甲子吉</text>
-        <text>乙丑吉</text>
-        <text>丙寅吉</text>
-        <text>丁卯吉</text>
-        <text>戊戌吉</text>
-        <text>己巳吉</text>
-        <text>庚午吉</text>
-        <text>幸未吉</text>
-        <text>壬申吉</text>
-        <text>葵酉吉</text>
-        <text>甲戌吉</text>
-        <text>乙亥吉</text>
-    </view> -->
+    
     <view class='hl-all'>
       <view class='hl-all-left'>
       <text>建除十二神</text>
@@ -56,7 +75,7 @@
       <view class='hl-all-center'>
           <view class='hl-all-center-top'>
               <view>
-                <text>吉神宜趋</text>
+                <text>冲煞</text>
                 <text>{{year.jishen}}</text>
               </view>
               <view>
@@ -64,7 +83,7 @@
                 <text>一二三四一二</text>
               </view>
               <view>
-                <text>凶神宜忌</text>
+                <text>六耀</text>
                 <text>{{year.xiongshen}}</text>
               </view>
           </view>
