@@ -106,13 +106,29 @@ page{
   font-size: 0.7rem;
   height: 1rem;
   line-height: 1rem;
-  margin:0 0.4rem
-}
-.index-data-yunshi-bottom-1:nth-child(1) button{
+  margin:0 0.4rem;
+  color: #ffffff;
    background: #c54342;
 }
-.index-data-yunshi-bottom-1:nth-child(2) button{
+.index-data-yunshi-bottom-1 text{
+  color: #c54342;
+}
+.index-data-yunshi-bottom-2{
+  overflow: hidden;
+  margin: 0.3rem 0
+}
+.index-data-yunshi-bottom-2 button{
+  float: left;
+  padding:0 0.2rem;
+  font-size: 0.7rem;
+  height: 1rem;
+  line-height: 1rem;
+  margin:0 0.4rem;
+  color: #ffffff;
    background: #4d966f;
+}
+.index-data-yunshi-bottom-2 text{
+  color: #4d966f;
 }
 .index-weather{
   width: 95%;

@@ -97,7 +97,7 @@
                   <button>宜</button>
                   <text>{{year.yi}}</text>
               </view>
-              <view class='index-data-yunshi-bottom-1'>
+              <view class='index-data-yunshi-bottom-2'>
                   <button>忌</button>
                   <text>{{year.ji}}</text>
               </view>

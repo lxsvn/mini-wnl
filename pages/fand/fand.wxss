@@ -46,8 +46,8 @@ page{
   margin-right: 25rpx
 }
 .fand-bottom-lists image{
-    width: 130rpx;
-    height: 130rpx;
+    width: 150rpx;
+    height: 150rpx;
     margin-top: 20rpx
 }
 .fand-text text{

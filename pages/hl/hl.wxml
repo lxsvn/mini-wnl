@@ -6,11 +6,11 @@
     </view>
   </picker>
       <view class='hl-data-center'>
-        <image bindtap='left'></image>
-        <text>{{bigday}}</text>
-        <image bindtap='right'></image>
+        <!-- <image bindtap='left'></image> -->
+        <text class='hl-data-center-text'>{{bigday}}</text>
+        <!-- <image bindtap='right'></image> -->
       </view>
-      <text>{{year.yinli}}</text>
+      <text class='hl-data-text'>{{year.yinli}}</text>
     </view>
     <view class='hl-good'>
       <view class='hl-good-1'>

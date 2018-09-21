@@ -58,18 +58,18 @@ Page({
     let time = e.detail.value;
     console.log(e.detail.value);
         //获取当日的万年历数据
-    // wx: wx.request({
-    //   url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
-    //   success: (msg) => {
-    //     let day = msg.data.result.yangli.substring(8);
-    //     console.log(msg);
+    wx: wx.request({
+      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
+      success: (msg) => {
+        let day = msg.data.result.yangli.substring(8);
+        console.log(msg);
         this.setData({
-          // year: msg.data.result,
-          // day: day,
+          year: msg.data.result,
+          day: day,
           aaa: aaa,
         })
-    //   }
-    // })
+      }
+    })
   },
   //点击弹出城市选择器
   changecity(e) {
