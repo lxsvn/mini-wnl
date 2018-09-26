@@ -13,7 +13,7 @@
                   <text>{{item.day}}</text>
                 </view>
                 <view class='festival-data-show-right'>
-                  <text>{{item.oldday}}天后</text>
+                  <text bindtap='addcenter'>{{item.oldday}}天后</text>
                 </view>
             </view>     
         </view>
@@ -37,44 +37,16 @@
           <image src='../../assets/imgs/black_yzm.png'></image>
           <text>热门节日</text>
         </view>
-        <view class='festival-data-show' wx:if="{{ifhot}}">
+        <view class='festival-data-show' wx:if="{{ifhot}}" wx:for="{{hotday}}" wx:key="{{hotday}}">
             <view>
                 <view class='festival-data-show-left'>
-                  <text>中秋节</text>
-                  <text>09月24日</text>
+                  <text>{{item.name}}</text>
+                  <text>{{item.day}}</text>
                 </view>
                 <view class='festival-data-show-right'>
-                  <text>4天后</text>
-                </view>
-            </view>
-            <view>
-                <view class='festival-data-show-left'>
-                  <text>中秋节</text>
-                  <text>09月24日</text>
-                </view>
-                <view class='festival-data-show-right'>
-                  <text>4天后</text>
-                </view>
-            </view>
-            <view>
-                <view class='festival-data-show-left'>
-                  <text>中秋节</text>
-                  <text>09月24日</text>
-                </view>
-                <view class='festival-data-show-right'>
-                  <text>4天后</text>
-                </view>
-            </view>
-            <view>
-                <view class='festival-data-show-left'>
-                  <text>中秋节</text>
-                  <text>09月24日</text>
-                </view>
-                <view class='festival-data-show-right'>
-                  <text>4天后</text>
+                  <text>{{item.oldday}}天后</text>
                 </view>
             </view>
         </view>
     </view>
-  
 </view>

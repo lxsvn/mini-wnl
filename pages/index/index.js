@@ -35,10 +35,36 @@ Page({
     currentDayList: '',
     currentObj: '',
     currentDay: '',
-    aaa: ' '
+    aaa: ' ',
+     dayStyle: [
+      { month: 'current', day: new Date().getDate(), color: 'white', background: '#AAD4F5' },
+      { month: 'current', day: new Date().getDate(), color: 'white', background: '#AAD4F5' }
+    ],
   },
 
   //右上角的按钮 点击字体会在标签的内容中切换 并且会让一个影藏的 div 显现
+  dayClick: function (event) {
+    let clickDay = event.detail.day;
+    let changeDay = `dayStyle[1].day`;
+    let changeBg = `dayStyle[1].background`;
+    this.setData({
+      [changeDay]: clickDay,
+      [changeBg]: "#84e7d0"
+    })
+    let ymd = event.detail.year + "-" + event.detail.month + "-" + event.detail.day
+    wx: wx.request({
+      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + ymd,
+      success: (msg) => {
+        let day = msg.data.result.yangli.substring(8);
+        this.setData({
+          year: msg.data.result,
+          day: day,
+         
+        })
+      }
+    })
+    
+  },
   onChangeShowState: function () {
     var that = this;
     that.setData({
@@ -61,15 +87,12 @@ Page({
     //应为得到的是 2018-09-30 所有要让两个-换成 年月
     let aaa = aa.replace(/^(.{7})(.{1})(.*)$/, '$1月$3');
     let aaa1 = aaa + "日";
-    console.log(aaa);
     let time = e.detail.value;
-    console.log(e.detail.value);
         //获取当日的万年历数据
     wx: wx.request({
       url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
       success: (msg) => {
         let day = msg.data.result.yangli.substring(8);
-        console.log(msg);
         this.setData({
           year: msg.data.result,
           day: day,
@@ -81,7 +104,6 @@ Page({
   //点击弹出城市选择器
   changecity(e) {
     //点击切换城市 换成不同的城市天气
-    console.log(e.detail.value);
     this.setData({
       //应为数据 上海市 上海市 虹口区 所有只需要最后一个即可  得到的是个数组
       dacity: e.detail.value[2],
@@ -98,7 +120,6 @@ Page({
         let low1 = msg.data.data.forecast[1].low.substring(2, 5);
         let high2 = msg.data.data.forecast[2].high.substring(2, 5);
         let low2 = msg.data.data.forecast[2].low.substring(2, 5);
-        console.log(msg);
         //对数据的进行 删减转换 放在html里面
         this.setData({
           weather1: msg.data.data.forecast[0],
@@ -121,37 +142,6 @@ Page({
     this.setData({
       index: e.detail.value
     })
-  },
-  //这个是引入的日历 左右两个按钮
-  doDay: function (e) {
-    var that = this
-    var currentObj = that.data.currentObj
-    var Y = currentObj.getFullYear();
-    var m = currentObj.getMonth() + 1;
-    var d = currentObj.getDate();
-    var str = ''
-    console.log(Y)
-    if (e.currentTarget.dataset.key == 'left') {
-      m -= 1
-      if (m <= 0) {
-        str = (Y - 1) + '/' + 12 + '/' + d
-      } else {
-        str = Y + '/' + m + '/' + d
-      }
-    } else {
-      m += 1
-      if (m <= 12) {
-        str = Y + '/' + m + '/' + d
-      } else {
-        str = (Y + 1) + '/' + 1 + '/' + d
-      }
-    }
-    currentObj = new Date(str)
-    this.setData({
-      currentDate: currentObj.getFullYear() + '年' + (currentObj.getMonth() + 1) + '月' + currentObj.getDate() + '日',
-      currentObj: currentObj
-    })
-    this.setSchedule(currentObj);
   },
 
   getCurrentDayString: function () {
@@ -205,7 +195,7 @@ Page({
     })
     // wx: wx.request({
 
-    //   url: 'https://www.sojson.com/open/api/weather/json.shtml?city=小店区',
+    //   url: 'https://www.sojson.com/open/api/weather/json.shtml?city=东城区',
     //   success: (msg) => {
     //     console.log(msg)
     //     let high0 = msg.data.data.forecast[0].high.substring(2, 5);

@@ -1,0 +1,9 @@
+/* pages/festivalcenter/festivalcenter.wxss */
+page{
+  height: 100%;
+  background: #f2f2f2;
+}
+.wy{
+  width: 95%;
+  height: 500rpx;
+}

@@ -1,0 +1,2 @@
+<!--pages/festivalcenter/festivalcenter.wxml-->
+<web-view class='wy' src="https://www.baidu.com/"></web-view>

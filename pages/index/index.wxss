@@ -484,3 +484,15 @@ color: transparent;
 .item-content-current-day {
   flex-grow: 2;
 }
+.calendar {
+background-color:#f2f2f2; 
+padding-top: 10px; 
+}
+.calendar-header{
+font-size: large;
+color: #59518d;
+}
+.calendar-board{
+color: #c7cbe2;
+font-weight: bold;
+}
