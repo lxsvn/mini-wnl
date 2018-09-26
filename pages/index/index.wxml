@@ -7,9 +7,9 @@
              {{aaa}}
             </view>
           </picker>
-          <button bindtap="onChangeShowState">{{showView?'收起':'择吉日'}}</button>
+          <!-- <button bindtap="onChangeShowState">{{showView?'收起':'择吉日'}}</button> -->
       </view>
-    <scroll-view scroll-x="true" style=" white-space: nowrap; display:flex"class='index-data-top-show' wx:if="{{ifture}}">
+    <!-- <scroll-view scroll-x="true" style=" white-space: nowrap; display:flex" class='index-data-top-show' wx:if="{{ifture}}">
         <button>结婚</button>
         <button>出行</button>
         <button>搬新房</button>
@@ -20,7 +20,7 @@
         <button>搬家</button>
         <button>合婚订婚</button>
         <button>打扫</button>
-</scroll-view>
+</scroll-view> -->
       <view class='index-data-rl'>
 
         <view class="box">
@@ -74,14 +74,7 @@
 
 
 
-
-
-
-
-
-
-
-
+      
       </view>
       <view class='index-data-yunshi'>
           <view class='index-data-yunshi-top'>
@@ -90,7 +83,7 @@
                 <text>{{year.yinli}} </text>
                 <!-- <text>{{data.hyear}}[{{data.animal}}]年 {{data.cyclicalMonth}}月 {{data.cyclicalDay}}日 </text> -->
             </view>
-            <button>今日运势</button>
+            <navigator  url="/pages/hl/hl" open-type="switchTab" >今日运势</navigator >
           </view>
           <view class='index-data-yunshi-bottom'>
               <view class='index-data-yunshi-bottom-1'>
@@ -126,7 +119,7 @@
             <text>{{weather1.fx}} | 湿度{{weather.data.shidu}}</text>
         </view>
       </view>
-      <view class='index-weather-bottom'>
+      <view class='index-weather-bottom' bindtap='chatweather'>
           <view class='index-weather-bottom-left'>
               <view class='index-weather-bottom-left-1'>
                   <text>明天 <text>{{low1}}/{{high1}}°</text></text>
@@ -154,7 +147,7 @@
           </view>
       </view>
    </view>
-   <view class='index-tool'>
+   <!-- <view class='index-tool'>
       <view class='index-tool-title'>
         <text>热门工具</text>
       </view>
@@ -222,7 +215,7 @@
       <view class='index-datanews-news'>
       <text>微信小程序，简称小程序，英文名MiniProgram，是一种不需要下载安装即可使用的应用，它实现了应用“触手可及”的梦想，用户扫一扫或搜一下即可打开应用。</text>
       </view>
-   </view>
+   </view> -->
    
 </view>
 

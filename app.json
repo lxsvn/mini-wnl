@@ -3,15 +3,15 @@
     "pages/index/index",
     "pages/hl/hl",
     "pages/festival/festival",
-    "pages/fand/fand"
-    
+    "pages/fand/fand",
+    "pages/chatweather/chatweather"
   ],
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#ce3e3e",
     "navigationBarTitleText": "万年历",
     "navigationBarTextStyle": "white",
-    "backgroundColor":"#f2f2f2"
+    "backgroundColor":"#ffffff"
   },
   "tabBar": {
     "selectedColor": "#0090ff",
@@ -43,6 +43,7 @@
       }
     ]
   }
+
  
   
 }

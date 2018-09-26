@@ -76,14 +76,15 @@ page{
   float: left;
   margin: 0.9rem 0.35rem
 }
-.index-data-yunshi-top button{
-   padding: 0 0.4rem;
-   font-size: 0.55rem;
+.index-data-yunshi-top navigator{
+   padding: 0 20rpx;
+   font-size: 25rpx;
    float: right;
    margin: 1.25rem 0.5rem;
    border:1px solid #d6b72f;
    color: #d6b72f;
-   background: #ffffff
+   background: #ffffff;
+   border-radius: 8rpx;
 }
 .index-data-yunshi-bottom{
   width: 100%;
@@ -165,7 +166,6 @@ page{
   font-size: 30rpx;
 }
 .index-weather-top-2 button{
-  width: 200rpx;
   font-size: 28rpx;
   height: 1.1rem;
   float: left;
@@ -176,7 +176,7 @@ page{
   position: absolute;
   top: 20rpx;
   left: 50%;
-  margin-left: -50rpx;
+  margin-left: -80rpx;
 }
 .index-weather-top-3{
   float: right;

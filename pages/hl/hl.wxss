@@ -1,5 +1,7 @@
 page{
   background: #f2f2f2;
+  font-size: 30rpx;
+    color: #666;
 }
 .hl-data{
   width: 100%;
@@ -59,7 +61,8 @@ page{
   line-height: 40rpx;
   height: 40rpx;
   margin:0 10rpx;
-  text-align: center
+  text-align: center;
+  color: #ffffff;
 }
 
 .hl-good-1:nth-child(1) button{
@@ -86,11 +89,11 @@ page{
   display: block
 }
 .hl-top view text:nth-child(1){
-  color: #e7c658;
+  color: #f7b636;
   margin-top: 25rpx;
+   font-size: 32rpx;
 }
 .hl-top view text:nth-child(2){
-  font-size: 32rpx;
   margin-left: 16rpx;
   margin-top: 15rpx;
 }
@@ -115,11 +118,12 @@ page{
   display: block;
 }
 .hl-top2 view text:nth-child(1){
-  color: #e7c658;
+  color: #f7b636;
   margin-top: 40rpx;
+  font-size: 32rpx;
 }
 .hl-top2 view text:nth-child(2){
-  font-size: 32rpx;
+  
   margin-left: 16rpx;
   margin-top: 15rpx
 }
@@ -128,14 +132,13 @@ page{
 }
 .hl-all{
   width: 100%;
-  height: 370rpx;
+  height: 400rpx;
   background: #ffffff;
   margin-top: 4rpx;
   margin-bottom: 50rpx;
 }
 .hl-all text{
   display: block;
-  font-size: 30rpx;
 }
 .hl-all-left{
   width: 14%;
@@ -151,7 +154,7 @@ page{
 }
 .hl-all-left text:nth-child(1){
   float: left;
-   font-size: 37rpx;
+   font-size: 32rpx;
   color: #f7b636;
   margin-top: 74rpx;
 }
@@ -187,7 +190,7 @@ page{
 .hl-all-center-top view text:nth-child(1){ 
   color: #f7b636;
   margin-top: 25rpx;
-  font-size: 35rpx;
+  font-size: 32rpx;
 }
 .hl-all-center-top view:last-child{
   border: none
@@ -206,7 +209,7 @@ page{
 .hl-all-center-bottom  text:nth-child(1){ 
   color: #f7b636;
   margin-top: 15rpx;
-  font-size: 35rpx;
+  font-size: 32rpx;
 }
 .hl-all-right text{
   width: 40rpx;
@@ -216,7 +219,7 @@ page{
 }
 .hl-all-right text:nth-child(1){
   float: left;
-   font-size: 37rpx;
+   font-size: 32rpx;
   color: #f7b636;
   margin-top: 74rpx;
 }
@@ -264,10 +267,9 @@ width: 49.5%;
 }
 .hl-jq-bottom text{
   margin-top: 20rpx;
-  font-size: 32rpx;
 }
 .hl-jq-bottom text:nth-child(1){
   color: #e7c658;
-  font-size: 38rpx;
+  font-size: 32rpx;
    
 }

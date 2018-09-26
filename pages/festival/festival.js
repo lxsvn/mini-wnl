@@ -194,12 +194,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx:wx.request({
-      url: 'http://api.djapi.cn/wannianli/get?token=dd1dcabd141b7ea33b0336063d2e6dc6&date=20181001',
-      success:(msg)=>{
-        console.log(msg)
-      }
-    })
+    
   },
 
   /**

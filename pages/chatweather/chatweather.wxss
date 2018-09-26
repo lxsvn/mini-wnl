@@ -1,0 +1,47 @@
+/* pages/chatweather/chatweather.wxss */
+page{
+  height: 100%;
+  background: #2c9bce;
+  color: #ffffff;
+   font-size: 32rpx;
+}
+.weather-wendu{
+  width: 95%;
+  height: 480rpx;
+  border-bottom: 4rpx solid #42a8d3;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.weather-wendu-top{
+  margin-top: 80rpx;
+}
+.weather-wendu-top text{
+  text-align: center;
+  display: block;
+  color: #e3fbfc;
+}
+.weather-wendu-top text:nth-child(2){
+  font-size: 120rpx;
+  font-weight: normal;
+  margin:10rpx 0;
+}
+.weather-wendu-bottom{
+  width: 100%;
+  height: 70rpx;
+  margin-top: 25rpx;
+}
+.weather-wendu-bottom text{
+  width: 33.3%;
+  height: 100%;
+  line-height: 70rpx;
+  text-align: center;
+  display: block;
+  float: left
+}
+.weather-ganmao{
+  width: 95%;
+  height: 430rpx;
+  border-bottom: 4rpx solid #42a8d3;
+  margin: 0 auto;
+  overflow: hidden;
+}

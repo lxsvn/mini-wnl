@@ -28,7 +28,7 @@
                   <text>{{item.day}}</text>
                 </view>
                 <view class='festival-data-show-right'>
-                  <text>4天后</text>
+                  <text>{{item.oldday}}天后</text>
                 </view>
             </view>
             
@@ -76,5 +76,5 @@
             </view>
         </view>
     </view>
-    
+  
 </view>

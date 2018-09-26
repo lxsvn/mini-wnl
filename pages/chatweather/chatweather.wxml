@@ -1,0 +1,18 @@
+<!--pages/chatweather/chatweather.wxml-->
+<view>
+    <view class='weather-wendu'>
+      <view class='weather-wendu-top'>
+        <text>{{logsView}}</text>
+        <text>{{day.wendu}}°</text>
+        <text>{{today.type}}</text>
+      </view>
+       <view class='weather-wendu-bottom'>
+          <text>{{today.low}}</text>
+          <text>{{today.fengxiang}}{{fengli}}</text>
+          <text>{{today.high}}</text>
+      </view>
+    </view>
+    <view class='weather-ganmao'>
+      <text>提示：{{day.ganmao}}</text>
+    </view>
+</view> 

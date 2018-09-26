@@ -2,7 +2,7 @@
     <view class='hl-data'>
       <picker mode="date" value="{{date}}" start="1994-07-16" end="2055-07-16" bindchange="changeDate">
     <view class="tui-picker-detail">
-      {{date}}
+      {{aaa}}
     </view>
   </picker>
       <view class='hl-data-center'>

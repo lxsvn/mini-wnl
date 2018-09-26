@@ -35,7 +35,7 @@ Page({
     currentDayList: '',
     currentObj: '',
     currentDay: '',
-    aaa: '2018年9月21 '
+    aaa: ' '
   },
 
   //右上角的按钮 点击字体会在标签的内容中切换 并且会让一个影藏的 div 显现
@@ -47,6 +47,12 @@ Page({
     })
 
   },
+  chatweather:function(){
+    wx.navigateTo({
+      title: "goback",
+      url: '../chatweather/chatweather?city=' + this.data.dacity 
+    })
+  },
   //点击弹出影藏的时间选择器
   changeDate(e) {
 
@@ -54,6 +60,7 @@ Page({
     let aa = e.detail.value.replace(/^(.{4})(.{1})(.*)$/, '$1年$3');
     //应为得到的是 2018-09-30 所有要让两个-换成 年月
     let aaa = aa.replace(/^(.{7})(.{1})(.*)$/, '$1月$3');
+    let aaa1 = aaa + "日";
     console.log(aaa);
     let time = e.detail.value;
     console.log(e.detail.value);
@@ -66,7 +73,7 @@ Page({
         this.setData({
           year: msg.data.result,
           day: day,
-          aaa: aaa,
+          aaa: aaa1,
         })
       }
     })
@@ -91,6 +98,7 @@ Page({
         let low1 = msg.data.data.forecast[1].low.substring(2, 5);
         let high2 = msg.data.data.forecast[2].high.substring(2, 5);
         let low2 = msg.data.data.forecast[2].low.substring(2, 5);
+        console.log(msg);
         //对数据的进行 删减转换 放在html里面
         this.setData({
           weather1: msg.data.data.forecast[0],
@@ -235,25 +243,31 @@ Page({
    */
   onReady: function () {
     var time = dateTimePicker.formatTime(new Date());
-
-    // wx: wx.request({
-    //   url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
-    //   success: (msg) => {
-    //     let day = msg.data.result.yangli.substring(8);
-    //     console.log(msg);
-    //     this.setData({
-    //       year: msg.data.result,
-    //       day: day,
-    //     })
-    //   }
-    // })
+    // 点击时间切换接口 获取当日的万年历数据
+    let aa = time.replace(/^(.{4})(.{1})(.*)$/, '$1年$3');
+    //应为得到的是 2018-09-30 所有要让两个-换成 年月
+    let aaa = aa.replace(/^(.{7})(.{1})(.*)$/, '$1月$3');
+    let aaa1 = aaa+"日";
+    console.log(aaa1)
+    wx: wx.request({
+      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
+      success: (msg) => {
+        let day = msg.data.result.yangli.substring(8);
+        console.log(msg);
+        this.setData({
+          year: msg.data.result,
+          day: day,
+          aaa: aaa1
+        })
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+      
   },
 
   /**
@@ -274,7 +288,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+     
   },
   /**
    * 页面上拉触底事件的处理函数

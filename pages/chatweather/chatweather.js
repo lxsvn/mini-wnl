@@ -1,32 +1,37 @@
-// pages/fand/fand.js
+// pages/chatweather/chatweather.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgArr: [
-      'http://i2.houputech.com/upload/bbd/qr/default.jpg',
+    logsView:"",
+    day:"",
+    today:"",
+    fengli:""
+  },
 
-    ]
-  },
-  previewImg: function (e) {
-    console.log(e.currentTarget.dataset.index);
-    var index = e.currentTarget.dataset.index;
-    var imgArr = this.data.imgArr;
-    wx.previewImage({
-      current: imgArr[index],     //当前图片地址
-      urls: imgArr,               //所有要预览的图片的地址集合 数组形式
-      success: function (res) { },
-      fail: function (res) { },
-      complete: function (res) { },
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    this.setData({
+      logsView: options.city
+    })
+    console.log(options.city)
+    wx: wx.request({
+      //天气接口
+      url: 'http://wthrcdn.etouch.cn/weather_mini?city='+options.city,
+      success: (msg) => {
+        console.log(msg.data);
+        let fengli = msg.data.data.forecast[0].fengli.substring(10, 12);
+        this.setData({
+          day: msg.data.data,
+          today: msg.data.data.forecast[0],
+          fengli: fengli
+        })
+      }
+    })
   },
 
   /**

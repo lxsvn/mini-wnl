@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    aaa: '2018-09-20',
+    aaa: '',
     year:[],
     day:[],
     bigday:"八月初十" ,
@@ -17,9 +17,10 @@ Page({
     console.log(e.detail.value);
     let aa = e.detail.value.replace(/^(.{4})(.{1})(.*)$/, '$1年$3');
     let aaa = aa.replace(/^(.{7})(.{1})(.*)$/, '$1月$3');
+    let aaa1 = aaa + "日";
     console.log(aaa)
     this.setData({
-      date: e.detail.value,
+      aaa: aaa1,
     });
     let date=e.detail.value;
     wx: wx.request({
@@ -72,19 +73,23 @@ Page({
   onLoad: function (options) {
     var time = dateTimePicker.formatTime(new Date());
 
-    // wx: wx.request({
-    //   url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
-    //   success: (msg) => {
-    //     let day = msg.data.result.yangli.substring(8);
-    //     let bigday = msg.data.result.yinli.substring(6)
-    //     this.setData({
-    //       year: msg.data.result,
-    //       day: day,
-    //       bigday: bigday
-    //     })
-    //     console.log(msg)
-    //   }
-    // })
+    wx: wx.request({
+      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
+      success: (msg) => {
+        let day = msg.data.result.yangli.substring(8);
+        let bigday = msg.data.result.yinli.substring(6);
+        let aa = msg.data.result.yangli.replace(/^(.{4})(.{1})(.*)$/, '$1年$3');
+        let aaa = aa.replace(/^(.{7})(.{1})(.*)$/, '$1月$3');
+        let aaa1 = aaa + "日";      
+        this.setData({
+          year: msg.data.result,
+          day: day,
+          bigday: bigday,
+          aaa: aaa1,
+        })
+        console.log(msg)
+      }
+    })
   },
 
   /**
