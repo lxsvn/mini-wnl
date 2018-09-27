@@ -23,7 +23,7 @@ page>view{
   height: 45rpx;
   margin-top: 10rpx;
   margin-left: 8rpx;
-  float: left
+  float: left;
 }
 .weather-wendu{
   width: 95%;

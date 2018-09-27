@@ -53,9 +53,9 @@ days-color="{{dayStyle}}" weeks-type="cn" binddayClick="dayClick" lunar="ture" s
           </view>
       </view>
    </view>
-   <view class='weather' bindtap='chatweather'>
+   <!-- <view class='weather' bindtap='chatweather'>
     <weather bgcolor="#999" color="#ffffff" />
-   </view>
+   </view> -->
 
 
    <view class='index-weather'>

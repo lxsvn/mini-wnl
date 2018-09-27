@@ -1,5 +1,6 @@
 page{
   background: #f2f2f2;
+  color: #666666;
 }
 .index-data-top{
   overflow: hidden;
@@ -51,7 +52,8 @@ page{
   margin: 0.35rem auto;
   font-size:  0.7rem;
   height: 7rem;
-  background: #ffffff
+  background: #ffffff;
+  color: #666666;
 }
 .index-data-yunshi-top-text{
   width: 3rem;
@@ -134,8 +136,7 @@ page{
 .index-weather{
   width: 95%;
   height: 7rem;
-  margin-bottom:0.35rem;
-  margin: 0 auto;
+  margin: 0 auto 50rpx;
   background: #ffffff;
   color: #999999
 }
@@ -432,6 +433,7 @@ display:-webkit-box;
   float: left;
   margin-top: 20rpx;
   margin-left: 20rpx;
+  color: #666666;
 }
 ::-webkit-scrollbar{
 width: 0;
@@ -505,4 +507,10 @@ background:#ffffff;
 .tui-picker-det image{
   width: 30rpx;
   height: 30rpx;
+}
+.weather-index--rgrtop{
+  color: orange ;
+}
+.weather{
+  color: #ffffff;
 }

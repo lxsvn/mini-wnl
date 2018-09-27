@@ -2,7 +2,7 @@
 <view>
     <view class='festival'>
         <view class='festival-data' bindtap="onChangeShowState">
-          <image src='../../assets/imgs/black_name.png'></image>
+          <image src='../../assets/imgs/data.png'></image>
           <text>法定节假日</text>
           
         </view>
@@ -18,7 +18,7 @@
             </view>     
         </view>
         <view class='festival-two'  bindtap="onChangeShowtwo">
-          <image src='../../assets/imgs/black_sj.png'></image>
+          <image src='../../assets/imgs/small.png'></image>
           <text >二十四节气</text>
         </view>
         <view class='festival-data-show' wx:if="{{iftwo}}" wx:for="{{twoer}}" wx:key="{{twoer}}" bindtap='twoacc'>
@@ -28,13 +28,13 @@
                   <text>{{item.day}}</text>
                 </view>
                 <view class='festival-data-show-right'>
-                  <text>{{item.oldday}}天后</text>
+                  <text>太阳黄经{{item.oldday}}°</text>
                 </view>
             </view>
             
         </view>
         <view class='festival-hot' bindtap="onChangeShowhot">
-          <image src='../../assets/imgs/black_yzm.png'></image>
+          <image src='../../assets/imgs/hot.png'></image>
           <text>热门节日</text>
         </view>
         <view class='festival-data-show' wx:if="{{ifhot}}" wx:for="{{hotday}}" wx:key="{{hotday}}">
@@ -49,4 +49,9 @@
             </view>
         </view>
     </view>
+    <!-- <weathjy/>
+    <weath/>
+    <weather/>
+    <weathlist/>
+    <weathrow/> -->
 </view>

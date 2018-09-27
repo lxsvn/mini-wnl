@@ -1,10 +1,13 @@
 <!--pages/fand/fand.wxml-->
 <view class='content'>
+  
   <view class='fand'>
+  <image src='../../assets/imgs/bg.png' class='content-img'></image>
      <view class='fand-top'>
-        <image src='../../assets/imgs/logo.png'></image>
-        <text>51万年历</text>
+        <image src='../../assets/imgs/logo.png' class='fand-topimg1'></image>
+        <text>查万年历</text>
         <text>三亿用户真是选择</text>
+        <image src='../../assets/imgs/bg-text.png' class='fand-topimg12'></image>
      </view>
      <view class='fand-center'>
         <text>三亿用户真是选择</text>
@@ -19,10 +22,10 @@
           <text>微博:</text>
         </view>
         <view class=' fand-bottom-lists'>
-          <text>www.baodu.com</text>
-          <text>youtubi</text>
-          <text>763278661</text>
-          <text>weibo.com/qinghu</text>
+          <text>www.qh-time.com</text>
+          <text>xxxx</text>
+          <text>xxxx</text>
+          <text>xxxx</text>
         </view>
          <view class=' fand-bottom-lists'>
           <view class='imgList'>      
@@ -30,17 +33,15 @@
     <image class='img' src='{{item}}' data-index='{{index}}' bindtap='previewImg'></image>
   </view>
 </view>
-
           <text>关注公众号</text>
         </view>
      </view>
      
 </view>
 <view class='fand-text'>
-        <text>什么什么什么什么公司  版权所有</text>
-        <text>opyRight © 2004-2018 便民查询网 All Rights Reserved</text>
+        <text>青弧网络公司  版权所有</text>
+        <text>opyRight © 2004-2018 便民查询网 </text>
 </view>
-<open-data type="userCity" lang="zh_CN"></open-data>
 </view>
 
 

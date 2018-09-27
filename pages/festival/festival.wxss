@@ -13,6 +13,7 @@ page{
   float: left;
   margin-top: 25rpx;
   margin-right: 30rpx;
+  display: block;
 }
 .festival-data{
   width: 90%;

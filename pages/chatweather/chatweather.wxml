@@ -44,5 +44,5 @@
       <text>友情提示: {{day.ganmao}}</text>
     </view>
  </view>
- 
+ <weathlist/>
 </view>
