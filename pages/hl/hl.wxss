@@ -2,6 +2,7 @@ page{
   background: #f2f2f2;
   font-size: 30rpx;
     color: #666;
+    overflow: hidden
 }
 .hl-data{
   width: 100%;
@@ -9,17 +10,41 @@ page{
   overflow: hidden;
   padding-bottom: 35rpx;
 }
+.hl-data image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 10rpx;
+}
 .hl-data text{
   display: block;
   text-align: center
 }
 .tui-picker-detail{
   font-size: 35rpx;
-   margin-top: 20rpx
+   margin-top: 20rpx;
+   text-align: center;
+  
 }
 .hl-data-center{
   overflow: hidden;
+  width: 70%;
+  margin: 0 auto;
   margin-top: 40rpx;
+  position: relative
+}
+.hl-data-center image{
+  width: 30rpx;
+  height: 106rpx;
+  background: orange;
+  position: absolute;
+}
+.hl-data-center image:nth-child(1){
+  left: 0;
+  top: 0
+}
+.hl-data-center image:nth-child(3){
+   right: 0;
+  top: 0
 }
 .hl-data-text{
     text-align: center;
@@ -30,8 +55,9 @@ page{
 .hl-data-center-text{
   text-align: center;
   display: block;
-  font-size: 60rpx;
+  font-size: 80rpx;
   color: #c94335;
+  
 }
 .hl-good{
   width: 100%;
@@ -100,7 +126,12 @@ page{
 .hl-top view:nth-child(3){
   border: none
 }
-.hl-top2{
+
+
+/* 全面的版本 但是没接口 暂留 */
+
+
+/* .hl-top2{
   width: 100%;
   height: 200rpx;
   background: #ffffff;
@@ -272,4 +303,99 @@ width: 49.5%;
   color: #e7c658;
   font-size: 32rpx;
    
+} */
+
+
+.hl-all{
+  width: 100%;
+  height: 400rpx;
+  background: #ffffff;
+  margin-top: 4rpx;
+  margin-bottom: 50rpx;
+}
+.hl-all text{
+  display: block;
+}
+.hl-all-left{
+  width: 14%;
+  height: 100%;
+  border-right: 4rpx solid #f2f2f2;
+  float: left
+}
+.hl-all-left text{
+  width: 40rpx;
+  float: left;
+  margin-left: 10rpx;
+  margin-top: 158rpx;
+}
+.hl-all-left text:nth-child(1){
+  float: left;
+   font-size: 32rpx;
+  color: #f7b636;
+  margin-top: 74rpx;
+}
+.hl-all-right{
+  width: 14%;
+  height: 100%;
+  border-left: 4rpx solid #f2f2f2;
+  float: right
+}
+.hl-all-center{
+  width:69%;
+  height: 100% ;
+  float: left
+}
+.hl-all-center-top{
+  width: 100%;
+  height: 66%;
+  border-bottom: 4rpx solid #f2f2f2;
+}
+.hl-all-center-top view{
+  width: 33%;
+  height: 100%;
+  float: left;
+  border-right: 1px solid #f2f2f2
+}
+.hl-all-center-top view text{
+  text-align: center;
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 15rpx;
+}
+.hl-all-center-top view text:nth-child(1){ 
+  color: #f7b636;
+  margin-top: 25rpx;
+  font-size: 32rpx;
+}
+.hl-all-center-top view:last-child{
+  border: none
+}
+.hl-all-center-bottom{
+  width: 100%;
+  height: 30%;
+  border-bottom: 4rpx solid #f2f2f2;
+}
+.hl-all-center-bottom text{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 10rpx
+}
+.hl-all-center-bottom  text:nth-child(1){ 
+  color: #f7b636;
+  margin-top: 15rpx;
+  font-size: 32rpx;
+}
+.hl-all-right text{
+  width: 40rpx;
+  float: left;
+  margin-left: 10rpx;
+  margin-top: 100rpx;
+}
+.hl-all-right text:nth-child(1){
+  float: left;
+   font-size: 32rpx;
+  color: #f7b636;
+  margin-top: 74rpx;
 }

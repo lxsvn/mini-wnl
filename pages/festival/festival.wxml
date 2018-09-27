@@ -21,7 +21,7 @@
           <image src='../../assets/imgs/small.png'></image>
           <text >二十四节气</text>
         </view>
-        <view class='festival-data-show' wx:if="{{iftwo}}" wx:for="{{twoer}}" wx:key="{{twoer}}" bindtap='twoacc'>
+        <view class='festival-data-show' wx:if="{{iftwo}}" wx:for="{{twoer}}" wx:key="{{twoer}}" >
             <view>
                 <view class='festival-data-show-left'>
                   <text>{{item.name}}</text>

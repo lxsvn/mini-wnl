@@ -1,6 +1,9 @@
 var dateTimePicker = require('./dateTimePicker.js');
 const util = require('../../utils/util.js');
-const app = getApp()
+const app = getApp();
+var Y = new Date().getFullYear();
+var m = new Date().getMonth() + 1;
+var d = new Date().getDate(); 
 Page({
 
   /**
@@ -12,6 +15,8 @@ Page({
     day:[],
     bigday:"八月初十" ,
     date: '2018-09-20',
+    data:"",
+    aac:""
   },
   changeDate(e) {
     console.log(e.detail.value);
@@ -21,32 +26,31 @@ Page({
     console.log(aaa)
     this.setData({
       aaa: aaa1,
+      data: e.detail.value
     });
     let date=e.detail.value;
-    wx: wx.request({
-      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + date,
-      success: (msg) => {
-        let day = msg.data.result.yangli.substring(8);
-        let bigday = msg.data.result.yinli.substring(6)
-        this.setData({
-          year: msg.data.result,
-          day: day,
-          bigday: bigday,
-          date: date
-        })
-      }
-    })
+    // wx: wx.request({
+    //   url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + date,
+    //   success: (msg) => {
+    //     let day = msg.data.result.yangli.substring(8);
+    //     let bigday = msg.data.result.yinli.substring(6)
+    //     this.setData({
+    //       year: msg.data.result,
+    //       day: day,
+    //       bigday: bigday,
+    //       date: date
+    //     })
+    //   }
+    // })
   },
   left: function () {
   var that = this    
-  var Y = new Date().getFullYear(); 
-  var m = new Date().getMonth()+1;
-  var d = new Date().getDate(); 
+  
     var str = '';
-    d -= 1;
-    if (m <= 0) {
-      
-      str = Y + '/' + (m - 1) + '/' + 30;
+    d--;
+    if (d <1) {
+      m = m - 1
+      str = Y + '/' + m + '/' + (d = 30);
       if (m <= 0) {
         str = (Y - 1) + '/' + 12 + '/' + d;
       } else {
@@ -56,40 +60,112 @@ Page({
       str = Y + '/' + m + '/' + d
     }
     let aaa = new Date(str);
-    // this.setData({
-    //   currentDate: aaa.getFullYear() + '年' + (aaa.getMonth() + 1) + '月' + aaa.getDate() + '日',
-    //   aaa: aaa
+   
+    let aac= aaa.getFullYear() + '-' + (aaa.getMonth() + 1) + '-' + aaa.getDate() ;
+    let aab = aaa.getFullYear() + '年' + (aaa.getMonth() + 1) + '月' + aaa.getDate() + "日";
+    this.setData({
+      aaa: aab,
+      aac: aac
+    })
+    this.setData({
+     
+      aac: aac
+    })
+    console.log(aac);
+    // wx: wx.request({
+    //   url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + aac,
+    //   success: (msg) => {
+    //     let day = msg.data.result.yangli.substring(8);
+    //     let bigday = msg.data.result.yinli.substring(6);
+    //     let aa = msg.data.result.yangli.replace(/^(.{4})(.{1})(.*)$/, '$1年$3');
+    //     let aaa = aa.replace(/^(.{7})(.{1})(.*)$/, '$1月$3');
+    //     let aaa1 = aaa + "日";      
+    //     this.setData({
+    //       year: msg.data.result,
+    //       day: day,
+    //       bigday: bigday,
+    //       aaa: aaa1,
+    //     })
+    //     console.log(msg)
+    //   }
     // })
-    let aac= aaa.getFullYear() + '年' + (aaa.getMonth() + 1) + '月' + aaa.getDate() + '日';
-    console.log(aac)
   },
   right() {
-      
-   
+    var that = this
+
+    var str = '';
+    d+=1;
+    if (d >30) {
+      m=m+1
+      str = Y + '/' + m + '/' + (d=1);
+      if (m <= 0) {
+        str = (Y - 1) + '/' + 12 + '/' + d;
+      } else {
+        str = Y + '/' + m + '/' + d
+      }
+    } else {
+      str = Y + '/' + m + '/' + d
+    }
+    let aaa = new Date(str);
+    
+
+    let aac = aaa.getFullYear() + '-' + (aaa.getMonth() + 1) + '-' + aaa.getDate();
+    let aab = aaa.getFullYear() + '年' + (aaa.getMonth() + 1) + '月' + aaa.getDate()+"日";
+    this.setData({
+      aaa: aab,   
+      aac: aac
+        })
+    console.log(aac)
+    // wx: wx.request({
+    //   url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + aac,
+    //   success: (msg) => {
+    //     let day = msg.data.result.yangli.substring(8);
+    //     let bigday = msg.data.result.yinli.substring(6);
+    //     let aa = msg.data.result.yangli.replace(/^(.{4})(.{1})(.*)$/, '$1年$3');
+    //     let aaa = aa.replace(/^(.{7})(.{1})(.*)$/, '$1月$3');
+    //     let aaa1 = aaa + "日";
+    //     this.setData({
+    //       year: msg.data.result,
+    //       day: day,
+    //       bigday: bigday,
+    //       aaa: aaa1,
+    //     })
+    //     console.log(msg)
+    //   }
+    // })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     var time = dateTimePicker.formatTime(new Date());
+    // 点击时间切换接口 获取当日的万年历数据
+    let aa = time.replace(/^(.{4})(.{1})(.*)$/, '$1年$3');
+    //应为得到的是 2018-09-30 所有要让两个-换成 年月
+    let aaa = aa.replace(/^(.{7})(.{1})(.*)$/, '$1月$3');
+    let aaa1 = aaa + "日";
+    this.setData({
 
-    wx: wx.request({
-      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
-      success: (msg) => {
-        let day = msg.data.result.yangli.substring(8);
-        let bigday = msg.data.result.yinli.substring(6);
-        let aa = msg.data.result.yangli.replace(/^(.{4})(.{1})(.*)$/, '$1年$3');
-        let aaa = aa.replace(/^(.{7})(.{1})(.*)$/, '$1月$3');
-        let aaa1 = aaa + "日";      
-        this.setData({
-          year: msg.data.result,
-          day: day,
-          bigday: bigday,
-          aaa: aaa1,
-        })
-        console.log(msg)
-      }
+      aaa: aaa1
     })
+    console.log(aaa1)
+    // wx: wx.request({
+    //   url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
+    //   success: (msg) => {
+    //     let day = msg.data.result.yangli.substring(8);
+    //     let bigday = msg.data.result.yinli.substring(6);
+    //     let aa = msg.data.result.yangli.replace(/^(.{4})(.{1})(.*)$/, '$1年$3');
+    //     let aaa = aa.replace(/^(.{7})(.{1})(.*)$/, '$1月$3');
+    //     let aaa1 = aaa + "日";      
+    //     this.setData({
+    //       year: msg.data.result,
+    //       day: day,
+    //       bigday: bigday,
+    //       aaa: aaa1,
+    //     })
+    //     console.log(msg)
+    //   }
+    // })
   },
 
   /**

@@ -1,4 +1,5 @@
 // pages/fand/fand.js
+var QQMapWX = require('./qqmap-wx-jssdk.js');
 Page({
 
   /**
@@ -25,8 +26,32 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // var that = this
+    // 实例化腾讯地图API核心类
+    let  qqmapsdk = new QQMapWX({
+      key: 'e36adb28eb69f91f07bafa6ede6cea54'
+    });
+    //1、获取当前位置坐标
+    wx.getLocation({
+      type: 'wgs84',
+      success: function (res) {
+        //2、根据坐标获取当前位置名称，显示在顶部:腾讯地图逆地址解析
+        qqmapsdk.reverseGeocoder({
+          location: {
+            latitude: res.latitude,
+            longitude: res.longitude
+          },
+          success: function (addressRes) {
+            var address = addressRes.result.formatted_addresses.recommend;
+            
+              console.log(address)
+            
+          }
+        })
+      }
+    })
     
-      },
+  },
 
   
 

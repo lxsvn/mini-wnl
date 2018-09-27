@@ -208,8 +208,8 @@ page{
 .index-weather-bottom-lef text{
   display: block
 }
-.index-weather-bottom-left text:nth-child(1){
-  color: #000000;
+.index-weather-bottom-left>text:nth-child(1){
+  color: #333;
   margin-bottom: 0.5rem
 }
 .index-weather-bottom-left text:nth-child(1) text{
@@ -225,8 +225,11 @@ page{
 float: right;
 }
 .index-weather-bottom-left-2 text{
-  
   display: block;
+}
+.index-weather-bottom-left-2 text:nth-child(2){
+  margin-top: 10rpx;
+  float: right;
 }
 .index-weather-bottom-center{
   width: 1px;
@@ -240,19 +243,9 @@ float: right;
   overflow: hidden;
   margin-top: 0.4rem
 }
-.index-weather-bottom-left-1-down view{
-  width: 0.2rem;
-  height: 0.8rem;
-  background: #3fa2ca;
-  display: block;
-  float: left;
-  border-radius: 50px;
-  margin-top: 0.1rem
-  
-}
 .index-weather-bottom-left-1-down text{
     float: left;
-    margin-left: 0.25rem
+    color: #999999
 }
 .index-tool{
  width: 95%;
@@ -434,6 +427,11 @@ display:-webkit-box;
   margin-top: 20rpx;
   margin-left: 20rpx;
   color: #666666;
+}
+.tui-picker-detail image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 10rpx;
 }
 ::-webkit-scrollbar{
 width: 0;

@@ -79,6 +79,7 @@ Page({
       title: "goback",
       url: '../chatweather/chatweather?city=' + this.data.dacity 
     })
+    
   },
   //点击弹出影藏的时间选择器
   changeDate(e) {
@@ -89,6 +90,10 @@ Page({
     let aaa = aa.replace(/^(.{7})(.{1})(.*)$/, '$1月$3');
     let aaa1 = aaa + "日";
     let time = e.detail.value;
+    this.setData({
+      
+      aaa: aaa1,
+    })
         //获取当日的万年历数据
     wx: wx.request({
       url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
@@ -97,7 +102,7 @@ Page({
         this.setData({
           year: msg.data.result,
           day: day,
-          aaa: aaa1,
+         
         })
       }
     })
@@ -240,19 +245,23 @@ Page({
     //应为得到的是 2018-09-30 所有要让两个-换成 年月
     let aaa = aa.replace(/^(.{7})(.{1})(.*)$/, '$1月$3');
     let aaa1 = aaa+"日";
-    console.log(aaa1)
-    wx: wx.request({
-      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
-      success: (msg) => {
-        let day = msg.data.result.yangli.substring(8);
-        console.log(msg);
-        this.setData({
-          year: msg.data.result,
-          day: day,
+    this.setData({
+          
           aaa: aaa1
         })
-      }
-    })
+    console.log(aaa1)
+    // wx: wx.request({
+    //   url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
+    //   success: (msg) => {
+    //     let day = msg.data.result.yangli.substring(8);
+    //     console.log(msg);
+    //     this.setData({
+    //       year: msg.data.result,
+    //       day: day,
+    //      
+    //     })
+    //   }
+    // })
   },
 
   /**

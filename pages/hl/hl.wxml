@@ -2,13 +2,15 @@
     <view class='hl-data'>
       <picker mode="date" value="{{date}}" start="1994-07-16" end="2055-07-16" bindchange="changeDate">
     <view class="tui-picker-detail">
-      {{aaa}}
+      {{aaa}}<image src='../../assets/imgs/down.png'></image>
     </view>
+    {{aac}}
   </picker>
       <view class='hl-data-center'>
-        <!-- <image bindtap='left'></image> -->
+        <image bindtap='left'></image>
         <text class='hl-data-center-text'>{{bigday}}</text>
-        <!-- <image bindtap='right'></image> -->
+        <image bindtap='right'></image>
+       
       </view>
       <text class='hl-data-text'>{{year.yinli}}</text>
     </view>
@@ -22,7 +24,11 @@
           <text>{{year.ji}}</text>
       </view>
     </view>
-    <view class='hl-top2'>
+
+    <!-- 全面的版本 但是没接口 暂留 -->
+
+
+    <!-- <view class='hl-top2'>
       <view>
           <text>生肖</text>
           <text>{{year.wuxing}}</text>
@@ -66,7 +72,38 @@
           <text>{{year.chongsha}}</text>
       </view>
     </view>
-    
+    <view class='hl-all'>
+      <view class='hl-all-left'>
+      <text>建除十二神</text>
+      <text>执日</text>
+      </view>
+      <view class='hl-all-center'>
+          <view class='hl-all-center-top'>
+              <view>
+                <text>冲煞</text>
+                <text>{{year.jishen}}</text>
+              </view>
+              <view>
+                <text>今日胎神</text>
+                <text>一二三四一二</text>
+              </view>
+              <view>
+                <text>六耀</text>
+                <text>{{year.xiongshen}}</text>
+              </view>
+          </view>
+          <view class='hl-all-center-bottom'>
+                <text>彭祖百忌</text>
+                <text>{{year.baiji}}</text>
+          </view>
+      </view>
+      <view class='hl-all-right'>
+      <text>二十八星宿</text>
+      <text>二十八星宿</text>
+      </view>
+    </view> -->
+
+
     <view class='hl-all'>
       <view class='hl-all-left'>
       <text>建除十二神</text>

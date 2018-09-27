@@ -4,7 +4,7 @@
       <view class='index-data-top'>
           <picker mode="date" value="{{date}}" start="1994-07-16" end="2055-07-16" bindchange="changeDate">
             <view class="tui-picker-detail">
-             {{aaa}}
+             {{aaa}}<image src='../../assets/imgs/down.png'></image>
             </view>
           </picker>
           <!-- <button bindtap="onChangeShowState">{{showView?'收起':'择吉日'}}</button> -->
@@ -84,7 +84,7 @@ days-color="{{dayStyle}}" weeks-type="cn" binddayClick="dayClick" lunar="ture" s
               <view class='index-weather-bottom-left-1'>
                   <text>明天 <text>{{low1}}/{{high1}}°</text></text>
                   <view class='index-weather-bottom-left-1-down'>
-                    <view></view><text>轻度</text>
+                    <text>{{weather2.date}}</text>
                   </view>
               </view>
               <view class='index-weather-bottom-left-2'>
@@ -97,7 +97,7 @@ days-color="{{dayStyle}}" weeks-type="cn" binddayClick="dayClick" lunar="ture" s
               <view class='index-weather-bottom-left-1'>
                   <text>后天 <text>{{low2}}/{{high2}}°</text></text>
                   <view class='index-weather-bottom-left-1-down'>
-                    <view></view><text>轻度</text>
+                    <text>{{weather3.date}}</text>
                   </view>
               </view>
               <view class='index-weather-bottom-left-2'>

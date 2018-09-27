@@ -96,8 +96,9 @@ Page({
     console.log(aaa)
     wx: wx.request({
       //天气接口
-      url: 'http://wthrcdn.etouch.cn/weather_mini?city=北京',// + options.city,
+      url: 'http://wthrcdn.etouch.cn/weather_mini?city='+ options.city,
       success: (msg) => {
+        console.log(msg)
         let aa = msg.data.data.forecast[0].fengli;
         let aaa = aa.replace(/[\<![CDATA[|\]]|\>|"]/g, '');
 
