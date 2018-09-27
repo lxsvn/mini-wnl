@@ -38,7 +38,8 @@ page{
 }
 .festival-data-show{
   width: 80%;
-  margin-left: 15%
+  margin-left: 15%;
+  position: relative
 }
 .festival-data-show>view{
   width: 100%;
@@ -59,10 +60,10 @@ page{
   margin-top: 10rpx;
 }
 .festival-data-show-right text{
-  float: right;
-  line-height: 120rpx;
   color: #666;
   font-size: 30rpx;
-  height: 100%;
-  text-align: right;
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+ 
 }

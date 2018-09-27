@@ -44,7 +44,7 @@
                   <text>{{item.day}}</text>
                 </view>
                 <view class='festival-data-show-right'>
-                  <text>{{item.oldday}}天后</text>
+                  <text>{{item.oldday}}</text>
                 </view>
             </view>
         </view>
@@ -54,4 +54,5 @@
     <weather/>
     <weathlist/>
     <weathrow/> -->
+    
 </view>

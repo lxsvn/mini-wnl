@@ -6,7 +6,7 @@ page{
   overflow: hidden;
 }
 .fand{
-  width: 95%;
+  width: 100%;
   margin: 40rpx auto 0;
   position: relative;
   overflow: hidden;
@@ -63,7 +63,7 @@ page{
   margin: 5rpx 0
 }
 .fand-bottom{
-  width: 85%;
+  width: 80%;
   border-top: 1px solid #eccc76;
   margin: 80rpx auto 100rpx;
   overflow: hidden;
