@@ -8,40 +8,40 @@ Page({
   data: {
     items: [
       {
-        "name": "国庆节",
-        "day": "10月01日",
-        "oldday": '5'
-      },
-      {
         "name": "元旦节",
-        "day": "2019年01月01日",
-        "oldday": '97'
+        "day": "01月01日",
+        "oldday": '公历1月1日'
       },
       {
         "name": "春节",
-        "day": "2019年02月05日",
-        "oldday": '132'
+        "day": "02月05日",
+        "oldday": '农历 大年三十'
       },
       {
         "name": "清明",
-        "day": "2019年04月05日",
-        "oldday": '191'
+        "day": "04月05日",
+        "oldday": "冬至过了106天"
       },
       {
         "name": "劳动节",
-        "day": "2019年05月01日",
-        "oldday": '217'
+        "day": "05月01日",
+        "oldday": '公历5月1日'
       },
       {
         "name": "端午节",
-        "day": "2019年06月07日",
-        "oldday": '254'
+        "day": "06月07日",
+        "oldday": '农历 五月初五'
       },
       {
         "name": "中秋节",
-        "day": "2019年09月13日",
-        "oldday": '352'
+        "day": "09月13日",
+        "oldday": '农历 八月十五'
       },
+      {
+        "name": "国庆节",
+        "day": "10月01日",
+        "oldday": '公历10月1日'
+      }
     ],
     index:'',
     twoer: [
@@ -189,7 +189,7 @@ Page({
       }
     ],
   },
-  addcenter:function(){
+  twoacc:function(){
     wx.navigateTo({
       title: "goback",
       url: '../festivalcenter/festivalcenter'
@@ -217,6 +217,29 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // wx: wx.request({
+    //   url: "http://www.sojson.com/tianqi/api/"+"1011-58414"+".shtml" ,
+    //   success: (msg) => {
+    //     console.log(msg)
+    //   }
+    // })
+    wx: wx.request({
+      url: "http://wthrcdn.etouch.cn/weather_mini?city=北京",
+      success: (msg) => {
+        console.log(msg)
+      }
+    })
+    // wx: wx.request({
+    //   url: 'http://route.showapi.com/9-5',
+    //   data: {
+    //     showapi_appid: '11697',
+    //     showapi_sign: '6c0c15c5ec61454dac5288cea2d32881',
+    //   },
+    //   success: (msg) => {
+    //     console.log(msg)
+    //   }
+    // })
+
     
   },
 

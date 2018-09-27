@@ -136,7 +136,8 @@ page{
   height: 7rem;
   margin-bottom:0.35rem;
   margin: 0 auto;
-  background: #ffffff
+  background: #ffffff;
+  color: #999999
 }
 .index-weather-top{
   width: 95%;
@@ -216,17 +217,15 @@ page{
 .index-weather-bottom-left:nth-child(3){
   float: right
 }
-.index-weather-bottom-left image{
-  width: 1.5rem;
-  height: 1.5rem;
-  background: orange;
-  display: block
-}
 .index-weather-bottom-left-1{
   float: left
 }
 .index-weather-bottom-left-2{
-  float: right
+float: right;
+}
+.index-weather-bottom-left-2 text{
+  
+  display: block;
 }
 .index-weather-bottom-center{
   width: 1px;
@@ -495,4 +494,15 @@ color: #59518d;
 .calendar-board{
 color: #c7cbe2;
 font-weight: bold;
+}
+.weather{
+  width:95%;
+margin:0.35rem auto;
+font-size:0.7rem;
+background:#ffffff;
+
+}
+.tui-picker-det image{
+  width: 30rpx;
+  height: 30rpx;
 }

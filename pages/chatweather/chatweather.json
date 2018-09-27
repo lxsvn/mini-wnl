@@ -1,3 +1,10 @@
 {
-  "navigationBarTitleText": "天气详情"
+  "navigationBarTitleText": "天气详情",
+  "usingComponents": {
+    "weathjy": "plugin://myPlugin/weathjy",
+    "weath": "plugin://myPlugin/weath",
+    "weather": "plugin://myPlugin/weather",
+    "weathlist": "plugin://myPlugin/weathlist",
+    "weathrow": "plugin://myPlugin/weathrow"
+  }
 }

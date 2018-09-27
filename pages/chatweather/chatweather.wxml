@@ -1,18 +1,48 @@
 <!--pages/chatweather/chatweather.wxml-->
+<!-- <weathlist bgcolor="#2c9bce" color="#ffffff" /> -->
 <view>
-    <view class='weather-wendu'>
-      <view class='weather-wendu-top'>
-        <text>{{logsView}}</text>
-        <text>{{day.wendu}}°</text>
-        <text>{{today.type}}</text>
+  <view class='weather-city'>
+    <picker mode="region" value="{{date}}"  bindchange="changecity">
+      <view class="tui-picker-det">
+        <text>{{logsView}}</text><image src='../../assets/imgs/change.png'></image>
       </view>
-       <view class='weather-wendu-bottom'>
-          <text>{{today.low}}</text>
-          <text>{{today.fengxiang}}{{fengli}}</text>
-          <text>{{today.high}}</text>
-      </view>
+    </picker>
+ </view>
+ <view class='weather-wendu'>
+    <text>{{day.wendu}}°C</text>
+    <text>{{today.type}}</text>
+    <text>{{today.low}}~{{today.high}}</text>
+    <text>{{today.date}}     |     {{today.fengxiang}}{{aaa}}</text>
+ </view>
+ <view class='weather-oldday'>
+    <view class='weather-oldday-lists'>
+      <text>{{day1.date}}</text>
+      <text>{{day1.type}}</text>
+      <text>{{day1low}}~{{day1high}}</text>
+      <text>{{day1.fengxiang}}{{aaa1}}</text>
+    </view>
+    <view class='weather-oldday-lists'>
+      <text>{{day2.date}}</text>
+      <text>{{day2.type}}</text>
+      <text>{{day2low}}~{{day2high}}</text>
+      <text>{{day2.fengxiang}}{{aaa2}}</text>
+    </view>
+
+    <view class='weather-oldday-lists'>
+      <text>{{day3.date}}</text>
+      <text>{{day3.type}}</text>
+      <text>{{day3low}}~{{day3high}}</text>
+      <text>{{day3.fengxiang}}{{aaa3}}</text>
+    </view>
+    <view class='weather-oldday-lists'>
+      <text>{{day4.date}}</text>
+      <text>{{day4.type}}</text>
+      <text>{{day4low}}~{{day4high}}</text>
+      <text>{{day4.fengxiang}}{{aaa4}}</text>
     </view>
     <view class='weather-ganmao'>
-      <text>提示：{{day.ganmao}}</text>
+      <text>友情提示: {{day.ganmao}}</text>
     </view>
-</view> 
+ </view>
+ 
+</view>

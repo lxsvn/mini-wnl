@@ -5,43 +5,67 @@ page{
   color: #ffffff;
    font-size: 32rpx;
 }
+page>view{
+  overflow: hidden
+}
+.weather-city{
+  width: 95%;
+  margin: 25rpx auto;
+  font-size: 35rpx;
+  height: 60rpx;
+}
+.weather-city text{
+  float: left;
+  line-height: 60rpx;
+}
+.weather-city image{
+  width: 45rpx;
+  height: 45rpx;
+  margin-top: 10rpx;
+  margin-left: 8rpx;
+  float: left
+}
 .weather-wendu{
   width: 95%;
-  height: 480rpx;
-  border-bottom: 4rpx solid #42a8d3;
+  margin: 130rpx auto 80rpx;
+  text-align: center
+}
+.weather-wendu text{
+  display: block
+}
+.weather-wendu text:nth-child(1){
+  font-size: 100rpx;
+}
+.weather-wendu text:nth-child(2){
+  font-size: 38rpx;
+}
+.weather-wendu text:nth-child(4){
+  margin-top: 30rpx;
+}
+.weather-oldday{
+  width: 95%;
+  background: #80c3e2;
   margin: 0 auto;
-  overflow: hidden;
+  font-size: 28rpx;
+  border-radius: 15rpx;
 }
-.weather-wendu-top{
-  margin-top: 80rpx;
-}
-.weather-wendu-top text{
-  text-align: center;
-  display: block;
-  color: #e3fbfc;
-}
-.weather-wendu-top text:nth-child(2){
-  font-size: 120rpx;
-  font-weight: normal;
-  margin:10rpx 0;
-}
-.weather-wendu-bottom{
+.weather-oldday-lists{
   width: 100%;
-  height: 70rpx;
-  margin-top: 25rpx;
+  height: 80rpx;
+  border-bottom: 4rpx solid #64c1e4;
 }
-.weather-wendu-bottom text{
-  width: 33.3%;
-  height: 100%;
-  line-height: 70rpx;
+.weather-oldday-lists:last-child{
+  border: none;
+}
+.weather-oldday-lists text{
+  width: 25%;
+  float: left;
   text-align: center;
-  display: block;
-  float: left
+  line-height: 80rpx;
 }
 .weather-ganmao{
   width: 95%;
-  height: 430rpx;
-  border-bottom: 4rpx solid #42a8d3;
-  margin: 0 auto;
-  overflow: hidden;
+  margin: 25rpx auto;
+  padding: 25rpx 0;
+  color: palegoldenrod
 }

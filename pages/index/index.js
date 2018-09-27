@@ -112,7 +112,8 @@ Page({
     let dacity = e.detail.value[2];
     wx: wx.request({
       //天气接口
-      url: 'https://www.sojson.com/open/api/weather/json.shtml?city=' + dacity,
+      
+      url: 'http://wthrcdn.etouch.cn/weather_mini?city=' + dacity,
       success: (msg) => {
         let high0 = msg.data.data.forecast[0].high.substring(2, 5);
         let low0 = msg.data.data.forecast[0].low.substring(2, 5);
@@ -120,7 +121,7 @@ Page({
         let low1 = msg.data.data.forecast[1].low.substring(2, 5);
         let high2 = msg.data.data.forecast[2].high.substring(2, 5);
         let low2 = msg.data.data.forecast[2].low.substring(2, 5);
-        //对数据的进行 删减转换 放在html里面
+
         this.setData({
           weather1: msg.data.data.forecast[0],
           weather2: msg.data.data.forecast[1],
@@ -193,32 +194,32 @@ Page({
     this.setData({
       day: day
     })
-    // wx: wx.request({
+    wx: wx.request({
 
-    //   url: 'https://www.sojson.com/open/api/weather/json.shtml?city=东城区',
-    //   success: (msg) => {
-    //     console.log(msg)
-    //     let high0 = msg.data.data.forecast[0].high.substring(2, 5);
-    //     let low0 = msg.data.data.forecast[0].low.substring(2, 5);
-    //     let high1 = msg.data.data.forecast[1].high.substring(2, 5);
-    //     let low1 = msg.data.data.forecast[1].low.substring(2, 5);
-    //     let high2 = msg.data.data.forecast[2].high.substring(2, 5);
-    //     let low2 = msg.data.data.forecast[2].low.substring(2, 5);
+      url: 'http://wthrcdn.etouch.cn/weather_mini?city=东城区',
+      success: (msg) => {
+        console.log(msg)
+        let high0 = msg.data.data.forecast[0].high.substring(2, 5);
+        let low0 = msg.data.data.forecast[0].low.substring(2, 5);
+        let high1 = msg.data.data.forecast[1].high.substring(2, 5);
+        let low1 = msg.data.data.forecast[1].low.substring(2, 5);
+        let high2 = msg.data.data.forecast[2].high.substring(2, 5);
+        let low2 = msg.data.data.forecast[2].low.substring(2, 5);
 
-    //     this.setData({
-    //       weather1: msg.data.data.forecast[0],
-    //       weather2: msg.data.data.forecast[1],
-    //       weather3: msg.data.data.forecast[2],
-    //       weather: msg.data,
-    //       high0: high0,
-    //       low0: low0,
-    //       high1: high1,
-    //       low1: low1,
-    //       high2: high2,
-    //       low2: low2,
-    //     })
-    //   }
-    // })
+        this.setData({
+          weather1: msg.data.data.forecast[0],
+          weather2: msg.data.data.forecast[1],
+          weather3: msg.data.data.forecast[2],
+          weather: msg.data,
+          high0: high0,
+          low0: low0,
+          high1: high1,
+          low1: low1,
+          high2: high2,
+          low2: low2,
+        })
+      }
+    })
     var currentObj = this.getCurrentDayString()
     this.setData({
       currentDate: currentObj.getFullYear() + '年' + (currentObj.getMonth() + 1) + '月' + currentObj.getDate() + '日',
@@ -239,18 +240,18 @@ Page({
     let aaa = aa.replace(/^(.{7})(.{1})(.*)$/, '$1月$3');
     let aaa1 = aaa+"日";
     console.log(aaa1)
-    wx: wx.request({
-      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
-      success: (msg) => {
-        let day = msg.data.result.yangli.substring(8);
-        console.log(msg);
-        this.setData({
-          year: msg.data.result,
-          day: day,
-          aaa: aaa1
-        })
-      }
-    })
+    // wx: wx.request({
+    //   url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
+    //   success: (msg) => {
+    //     let day = msg.data.result.yangli.substring(8);
+    //     console.log(msg);
+    //     this.setData({
+    //       year: msg.data.result,
+    //       day: day,
+    //       aaa: aaa1
+    //     })
+    //   }
+    // })
   },
 
   /**

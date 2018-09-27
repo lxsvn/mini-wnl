@@ -7,7 +7,8 @@ Page({
   data: {
     imgArr: [
       'http://i2.houputech.com/upload/bbd/qr/default.jpg',
-    ]
+    ],
+    currentCity: ''
   },
   previewImg: function (e) {
     var index = e.currentTarget.dataset.index;
@@ -25,7 +26,15 @@ Page({
    */
   onLoad: function (options) {
     
-  },
+      },
+
+  
+
+
+
+    
+
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

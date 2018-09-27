@@ -53,6 +53,11 @@ days-color="{{dayStyle}}" weeks-type="cn" binddayClick="dayClick" lunar="ture" s
           </view>
       </view>
    </view>
+   <view class='weather' bindtap='chatweather'>
+    <weather bgcolor="#999" color="#ffffff" />
+   </view>
+
+
    <view class='index-weather'>
       <view class='index-weather-top'>
         <view class='index-weather-top-1'>
@@ -63,16 +68,15 @@ days-color="{{dayStyle}}" weeks-type="cn" binddayClick="dayClick" lunar="ture" s
             <text>{{weather1.type}}</text>
             <text>{{low0}}/{{high0}}°</text>
             </view>
-            <button>{{weather.data.quality}} {{weather.data.pm10}}</button>
         </view>
         <view class='index-weather-top-3'>
         <picker mode="region" value="{{date}}"  bindchange="changecity">
             <view class="tui-picker-det">
-              {{dacity}}
+              {{dacity}}<image src='../../assets/imgs/change.png'></image>
             </view>
           </picker>
            
-            <text>{{weather1.fx}} | 湿度{{weather.data.shidu}}</text>
+            <text>{{weather1.fengxiang}}</text>
         </view>
       </view>
       <view class='index-weather-bottom' bindtap='chatweather'>
@@ -84,7 +88,7 @@ days-color="{{dayStyle}}" weeks-type="cn" binddayClick="dayClick" lunar="ture" s
                   </view>
               </view>
               <view class='index-weather-bottom-left-2'>
-                  <image></image>
+                  <text>{{weather2.fengxiang}}</text>
                   <text>{{weather2.type}}</text>
               </view>
           </view>
@@ -97,7 +101,7 @@ days-color="{{dayStyle}}" weeks-type="cn" binddayClick="dayClick" lunar="ture" s
                   </view>
               </view>
               <view class='index-weather-bottom-left-2'>
-                  <image></image>
+                  <text>{{weather3.fengxiang}}</text>
                   <text>{{weather3.type}}</text>
               </view>
           </view>

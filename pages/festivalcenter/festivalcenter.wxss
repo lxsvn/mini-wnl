@@ -3,7 +3,27 @@ page{
   height: 100%;
   background: #f2f2f2;
 }
-.wy{
+.title{
   width: 95%;
-  height: 500rpx;
+  height: 80rpx;
+  margin: 25rpx auto;
+  text-align: center;
+  line-height: 80rpx;
+  color: #666;
+  border-radius: 15rpx;
+  display: block;
+}
+.title-txte{
+  width: 95%;
+  background: #ffffff;
+  color: #999999;
+  margin: 25rpx auto;
+  font-size: 30rpx;
+  padding: 20rpx 0;
+  border-radius: 15rpx;
+   text-indent: 40rpx;
+}
+.title-txte text{
+  display: block;
+  margin: 25rpx 0
 }
