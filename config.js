@@ -5,7 +5,7 @@
 
 var baseUrl ='https://mbbd-api.houputech.com'
 
-var appId = 'wx66978746c3343110'
+var appId = 'wx652c6de53558295a'
 
 var service = {
   appId,

@@ -1,5 +1,4 @@
 var dateTimePicker = require('./dateTimePicker.js');
-const util = require('../../utils/util.js');
 const app = getApp();
 var Y = new Date().getFullYear();
 var m = new Date().getMonth() + 1;
@@ -19,11 +18,9 @@ Page({
     aac:""
   },
   changeDate(e) {
-    console.log(e.detail.value);
     let aa = e.detail.value.replace(/^(.{4})(.{1})(.*)$/, '$1年$3');
     let aaa = aa.replace(/^(.{7})(.{1})(.*)$/, '$1月$3');
     let aaa1 = aaa + "日";
-    console.log(aaa)
     this.setData({
       aaa: aaa1,
       data: e.detail.value
@@ -71,7 +68,6 @@ Page({
      
       aac: aac
     })
-    console.log(aac);
     // wx: wx.request({
     //   url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + aac,
     //   success: (msg) => {
@@ -86,7 +82,6 @@ Page({
     //       bigday: bigday,
     //       aaa: aaa1,
     //     })
-    //     console.log(msg)
     //   }
     // })
   },
@@ -115,7 +110,6 @@ Page({
       aaa: aab,   
       aac: aac
         })
-    console.log(aac)
     // wx: wx.request({
     //   url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + aac,
     //   success: (msg) => {
@@ -130,7 +124,6 @@ Page({
     //       bigday: bigday,
     //       aaa: aaa1,
     //     })
-    //     console.log(msg)
     //   }
     // })
   },
@@ -148,7 +141,6 @@ Page({
 
       aaa: aaa1
     })
-    console.log(aaa1)
     // wx: wx.request({
     //   url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
     //   success: (msg) => {
@@ -163,7 +155,6 @@ Page({
     //       bigday: bigday,
     //       aaa: aaa1,
     //     })
-    //     console.log(msg)
     //   }
     // })
   },

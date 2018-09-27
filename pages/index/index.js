@@ -42,7 +42,7 @@ Page({
     ],
   },
 
-  //右上角的按钮 点击字体会在标签的内容中切换 并且会让一个影藏的 div 显现
+  //点击日历每次点击都会打开一次接口
   dayClick: function (event) {
     let clickDay = event.detail.day;
     let changeDay = `dayStyle[1].day`;
@@ -52,18 +52,17 @@ Page({
       [changeBg]: "#84e7d0"
     })
     let ymd = event.detail.year + "-" + event.detail.month + "-" + event.detail.day
-    wx: wx.request({
-      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + ymd,
-      success: (msg) => {
-        console.log(msg);
-        let day = msg.data.result.yangli.substring(8);
-        this.setData({
-          year: msg.data.result,
-          day: day,
+    // wx: wx.request({
+    //   url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + ymd,
+    //   success: (msg) => {
+    //     let day = msg.data.result.yangli.substring(8);
+    //     this.setData({
+    //       year: msg.data.result,
+    //       day: day,
          
-        })
-      }
-    })
+    //     })
+    //   }
+    // })
     
   },
   onChangeShowState: function () {
@@ -95,17 +94,17 @@ Page({
       aaa: aaa1,
     })
         //获取当日的万年历数据
-    wx: wx.request({
-      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
-      success: (msg) => {
-        let day = msg.data.result.yangli.substring(8);
-        this.setData({
-          year: msg.data.result,
-          day: day,
+    // wx: wx.request({
+    //   url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
+    //   success: (msg) => {
+    //     let day = msg.data.result.yangli.substring(8);
+    //     this.setData({
+    //       year: msg.data.result,
+    //       day: day,
          
-        })
-      }
-    })
+    //     })
+    //   }
+    // })
   },
   //点击弹出城市选择器
   changecity(e) {
@@ -144,12 +143,12 @@ Page({
     })
   },
   //点击按钮弹出影藏的普通——星座选择器
-  bindPickerChange(e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      index: e.detail.value
-    })
-  },
+  // bindPickerChange(e) {
+    
+  //   this.setData({
+  //     index: e.detail.value
+  //   })
+  // },
 
   getCurrentDayString: function () {
     var objDate = this.data.currentObj
@@ -204,7 +203,6 @@ Page({
 
       url: 'http://wthrcdn.etouch.cn/weather_mini?city=东城区',
       success: (msg) => {
-        console.log(msg)
         let high0 = msg.data.data.forecast[0].high.substring(2, 5);
         let low0 = msg.data.data.forecast[0].low.substring(2, 5);
         let high1 = msg.data.data.forecast[1].high.substring(2, 5);
@@ -249,12 +247,10 @@ Page({
           
           aaa: aaa1
         })
-    console.log(aaa1)
     // wx: wx.request({
     //   url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
     //   success: (msg) => {
     //     let day = msg.data.result.yangli.substring(8);
-    //     console.log(msg);
     //     this.setData({
     //       year: msg.data.result,
     //       day: day,

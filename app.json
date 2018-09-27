@@ -50,11 +50,10 @@
       "provider": "wx92c68dae5a8bb046"
     },
     "myPlugin": {
-      "version": "1.0.7",
+      "version": "1.0.8",
       "provider": "wx60d306fd175fe556"
     }
   }
-
  
   
 }

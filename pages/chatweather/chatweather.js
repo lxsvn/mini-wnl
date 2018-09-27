@@ -39,7 +39,6 @@ Page({
       //天气接口
       url: 'http://wthrcdn.etouch.cn/weather_mini?city=' + logsView,
       success: (msg) => {
-        console.log(msg.data);
         let aa = msg.data.data.forecast[0].fengli;
         let aaa = aa.replace(/[\<![CDATA[|\]]|\>|"]/g, '');
 
@@ -90,15 +89,12 @@ Page({
     this.setData({
       logsView: options.city
     })
-    console.log(options.city)
     let aa = "<![CDATA[<3级]]>";
         let aaa = aa.replace(/[\<![CDATA[|\]]|\>|"]/g, '');
-    console.log(aaa)
     wx: wx.request({
       //天气接口
       url: 'http://wthrcdn.etouch.cn/weather_mini?city='+ options.city,
       success: (msg) => {
-        console.log(msg)
         let aa = msg.data.data.forecast[0].fengli;
         let aaa = aa.replace(/[\<![CDATA[|\]]|\>|"]/g, '');
 

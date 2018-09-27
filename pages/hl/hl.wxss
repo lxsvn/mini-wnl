@@ -27,13 +27,13 @@ page{
 }
 .hl-data-center{
   overflow: hidden;
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
   margin-top: 40rpx;
   position: relative
 }
 .hl-data-center image{
-  width: 30rpx;
+  width: 85rpx;
   height: 106rpx;
   background: orange;
   position: absolute;
