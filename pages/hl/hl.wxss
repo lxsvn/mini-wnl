@@ -33,17 +33,17 @@ page{
   position: relative
 }
 .hl-data-center image{
-  width: 85rpx;
-  height: 106rpx;
+  width: 75rpx;
+  height: 70rpx;
   position: absolute;
 }
 .hl-data-center image:nth-child(1){
   left: 0;
-  top: 0
+  top: 25rpx;
 }
 .hl-data-center image:nth-child(3){
    right: 0;
-  top: 0
+  top: 25rpx;
 }
 .hl-data-text{
     text-align: center;
