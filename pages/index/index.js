@@ -52,17 +52,17 @@ Page({
       [changeBg]: "#84e7d0"
     })
     let ymd = event.detail.year + "-" + event.detail.month + "-" + event.detail.day
-    // wx: wx.request({
-    //   url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + ymd,
-    //   success: (msg) => {
-    //     let day = msg.data.result.yangli.substring(8);
-    //     this.setData({
-    //       year: msg.data.result,
-    //       day: day,
+    wx: wx.request({
+      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + ymd,
+      success: (msg) => {
+        let day = msg.data.result.yangli.substring(8);
+        this.setData({
+          year: msg.data.result,
+          day: day,
          
-    //     })
-    //   }
-    // })
+        })
+      }
+    })
     
   },
   onChangeShowState: function () {
@@ -94,17 +94,17 @@ Page({
       aaa: aaa1,
     })
         //获取当日的万年历数据
-    // wx: wx.request({
-    //   url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
-    //   success: (msg) => {
-    //     let day = msg.data.result.yangli.substring(8);
-    //     this.setData({
-    //       year: msg.data.result,
-    //       day: day,
+    wx: wx.request({
+      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
+      success: (msg) => {
+        let day = msg.data.result.yangli.substring(8);
+        this.setData({
+          year: msg.data.result,
+          day: day,
          
-    //     })
-    //   }
-    // })
+        })
+      }
+    })
   },
   //点击弹出城市选择器
   changecity(e) {
@@ -247,17 +247,17 @@ Page({
           
           aaa: aaa1
         })
-    // wx: wx.request({
-    //   url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
-    //   success: (msg) => {
-    //     let day = msg.data.result.yangli.substring(8);
-    //     this.setData({
-    //       year: msg.data.result,
-    //       day: day,
-    //      
-    //     })
-    //   }
-    // })
+    wx: wx.request({
+      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
+      success: (msg) => {
+        let day = msg.data.result.yangli.substring(8);
+        this.setData({
+          year: msg.data.result,
+          day: day,
+         
+        })
+      }
+    })
   },
 
   /**

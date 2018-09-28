@@ -26,19 +26,19 @@ Page({
       data: e.detail.value
     });
     let date=e.detail.value;
-    // wx: wx.request({
-    //   url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + date,
-    //   success: (msg) => {
-    //     let day = msg.data.result.yangli.substring(8);
-    //     let bigday = msg.data.result.yinli.substring(6)
-    //     this.setData({
-    //       year: msg.data.result,
-    //       day: day,
-    //       bigday: bigday,
-    //       date: date
-    //     })
-    //   }
-    // })
+    wx: wx.request({
+      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + date,
+      success: (msg) => {
+        let day = msg.data.result.yangli.substring(8);
+        let bigday = msg.data.result.yinli.substring(6)
+        this.setData({
+          year: msg.data.result,
+          day: day,
+          bigday: bigday,
+          date: date
+        })
+      }
+    })
   },
   left: function () {
   var that = this    
@@ -68,22 +68,22 @@ Page({
      
       aac: aac
     })
-    // wx: wx.request({
-    //   url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + aac,
-    //   success: (msg) => {
-    //     let day = msg.data.result.yangli.substring(8);
-    //     let bigday = msg.data.result.yinli.substring(6);
-    //     let aa = msg.data.result.yangli.replace(/^(.{4})(.{1})(.*)$/, '$1年$3');
-    //     let aaa = aa.replace(/^(.{7})(.{1})(.*)$/, '$1月$3');
-    //     let aaa1 = aaa + "日";      
-    //     this.setData({
-    //       year: msg.data.result,
-    //       day: day,
-    //       bigday: bigday,
-    //       aaa: aaa1,
-    //     })
-    //   }
-    // })
+    wx: wx.request({
+      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + aac,
+      success: (msg) => {
+        let day = msg.data.result.yangli.substring(8);
+        let bigday = msg.data.result.yinli.substring(6);
+        let aa = msg.data.result.yangli.replace(/^(.{4})(.{1})(.*)$/, '$1年$3');
+        let aaa = aa.replace(/^(.{7})(.{1})(.*)$/, '$1月$3');
+        let aaa1 = aaa + "日";      
+        this.setData({
+          year: msg.data.result,
+          day: day,
+          bigday: bigday,
+          aaa: aaa1,
+        })
+      }
+    })
   },
   right() {
     var that = this
@@ -110,22 +110,22 @@ Page({
       aaa: aab,   
       aac: aac
         })
-    // wx: wx.request({
-    //   url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + aac,
-    //   success: (msg) => {
-    //     let day = msg.data.result.yangli.substring(8);
-    //     let bigday = msg.data.result.yinli.substring(6);
-    //     let aa = msg.data.result.yangli.replace(/^(.{4})(.{1})(.*)$/, '$1年$3');
-    //     let aaa = aa.replace(/^(.{7})(.{1})(.*)$/, '$1月$3');
-    //     let aaa1 = aaa + "日";
-    //     this.setData({
-    //       year: msg.data.result,
-    //       day: day,
-    //       bigday: bigday,
-    //       aaa: aaa1,
-    //     })
-    //   }
-    // })
+    wx: wx.request({
+      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + aac,
+      success: (msg) => {
+        let day = msg.data.result.yangli.substring(8);
+        let bigday = msg.data.result.yinli.substring(6);
+        let aa = msg.data.result.yangli.replace(/^(.{4})(.{1})(.*)$/, '$1年$3');
+        let aaa = aa.replace(/^(.{7})(.{1})(.*)$/, '$1月$3');
+        let aaa1 = aaa + "日";
+        this.setData({
+          year: msg.data.result,
+          day: day,
+          bigday: bigday,
+          aaa: aaa1,
+        })
+      }
+    })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -141,22 +141,22 @@ Page({
 
       aaa: aaa1
     })
-    // wx: wx.request({
-    //   url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
-    //   success: (msg) => {
-    //     let day = msg.data.result.yangli.substring(8);
-    //     let bigday = msg.data.result.yinli.substring(6);
-    //     let aa = msg.data.result.yangli.replace(/^(.{4})(.{1})(.*)$/, '$1年$3');
-    //     let aaa = aa.replace(/^(.{7})(.{1})(.*)$/, '$1月$3');
-    //     let aaa1 = aaa + "日";      
-    //     this.setData({
-    //       year: msg.data.result,
-    //       day: day,
-    //       bigday: bigday,
-    //       aaa: aaa1,
-    //     })
-    //   }
-    // })
+    wx: wx.request({
+      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
+      success: (msg) => {
+        let day = msg.data.result.yangli.substring(8);
+        let bigday = msg.data.result.yinli.substring(6);
+        let aa = msg.data.result.yangli.replace(/^(.{4})(.{1})(.*)$/, '$1年$3');
+        let aaa = aa.replace(/^(.{7})(.{1})(.*)$/, '$1月$3');
+        let aaa1 = aaa + "日";      
+        this.setData({
+          year: msg.data.result,
+          day: day,
+          bigday: bigday,
+          aaa: aaa1,
+        })
+      }
+    })
   },
 
   /**

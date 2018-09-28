@@ -4,7 +4,6 @@
     <view class="tui-picker-detail">
       {{aaa}}<image src='../../assets/imgs/down.png'></image>
     </view>
-    {{aac}}
   </picker>
       <view class='hl-data-center'>
         <image bindtap='left'></image>
@@ -113,14 +112,14 @@
           <view class='hl-all-center-top'>
               <view>
                 <text>冲煞</text>
-                <text>{{year.jishen}}</text>
+                <text>{{year.chongsha}}</text>
               </view>
               <view>
-                <text>今日胎神</text>
-                <text>一二三四一二</text>
+                <text>五行</text>
+                <text>{{year.wuxing}}</text>
               </view>
               <view>
-                <text>六耀</text>
+                <text>凶煞</text>
                 <text>{{year.xiongshen}}</text>
               </view>
           </view>

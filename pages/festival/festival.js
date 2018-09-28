@@ -44,6 +44,7 @@ Page({
       }
     ],
     index:'',
+    ifture:true,
     twoer: [
       {
         "name": "立春",
@@ -442,25 +443,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // wx: wx.request({
-    //   url: "http://www.sojson.com/tianqi/api/"+"1011-58414"+".shtml" ,
-    //   success: (msg) => {
-    //   }
-    // })
-    wx: wx.request({
-      url: "http://wthrcdn.etouch.cn/weather_mini?city=北京",
-      success: (msg) => {
-      }
-    })
-    // wx: wx.request({
-    //   url: 'http://route.showapi.com/9-5',
-    //   data: {
-    //     showapi_appid: '11697',
-    //     showapi_sign: '6c0c15c5ec61454dac5288cea2d32881',
-    //   },
-    //   success: (msg) => {
-    //   }
-    // })
+    
 
     
   },
