@@ -64,7 +64,7 @@ page{
   margin: 5rpx 0
 }
 .fand-bottom{
-  width: 80%;
+  width: 60%;
   border-top: 1px solid #eccc76;
   margin: 80rpx auto 100rpx;
   overflow: hidden;
@@ -73,6 +73,11 @@ page{
   float: left;
   margin-top: 30rpx;
   margin-right: 25rpx
+}
+.fand-bottom-lists:nth-child(2){
+  float: right;
+  width: 280rpx;
+  overflow: hidden
 }
 .fand-bottom-lists image{
     width: 150rpx;
@@ -88,7 +93,7 @@ page{
 .fand-text text:nth-child(2){
   color: #999;
   font-size:26rpx;
-  margin-top: 5rpx
+  margin-top: 5rpx;
 }
 .fand-bottom-lists:nth-child(1) text{
   font-size: 30rpx;
@@ -97,7 +102,7 @@ page{
 .fand-bottom-lists:nth-child(2) text{
   font-size: 32rpx;
   line-height: 60rpx;
-  color: #999
+  color: #999;
 }
 .fand-bottom-lists:nth-child(3) {
  margin-right: 0rpx ;

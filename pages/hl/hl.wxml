@@ -6,9 +6,9 @@
     </view>
   </picker>
       <view class='hl-data-center'>
-        <image bindtap='left'></image>
+        <image bindtap='left' src='../../assets/imgs/left.png'></image>
         <text class='hl-data-center-text'>{{bigday}}</text>
-        <image bindtap='right'></image>
+        <image bindtap='right' src='../../assets/imgs/right.png'></image>
        
       </view>
       <text class='hl-data-text'>{{year.yinli}}</text>

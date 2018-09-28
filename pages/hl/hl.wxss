@@ -35,7 +35,6 @@ page{
 .hl-data-center image{
   width: 85rpx;
   height: 106rpx;
-  background: orange;
   position: absolute;
 }
 .hl-data-center image:nth-child(1){
