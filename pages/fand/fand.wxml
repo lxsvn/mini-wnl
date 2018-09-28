@@ -4,7 +4,7 @@
   <view class='fand'>
   <image src='../../assets/imgs/bg.png' class='content-img'></image>
      <view class='fand-top'>
-        <image src='../../assets/imgs/logo.png' class='fand-topimg1'></image>
+        <image src='../../assets/imgs/logo.jpg' class='fand-topimg1'></image>
         <text>查万年历</text>
         <text>三亿用户真是选择</text>
         <image src='../../assets/imgs/bg-text.png' class='fand-topimg12'></image>

@@ -29,7 +29,8 @@ page{
   width: 120rpx;
   height: 120rpx;
   display: block;
-  margin: 80rpx auto 0
+  margin: 80rpx auto 0;
+  border-radius: 30rpx;
 }
 .fand-topimg12{
   position: absolute;

@@ -37,7 +37,7 @@ Page({
     let logsView = e.detail.value[2];
     wx: wx.request({
       //天气接口
-      url: 'http://wthrcdn.etouch.cn/weather_mini?city=' + logsView,
+      url: 'https://wthrcdn.etouch.cn/weather_mini?city=' + logsView,
       success: (msg) => {
         let aa = msg.data.data.forecast[0].fengli;
         let aaa = aa.replace(/[\<![CDATA[|\]]|\>|"]/g, '');
@@ -93,7 +93,7 @@ Page({
         let aaa = aa.replace(/[\<![CDATA[|\]]|\>|"]/g, '');
     wx: wx.request({
       //天气接口
-      url: 'http://wthrcdn.etouch.cn/weather_mini?city='+ options.city,
+      url: 'https://wthrcdn.etouch.cn/weather_mini?city='+ options.city,
       success: (msg) => {
         let aa = msg.data.data.forecast[0].fengli;
         let aaa = aa.replace(/[\<![CDATA[|\]]|\>|"]/g, '');

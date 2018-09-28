@@ -27,7 +27,7 @@ Page({
     });
     let date=e.detail.value;
     wx: wx.request({
-      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + date,
+      url: 'https://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + date,
       success: (msg) => {
         let day = msg.data.result.yangli.substring(8);
         let bigday = msg.data.result.yinli.substring(6)
@@ -69,7 +69,7 @@ Page({
       aac: aac
     })
     wx: wx.request({
-      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + aac,
+      url: 'https://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + aac,
       success: (msg) => {
         let day = msg.data.result.yangli.substring(8);
         let bigday = msg.data.result.yinli.substring(6);
@@ -111,7 +111,7 @@ Page({
       aac: aac
         })
     wx: wx.request({
-      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + aac,
+      url: 'https://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + aac,
       success: (msg) => {
         let day = msg.data.result.yangli.substring(8);
         let bigday = msg.data.result.yinli.substring(6);
@@ -142,7 +142,7 @@ Page({
       aaa: aaa1
     })
     wx: wx.request({
-      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
+      url: 'https://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
       success: (msg) => {
         let day = msg.data.result.yangli.substring(8);
         let bigday = msg.data.result.yinli.substring(6);

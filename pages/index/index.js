@@ -53,7 +53,7 @@ Page({
     })
     let ymd = event.detail.year + "-" + event.detail.month + "-" + event.detail.day
     wx: wx.request({
-      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + ymd,
+      url: 'https://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + ymd,
       success: (msg) => {
         let day = msg.data.result.yangli.substring(8);
         this.setData({
@@ -95,7 +95,7 @@ Page({
     })
         //获取当日的万年历数据
     wx: wx.request({
-      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
+      url: 'https://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
       success: (msg) => {
         let day = msg.data.result.yangli.substring(8);
         this.setData({
@@ -118,7 +118,7 @@ Page({
     wx: wx.request({
       //天气接口
       
-      url: 'http://wthrcdn.etouch.cn/weather_mini?city=' + dacity,
+      url: 'https://wthrcdn.etouch.cn/weather_mini?city=' + dacity,
       success: (msg) => {
         let high0 = msg.data.data.forecast[0].high.substring(2, 5);
         let low0 = msg.data.data.forecast[0].low.substring(2, 5);
@@ -201,7 +201,7 @@ Page({
     })
     wx: wx.request({
 
-      url: 'http://wthrcdn.etouch.cn/weather_mini?city=东城区',
+      url: 'https://wthrcdn.etouch.cn/weather_mini?city=东城区',
       success: (msg) => {
         let high0 = msg.data.data.forecast[0].high.substring(2, 5);
         let low0 = msg.data.data.forecast[0].low.substring(2, 5);
@@ -248,7 +248,7 @@ Page({
           aaa: aaa1
         })
     wx: wx.request({
-      url: 'http://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
+      url: 'https://v.juhe.cn/laohuangli/d?key=48d0e29d484984c057193f9a85b05be3&date=' + time,
       success: (msg) => {
         let day = msg.data.result.yangli.substring(8);
         this.setData({
