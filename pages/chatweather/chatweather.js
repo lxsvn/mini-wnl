@@ -89,6 +89,7 @@ Page({
     this.setData({
       logsView: options.city
     })
+    console.log(options)
     let aa = "<![CDATA[<3级]]>";
         let aaa = aa.replace(/[\<![CDATA[|\]]|\>|"]/g, '');
     wx: wx.request({

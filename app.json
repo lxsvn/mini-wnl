@@ -15,31 +15,31 @@
     "backgroundColor":"#ffffff"
   },
   "tabBar": {
-    "selectedColor": "#0090ff",
+    "selectedColor": "#ce3e3e",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "万年历",
-        "iconPath": "/assets/imgs/tab_home.png",
-        "selectedIconPath": "/assets/imgs/tab_home_selected.png" 
+        "iconPath": "/assets/imgs/index.png",
+        "selectedIconPath": "/assets/imgs/index1.png" 
       },
       {
         "pagePath": "pages/hl/hl",
         "text": "黄历",
-        "iconPath": "/assets/imgs/tab_inspect.png",
-        "selectedIconPath": "/assets/imgs/tab_inspect_selected.png"
+        "iconPath": "/assets/imgs/hl.png",
+        "selectedIconPath": "/assets/imgs/hl1.png"
       },
       {
         "pagePath": "pages/festival/festival",
         "text": "节日",
-        "iconPath": "/assets/imgs/tab_loan.png",
-        "selectedIconPath": "/assets/imgs/tab_loan_selected.png"
+        "iconPath": "/assets/imgs/jr1.png",
+        "selectedIconPath": "/assets/imgs/jr.png"
       },
       {
         "pagePath": "pages/fand/fand",
         "text": "发现",
-        "iconPath": "/assets/imgs/tab_me.png",
-        "selectedIconPath": "/assets/imgs/tab_me_selected.png"
+        "iconPath": "/assets/imgs/fand.png",
+        "selectedIconPath": "/assets/imgs/fand1.png"
         
       }
     ]
