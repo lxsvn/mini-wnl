@@ -1,0 +1,15 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/ccc/ccc",
+    "pages/search/search",
+    "pages/center/center",
+    "pages/content/content"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#eeeeee",
+    "navigationBarTitleText": "小说网",
+    "navigationBarTextStyle": "black"
+  }
+}

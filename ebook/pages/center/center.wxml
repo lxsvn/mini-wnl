@@ -1,0 +1,72 @@
+<!--pages/center/center.wxml-->
+<view class='top'>
+  <view class='index-book'>
+  <view class='index-book-top'>
+    <image src="{{cover}}" lazy-load="true"></image>
+    <view class='index-book-top-author'>
+      <text class='index-book-top-author-title'>{{books.title}}</text>
+      <view class='index-graded-left-start' wx:if="{{iftrue}}">
+      <text>{{pf}}</text>
+      <view class='index-graded-left-start-five'>
+        <image src='../../imgs/fivestar2.png' class='index-graded-left-start-five-1'></image>
+        <view class='index-graded-left-start-five-1' style='width:{{bfb}}%'>
+          <image src='../../imgs/fivestar1.png' ></image>
+        </view>
+      
+      </view>
+      <view class='index-graded-left-start-pj'>
+        | {{books.rating.count}}人评
+      </view>
+    </view>
+      <view class='index-graded-left-start-author'>
+        <text decode="{{true}}">{{books.author}}&ensp;</text>
+        <text decode="{{true}}">|&ensp;{{books.majorCate}}</text>
+      </view>
+      <text>{{word}}字</text>
+    </view>
+  </view>
+</view>
+</view>
+<view class='index-graded'>
+  <view class='index-graded-center'>
+    <text>{{books.latelyFollower}}</text>
+    <text>追书人气</text>
+  </view>
+  <view class='index-graded-center'>
+    <text>{{books.retentionRatio}}%</text>
+    <text>读者留存</text>
+  </view>
+  <view class='index-graded-right index-graded-center'>
+    <text>{{books.serializeWordCount}}</text>
+    <text>日更字数</text>
+  </view>
+</view>
+<view class='center'>
+  <view class='index-intro'>
+    <view class='index-intro-top'>
+      <view class='index-intro-top-left'>
+        简介
+      </view>
+      <view class='index-intro-top-right' bindtap='nowmore'>
+        {{jzgd}}
+      </view>
+    </view>
+    <view class='index-intro-top-list' >
+      <view class='index-intro-top-lists' wx:for="{{books.tags}}" wx:key="{{books.tags}}">{{item}}</view>
+      
+    </view>
+    <view class='index-intro-bottom' style=' -webkit-line-clamp: {{more}};'>
+        {{books.longIntro}}
+    </view>
+  </view>
+</view>
+<view class='bottom'>
+  <view class='bottom-add'>
+    
+    <view bindtap='mmmm'>加入书架</view>
+  </view>
+  <view class='bottom-add' >
+  <view bindtap='content' data-text='{{books._id}}'>开始阅读</view>
+    
+  </view>
+</view>

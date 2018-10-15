@@ -1,0 +1,122 @@
+/* pages/search/search.wxss */
+.index-recommend-man-top-list {
+  width: 95%;
+  overflow: hidden;
+  margin: 15rpx auto;
+}
+
+.index-recommend-man-top-list-left {
+  float: left;
+  width: 22%;
+}
+
+.index-recommend-man-top-list-left image {
+  width: 100%;
+  height: 200rpx;
+}
+
+.index-recommend-man-top-list-right {
+  margin-left: 15rpx;
+  float: right;
+  width: 75%;
+}
+
+.index-recommend-man-top-list-right text {
+  display: block;
+  font-weight: bold;
+  font-size: 37rpx;
+}
+
+.index-recommend-man-top-list-right text:nth-child(2) {
+  font-weight: normal;
+  font-size: 30rpx;
+  color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-top: 10rpx;
+}
+
+.index-recommend-man-top-list-right-author {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 15rpx
+}
+
+.index-recommend-man-top-list-right-author image {
+  float: left;
+  width: 37rpx;
+  height: 37rpx;
+  margin-top: 10rpx;
+  margin-right: 15rpx;
+}
+.index-recommend-man-top-list-right-author text{
+  float: left;
+}
+.index-recommend-tap{
+  float: right;
+  font-size: 20rpx;
+  margin-top: 10rpx;
+  color: #666;
+  padding: 5rpx 15rpx;
+  border: 1rpx solid #666;
+  border-radius: 50rpx;
+}
+.son text{
+  display: block
+}
+.view{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 25rpx auto;
+}
+.view-lists {
+  width: 20rpx;
+  height: 100rpx;
+  background: #fff;
+  position: relative;
+  animation: mymove 1s infinite;
+  animation-delay: 0.4s;
+  float: right;
+  margin-right: 15rpx;
+}
+.view-lists:nth-child(2){
+animation-delay: 0.2s;
+}
+.view-lists:nth-child(3){
+animation-delay: 0s;
+}
+
+@keyframes mymove {
+  0% {
+    transform: scaleY(0.5);
+  }
+
+  50% {
+    transform: scaleY(1);
+  }
+
+  100% {
+    transform: scaleY(0.5);
+  }
+}
+
+.all {
+  width: 220rpx;
+  height: 220rpx;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15rpx;
+  margin: 482rpx auto;
+  overflow: hidden
+}
+
+.all text {
+  text-align: center;
+  margin-top: 15rpx;
+  display: block;
+  margin:  0 auto;
+  font-size: 32rpx;
+  color: #fff
+}

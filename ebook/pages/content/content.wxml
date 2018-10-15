@@ -1,0 +1,39 @@
+<!--pages/content/content.wxml-->
+<view class='all' wx:if="{{iftrue}}">
+  <view class='view'>
+    <view class='view-lists'></view>
+    <view class='view-lists'></view>
+    <view class='view-lists'></view>
+  </view>
+  <text>加载中</text>
+</view>
+<view class='text1'>{{title}}</view>
+  <view class='text' wx:for="{{content}}">{{item}}</view>
+
+<view class='index-tap'>
+  <view class='index-tap-next' bindtap='next'>
+    下一章
+  </view>
+  <view class='index-tap-lists'>
+    <view class='index-tap-lists-last' bindtap='last'>
+      上一章
+    </view>
+    <view class='index-tap-lists-catalog' bindtap='catalog'>
+      目录
+    </view>
+  </view>
+</view>
+<view class='catalog' wx:if="{{ifif}}">
+    <view  class='catalog-catalog'>
+      目录（共{{chapters.length}}章）
+    </view>
+  <scroll-view scroll-y="true" class='catalog-scroll'>
+    
+    <view class='catalog-lists' wx:for="{{chapters}}" wx:key="{{chapters}}" data-text='{{item.link}}'data-id="{{item.title}}" data-index='{{index}}' bindtap='cataloglists'>
+      {{index+1}}.{{item.title}}
+    </view>
+  </scroll-view>
+  <view class='catalog-close' bindtap='catalogclose'>
+    关闭
+  </view>
+</view>

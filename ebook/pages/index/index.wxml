@@ -1,0 +1,70 @@
+<view class='index'>
+  <view class='index-top'>
+    <view class='index-top-search'>
+      <input placeholder="搜索一下把" placeholder-class="phcolor" type='text' maxlength="15" confirm-type="搜索" bindinput="bindKeyInput"></input>
+      <image src='../../imgs/openbig.png' bindtap='search'></image>
+      <view class='index-top-search-lists'>
+        <view class='index-top-search-lists-tap' wx:for="{{keywords}}"  wx:key="{{keywords}}" data-text='{{item}}' bindtap='itemlists' wx:if="{{ifif}}">
+          {{item}}
+        </view>
+      </view>
+    </view>
+    <view class='index-top-tap'>
+      <view class="index-top-tap-list {{_num==2?'index-top-tap-list-active':''}}" data-num="2" bindtap="menuClick">
+        书架
+      </view>
+      <view class="index-top-tap-list {{_num==1?'index-top-tap-list-active':''}}" data-num="1" bindtap="menuClick">
+        推荐
+      </view>
+    </view>
+  </view>
+
+
+
+  <view class='index-bottom'>
+    <view class="index-bookrack {{_num==2?'bookrack':''}}" data-num="2">
+      <view class='index-bookrack-lists' bindtap='ccc' data-id='{{item.id}}' data-index='{{item.value}}' wx:for="{{cc}}" wx:key="{{cc}}" bindlongpress="deletediv" data-no='{{index}}' data-img='{{item.img}}' data-title='{{item.title}}'>
+        <image src='{{item.img}}'></image>
+        <text>{{item.title}}</text>
+      </view>
+      
+    </view>
+
+    <view class="index-bookrack index-recommend {{_num==1?'bookrack':''}}" data-num="1">
+      <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000" circular="true" class=''>
+        <block wx:for="{{books}}" wx:key="{{books}}">
+          <swiper-item>
+            <image src="{{item.book_cover}}" class="slide-image"  />
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class='zero-1'></view>
+      
+      
+      
+      <view class='index-recommend-man' >
+        <view class='index-recommend-man-top'>
+          <text>推荐列表</text>
+        </view>
+        <view class='index-recommend-man-top-list' wx:for="{{books}}" wx:key="{{books}}" bindtap='center'>
+          <view class='index-recommend-man-top-list-left'>
+            <image src='{{item.book_cover}}'></image>
+          </view>
+          <view class='index-recommend-man-top-list-right'>
+            <view class='index-recommend-man-top-list-right-text'>
+              <text>{{item.bookname}}</text>
+              <text>{{item.book_info}}</text>
+              <view class='index-recommend-man-top-list-right-author'>
+                <image src='../../imgs/men.png'></image>
+                <text>{{item.author_name}}</text>
+                <view class='index-recommend-tap'>
+                  {{item.class_name}}
+                </view>
+              </view>
+            </view>
+          </view>
+        </view> 
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,236 @@
+/* pages/center/center.wxss */
+page{
+  height: 100%;
+  background: #fff
+}
+.top{
+  width: 100%;
+  font-size: 32rpx;
+  color: #999
+}
+.index-book{
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden
+}
+.index-book-top{
+  width: 100%;
+  overflow: hidden;
+  margin-top: 40rpx;
+}
+.index-book-top image{
+  float: left;
+  width: 30%;
+  height: 280rpx;
+}
+.index-book-top-author{
+  width: 65%;
+  float: right;
+}
+.index-book-top-author text{
+  display: block;
+}
+.index-book-top-author-title{
+  font-size:46rpx;
+  color: #333;
+  font-weight: bold
+}
+.index-graded-left-start text{
+  color: #f6cb40;
+   float: left;
+   font-size: 48rpx;
+   margin-top: 5rpx
+}
+.index-graded-left-start-pj{
+  font-size: 32rpx;
+  color: #999;
+  margin-top: 20rpx
+}
+.index-book-top-author text:nth-child(3){
+  color: olive
+}
+.index-graded-left-start-author{
+  font-size: 32rpx;
+  width: 100%;
+  overflow: hidden;
+  color: #999;
+  margin-top: 10rpx;
+}
+.index-graded-left-start-author text:nth-child(1){
+  float: left;
+  color: #d5394e;
+  margin-top: 10rpx;
+}
+.index-book-top-author text:last-child{
+  margin-top: 10rpx;
+}
+
+/* .index-book-btn{
+  width: 100%;
+  overflow: hidden;
+  margin: 25rpx 0 35rpx;
+}
+.index-book-btn view{
+  width: 45%;
+  height: 88rpx;
+  text-align: center;
+  line-height: 95rpx;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+}
+.index-book-btn-now{
+  float: left;
+  background: #56abf2;
+  color: #ffffff
+}
+.index-book-btn-add{
+  float: right;
+  color: #56abf2;
+  border: 1rpx solid #56abf2;
+  box-sizing: border-box;
+} */
+.center{
+  width: 100%;
+  margin-bottom: 120rpx;
+}
+.index-intro{
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden
+}
+.index-intro-top{
+  margin: 35rpx 0 15rpx ; 
+  width: 100%;
+  overflow: hidden
+}
+.index-intro-top-left{
+  float: left
+}
+.index-intro-top-right{
+  float: right;
+  font-size: 36rpx;
+  color: #999
+}
+.index-intro-bottom{
+  font-size: 32rpx;
+  color: #666;
+  line-height: 48rpx;
+  text-indent: 60rpx;
+   overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+ 
+  -webkit-box-orient: vertical;
+  margin-top: 10rpx;
+  margin-bottom: 25rpx;
+}
+.index-intro-top-list{
+  overflow: hidden;
+  width: 100%;
+}
+.index-intro-top-lists{
+  float: left;
+  font-size: 28rpx;
+  background: #efeef4;
+  color: #b9b8be;
+  padding: 5rpx 18rpx;
+  margin: 15rpx;
+  border-radius: 50rpx;
+}
+.index-graded{
+  width: 80%;
+  height: 4rem;
+  margin: 50rpx auto 0;
+  font-size: 32rpx
+}
+.index-graded-left-start{
+  width: 100%;
+  overflow: hidden;
+  margin-top: 15rpx;
+}
+.index-graded-left-start-five{
+  float: left;
+  width: 40%;
+  height: 35rpx;
+  margin-top: 20rpx;
+  margin-left: 15rpx;
+  position: relative
+}
+.index-graded-left-start-five image{
+  width: 150rpx;
+  height: 100%
+}
+.index-graded-left-start-five-1{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden
+}
+.index-graded-left-bottom{
+  text-align: center;
+  color:#9b9fa7;
+  margin-top: 10rpx;
+}
+/* .index-graded-left-start-five-1 image{
+  width: 100%;
+  height: 100%
+} */
+.index-graded-center{
+  float: left;
+  width: 33.3%;
+  height: 100%;
+}
+.index-graded-center text{
+  display: block;
+  text-align: center
+}
+.index-graded-center text:nth-child(1){
+  font-size: 42rpx;
+  font-weight: bold;
+  color: #80848b
+}
+.index-graded-center text:nth-child(2){
+  text-align: center;
+  color:#9b9fa7;
+  margin-top: 10rpx;
+  font-size: 32rpx;
+}
+.index-graded-right{
+  float: left;
+  width: 30%;
+  height: 100%;
+}
+.bottom{
+  width: 100%;
+  height: 120rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-top: 1rpx solid #ccc;
+  background: #ffffff
+}
+.bottom-add{
+  width: 50%;
+  height: 100%;
+  float: left
+}
+.bottom-add view{
+  width: 80%;
+  height: 80rpx;
+  margin: 20rpx  auto;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  border-radius: 50rpx;
+  text-align: center;
+   
+}
+.bottom-add:nth-child(1) view{
+ background:#feddc7;
+ color: #ef5a18
+}
+.bottom-add:nth-child(2) view{
+ background:#ef4744;
+ color: #fffffd
+}

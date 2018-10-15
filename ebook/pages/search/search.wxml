@@ -1,0 +1,31 @@
+<!--pages/search/search.wxml-->
+
+
+<view class='search'>
+  <view class='index-recommend-man-top-list' wx:for="{{books1}}" data-text="{{item._id}}" bindtap='center'>
+    <view class='index-recommend-man-top-list-left'>
+      <image src='{{cover[index]}}' lazy-load="true"></image>
+    </view>
+    <view class='index-recommend-man-top-list-right'>
+      <view class='index-recommend-man-top-list-right-text'>
+        <text>{{item.title}}</text>
+        <text>{{item.shortIntro}}</text>
+        <view class='index-recommend-man-top-list-right-author'>
+          <image src='../../imgs/men.png'></image>
+          <text>{{item.author}}</text>
+          <view class='index-recommend-tap'>
+            {{item.cat}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='all' wx:if="{{iftrue}}">
+  <view class='view'>
+    <view class='view-lists'></view>
+    <view class='view-lists'></view>
+    <view class='view-lists'></view>
+  </view>
+  <text>加载中</text>
+</view>
