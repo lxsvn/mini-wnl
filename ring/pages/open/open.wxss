@@ -1,0 +1,65 @@
+/* pages/open/open.wxss */
+page{
+  height: 100%;
+  font-size: 32rpx
+}
+.open-top{
+  width: 100%;
+  height: 90rpx;
+  background: #3dcc7c;
+}
+.open-top input{
+  width: 78%;
+  margin-left: 20rpx;
+  background: #ffffff;
+  height: 70rpx;
+  float: left;
+  color: #999;
+  padding-left: 15rpx;
+}
+.open-top-btn{
+  width: 17%;
+  float: right;
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+  color: #ffffff
+}
+.phcolor{
+  color: #999;
+  font-size: 30rpx;
+  margin-left: 15rpx;
+}
+.open-new{
+  width: 100%;
+}
+.open-new-top{
+  width: 100%;
+  margin-left: 50rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.open-new-list{
+  width: 50%;
+  float: left;
+  height: 80rpx;
+}
+.open-new-list-index{
+  width: 20%;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  float: left;
+  color: #cccccc
+}
+.open-new-list-name{
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  color: #333333;
+  float: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

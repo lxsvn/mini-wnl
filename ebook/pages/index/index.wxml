@@ -10,10 +10,10 @@
       </view>
     </view>
     <view class='index-top-tap'>
-      <view class="index-top-tap-list {{_num==2?'index-top-tap-list-active':''}}" data-num="2" bindtap="menuClick">
+      <view class="index-top-tap-list {{_num==1?'index-top-tap-list-active':''}}" data-num="1" bindtap="menuClick">
         书架
       </view>
-      <view class="index-top-tap-list {{_num==1?'index-top-tap-list-active':''}}" data-num="1" bindtap="menuClick">
+      <view class="index-top-tap-list {{_num==2?'index-top-tap-list-active':''}}" data-num="2" bindtap="menuClick">
         推荐
       </view>
     </view>
@@ -22,7 +22,7 @@
 
 
   <view class='index-bottom'>
-    <view class="index-bookrack {{_num==2?'bookrack':''}}" data-num="2">
+    <view class="index-bookrack {{_num==1?'bookrack':''}}" data-num="1">
       <view class='index-bookrack-lists' bindtap='ccc' data-id='{{item.id}}' data-index='{{item.value}}' wx:for="{{cc}}" wx:key="{{cc}}" bindlongpress="deletediv" data-no='{{index}}' data-img='{{item.img}}' data-title='{{item.title}}'>
         <image src='{{item.img}}'></image>
         <text>{{item.title}}</text>
@@ -30,11 +30,11 @@
       
     </view>
 
-    <view class="index-bookrack index-recommend {{_num==1?'bookrack':''}}" data-num="1">
+    <view class="index-bookrack index-recommend {{_num==2?'bookrack':''}}" data-num="2">
       <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000" circular="true" class=''>
         <block wx:for="{{books}}" wx:key="{{books}}">
           <swiper-item>
-            <image src="{{item.book_cover}}" class="slide-image"  />
+            <image src="{{item.book_cover}}" class="slide-image" bindtap='tjlb' />
           </swiper-item>
         </block>
       </swiper>
@@ -46,7 +46,7 @@
         <view class='index-recommend-man-top'>
           <text>推荐列表</text>
         </view>
-        <view class='index-recommend-man-top-list' wx:for="{{books}}" wx:key="{{books}}" bindtap='center'>
+        <view class='index-recommend-man-top-list' wx:for="{{books}}" wx:key="{{books}}" bindtap='tjlb'>
           <view class='index-recommend-man-top-list-left'>
             <image src='{{item.book_cover}}'></image>
           </view>

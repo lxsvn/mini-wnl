@@ -1,0 +1,191 @@
+<view>
+  <view class='index-top'>
+    <view class="idnex-top-lists {{_num==1?'index-tap-btn-active':''}}" data-num="1" bindtap="menuClick">
+      最热
+    </view>
+    <view class="idnex-top-lists {{_num==2?'index-tap-btn-active':''}}" data-num="2" bindtap="menuClick">
+      最新
+    </view>
+    <view class="idnex-top-lists {{_num==3?'index-tap-btn-active':''}}" data-num="3" bindtap="menuClick">
+      分享榜
+    </view>
+    <view class="idnex-top-lists {{_num==4?'index-tap-btn-active':''}}" data-num="4" bindtap="menuClick">
+      DJ多多
+    </view>
+    <view class="idnex-top-lists {{_num==5?'index-tap-btn-active':''}}" data-num="5" bindtap="menuClick">
+      欧美馆
+    </view>
+  </view>
+  <view class='lists'>
+    <!-- 最热榜 -->
+    <view class="index-lists {{_num==1?'cur':''}}" data-num="1">
+      <scroll-view scroll-y style="height: 1200rpx;" bindscrolltolower="lower" scroll-top="{{scrollTop}}">
+        <view class='index-lists-lists' wx:for="{{index}}" wx:key="{{index}}" >
+          <view class='index-lists-lists-left'bindtap='open' data-text="{{item.song_id}}">
+          <view class='index-lists-lists-nun'>
+            {{index+1}}
+          </view>
+          <view class='index-lists-lists-center'>
+            <view class='index-lists-lists-center-top'>
+              {{item.album_title}}
+            </view>
+            <view class='index-lists-lists-center-bottom'>
+              <view class='news' wx:if="{{index<15}}">新</view>
+              <text class='search-lists-center-bottom-author'>{{item.artist_name}}</text>
+              <view class='open'>
+                <image src='../imgs/bof.png'></image>{{item.hot}}</view>
+            </view>
+          </view>
+          </view>
+          <view class='index-lists-lists-right'>
+            <button class='share user-motto search-lists-open-btn' id="shareBtn" open-type="share" hover-class="other-button-hover">
+              分享
+            </button>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <!-- 最新榜 -->
+    <view class="index-lists {{_num==2?'cur':''}}" data-num="2">
+      <scroll-view scroll-y style="height: 1200rpx;" bindscrolltolower="newss" scroll-top="{{scrollTop}}">
+        <view class='index-lists-lists' wx:for="{{news}}" wx:key="{{news}}" >
+        <view class='index-lists-lists-left'bindtap='open' data-text="{{item.song_id}}">
+          <view class='index-lists-lists-nun'>
+            {{index+1}}
+          </view>
+          <view class='index-lists-lists-center'>
+            <view class='index-lists-lists-center-top'>
+              {{item.album_title}}
+            </view>
+            <view class='index-lists-lists-center-bottom'>
+              <view class='news'>新</view>
+              <text class='search-lists-center-bottom-author'>{{item.artist_name}}</text>
+              <view class='open'>
+                <image src='../imgs/bof.png'></image>{{item.hot}}</view>
+            </view>
+          </view>
+          </view>
+          <view class='index-lists-lists-right'>
+            <button class='share user-motto search-lists-open-btn' id="shareBtn" open-type="share" hover-class="other-button-hover">
+              分享
+            </button>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <!-- 分享榜 -->
+    <view class="index-lists {{_num==3?'cur':''}}" data-num="3">
+      <scroll-view scroll-y style="height: 1200rpx;" bindscrolltolower="hottt" scroll-top="{{scrollTop}}">
+        <view class='index-lists-lists' wx:for="{{hott}}" wx:key="{{hott}}" >
+        <view class='index-lists-lists-left'bindtap='open' data-text="{{item.song_id}}">
+          <view class='index-lists-lists-nun'>
+            {{index+1}}
+          </view>
+          <view class='index-lists-lists-center'>
+            <view class='index-lists-lists-center-top'>
+              {{item.album_title}}
+            </view>
+            <view class='index-lists-lists-center-bottom'>
+              <text class='search-lists-center-bottom-author'>{{item.artist_name}}</text>
+              <view class='open'>
+                <image src='../imgs/bof.png'></image>{{item.hot}}</view>
+            </view>
+          </view>
+           </view>
+          <view class='index-lists-lists-right'>
+            <button class='share user-motto search-lists-open-btn' id="shareBtn" open-type="share" hover-class="other-button-hover">
+              分享
+            </button>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <!-- dj多多 -->
+    <view class="index-lists {{_num==4?'cur':''}}" data-num="4">
+      <!-- <scroll-view scroll-y style="height: 1200rpx;" bindscrolltolower="djjj" scroll-top="{{scrollTop}}"> -->
+        <view class='index-lists-lists' wx:for="{{djj}}" wx:key="{{djj}}" >
+        <view class='index-lists-lists-left'bindtap='open' data-text="{{item.song_id}}">
+          <view class='index-lists-lists-nun'>
+            {{index+1}}
+          </view>
+          <view class='index-lists-lists-center'>
+            <view class='index-lists-lists-center-top'>
+              {{item.album_title}}
+            </view>
+            <view class='index-lists-lists-center-bottom'>
+              <view class='news' wx:if="{{index<10}}">新</view>
+              <text class='search-lists-center-bottom-author'>{{item.artist_name}}</text>
+              <view class='open'>
+                <image src='../imgs/bof.png'></image>{{item.hot}}</view>
+            </view>
+          </view>
+          </view>
+          <view class='index-lists-lists-right'>
+            <button class='share user-motto search-lists-open-btn' id="shareBtn" open-type="share" hover-class="other-button-hover">
+              分享
+            </button>
+          </view>
+        </view>
+      <!-- </scroll-view> -->
+    </view>
+      <!--欧美馆  -->
+    <view class="index-lists {{_num==5?'cur':''}}" data-num="5">
+      <scroll-view scroll-y style="height: 1200rpx;" bindscrolltolower="oumeii" scroll-top="{{scrollTop}}">
+        <view class='index-lists-lists' wx:for="{{oumei}}" wx:key="{{oumei}}" >
+        <view class='index-lists-lists-left'bindtap='open' data-text="{{item.song_id}}">
+          <view class='index-lists-lists-nun'>
+            {{index+1}}
+          </view>
+          <view class='index-lists-lists-center'>
+            <view class='index-lists-lists-center-top'>
+              {{item.album_title}}
+            </view>
+            <view class='index-lists-lists-center-bottom'>
+              <view class='news' wx:if="{{index<10}}">新</view>
+              <text class='search-lists-center-bottom-author'>{{item.artist_name}}</text>
+              <view class='open'>
+                <image src='../imgs/bof.png'></image>{{item.hot}}</view>
+            </view>
+          </view>
+          </view>
+          <view class='index-lists-lists-right'>
+            <button class='share user-motto search-lists-open-btn' id="shareBtn" open-type="share" hover-class="other-button-hover">
+              分享
+            </button>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class='zero'></view>
+
+
+  <view class='music' >
+    <view class='music-left'data-text='{{song_id}}' bindtap='lists'>
+      <view class='music-play'>
+      <view class='music-play-photo'>
+        <image src='{{coverImgUrl}}'></image>
+      </view>
+    </view>
+
+    <view class='music-center'>
+      <view class='music-center-name'>
+        {{title}}
+      </view>
+      <view class='music-center-bottom'>
+        {{bitrate_fee}}
+      </view>
+    </view>
+    </view>
+
+    <view class='music-right' bindtap='changeDate'>
+      <view class='music-right-ok ' wx:if="{{!ifshow}}" bindtap='bcaa'>
+        <image src='../imgs/ok.png'></image>
+      </view>
+      <view class='music-right-ok cuu' wx:if="{{ifture}}" bindtap='bccc'>
+        <image src='../imgs/stop.png'></image>
+      </view>
+    </view>
+  </view>
+
+</view>

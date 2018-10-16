@@ -1,0 +1,95 @@
+<view>
+  <view class='report-top'>
+    <view class='check-top'>
+    <view class='check-top-left'>
+      <picker mode="date" value="{{date}}" start="2010-07-16" end="2055-07-16" bindchange="changeDate">
+            <view class="index-top-left1">
+            {{ccc}}
+            </view>
+          </picker>
+    <image src='../../assets/imgs/down.png'></image>
+    <text>至</text>
+    <picker mode="date" value="{{date}}" start="2010-07-16" end="2055-07-16" bindchange="changeDate2">
+            <view class="index-top-left2">
+            {{aaa}}
+            </view>
+          </picker>
+          <image src='../../assets/imgs/down.png'></image>
+    </view>
+    <view class='check-top-right'>
+      <text>饼状</text>
+      <text bindtap='next'>柱状</text>
+    </view>
+  </view>
+  </view>
+
+  <view class='index-tap'>
+    <view class="idenx-tap-btn   {{_num==1?'index-tap-btn-active':''}}" data-num="1" bindtap="menuClick"><text>花费</text></view>
+    <view class="idenx-tap-btn {{_num==2?'index-tap-btn-active ':''}}" data-num="2" bindtap="menuClick"><text>收入</text></view>
+  </view>
+  <view class='check-bottom'>
+  <view class="phtoto {{_num==2?'cur':''}}" data-num="2">
+    <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler"></canvas>
+  
+  <view class='report-bottom'>
+    <view class='report-bottom-top'>
+      合计：{{newarr}}
+    </view>
+    <view class='report-bottom-bottom'>
+      <view class='report-bottom-lists' wx:for="{{newobj2}}" wx:key="item.key" >
+      <text>{{item.name}}</text>
+      <text> {{item.money}}</text>
+      </view>
+    </view>
+  </view>
+  </view>
+
+
+
+
+
+  <view class="phtoto photo2 {{_num==1?'cur':''}}"data-num="1">
+    <canvas canvas-id="lineCanvass" disable-scroll="true" class="canvas" bindtouchstart="touchHandler"></canvas>
+  
+  <view class='report-bottom'>
+    <view class='report-bottom-top'>
+      合计：{{newbrr}}
+    </view>
+    <view class='report-bottom-bottom'>
+      <view class='report-bottom-lists' wx:for="{{newobj}}" wx:key="item.key">
+        <text>{{item.name}}</text>
+      <text> {{item.money}}</text>
+      </view>
+      
+    </view>
+  </view>
+  </view>
+</view>
+</view>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      

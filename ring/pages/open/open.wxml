@@ -1,0 +1,22 @@
+<!--pages/open/open.wxml-->
+<view class='open-top'>
+  <input placeholder='请输入搜索关键词'placeholder-class="phcolor" type='text' maxlength="15" confirm-type="搜索" bindinput="bindKeyInput"></input>
+  <view class='open-top-btn' bindtap='search'>搜索</view>
+</view>
+<view class='open-new'>
+  <view class='open-new-top'>
+    今日热词榜
+  </view>
+  <view class='open-lists' wx:for="{{index}}" wx:key="{{index}}">
+    <view class='open-new-list' bindtap='lisy' data-text="{{item.album_title}}">
+    <view class='open-new-list-index'>
+      <text>{{index+1}}</text>
+    </view>
+    <view class='open-new-list-name'>
+      {{item.album_title}}
+    </view>
+  </view>
+  
+  </view>
+  
+</view>

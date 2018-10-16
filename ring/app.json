@@ -1,0 +1,32 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/open/open",
+    "pages/search/search",
+    "pages/lists/lists"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#3dcc7a",
+    "navigationBarTitleText": "铃声",
+    "navigationBarTextStyle":"wight"
+  },
+  "tabBar": {
+    "selectedColor": "#3dcb7a",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "热铃",
+        "iconPath": "/pages/imgs/index1.png",
+        "selectedIconPath": "/pages/imgs/index.png"
+      },
+      {
+        "pagePath": "pages/open/open",
+        "text": "搜索",
+        "iconPath": "/pages/imgs/open2.png",
+        "selectedIconPath": "/pages/imgs/open.png"
+      }
+    ]
+  }
+}

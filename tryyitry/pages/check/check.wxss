@@ -1,0 +1,158 @@
+/* pages/check/check.wxss */
+page{
+  background: #2b809d;
+  height: 100%;
+}
+.check-title{
+  width:100%;
+  height: 200rpx;
+}
+.check-top{
+  width: 100%;
+  height: 100rpx;
+  background: #236f7f;
+  overflow: hidden;
+}
+.check-top-left{
+  color: #ffffff;
+  line-height: 100rpx;
+  font-size: 32rpx;
+  width: 70%;
+  height: 100%;
+  float: left;
+}
+.check-top-left image{
+  width: 25rpx;
+  height: 25rpx;
+  float: left;
+  margin-top:45rpx;
+  margin: 45rpx 10rpx 0
+}
+.check-top-left text{
+  float: left;
+  display: block;
+}
+.index-top-left1{
+  float: left;
+  margin-left: 20rpx;
+}
+.index-top-left2{
+  float: left;
+   margin-left: 10rpx;
+}
+.check-top-right{
+  float: right;
+}
+.check-top-right image{
+  width: 40rpx;
+  height: 40rpx;
+  margin: 30rpx 20rpx;
+}
+.check-top-right1{
+  float: right;
+  background: salmon
+}
+.check-top-right2{
+  float: right;
+  background: mediumaquamarine
+}
+.check-type{
+  width: 100%;
+  height: 100rpx;
+  color: #ffffff;
+  background: #62b5c3;
+  line-height: 100rpx;
+}
+.check-type text{
+  display: block;
+  float: left;
+  font-size: 32rpx;
+  text-align: center;
+}
+.check-type text:nth-child(1){
+  width: 15%;
+}
+.check-type text:nth-child(2){
+  width: 15%
+}
+.check-type text:nth-child(3){
+  width: 45%
+}
+.check-type text:nth-child(4){
+  width: 25%
+}
+.check-useing{
+  margin-bottom: 120rpx;
+}
+
+.check-use{
+  width: 100%;
+  background: #bfdade;
+  overflow: hidden;
+  border-bottom: 2rpx solid #2b809d;
+}
+.check-use text{
+  line-height: 60rpx;
+  display: block;
+  float: left;
+  font-size: 32rpx;
+  text-align: center;
+  color: #333333;
+}
+.check-use text:nth-child(1){
+  width: 15%;
+  color: #c3572d;
+}
+.check-use text:nth-child(2){
+  width: 15%
+}
+.check-use text:nth-child(3){
+  width: 45%
+}
+.check-use text:nth-child(4){
+  width: 25%
+}
+.check-use text:nth-child(5){
+  width: 85%;
+  float: right;
+  text-align: left;
+}
+
+
+
+
+.check-bottom{
+  width: 100%;
+  height: 100rpx;
+  background: #3e5056;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.check-bottom-left{
+  float: left;
+  line-height: 100rpx;
+  width: 20%;
+  color: #ffffff;
+  font-size: 32rpx;
+  text-align: center;
+}
+.check-bottom-right{
+  line-height: 100rpx;
+  font-size: 32rpx;
+  width: 80%;
+  float: right
+}
+.check-bottom-right text{
+  margin: 0 15rpx;
+  display: inline-block;
+}
+.check-bottom-right text:nth-child(1){
+  color: #67f468;
+}
+.check-bottom-right text:nth-child(2){
+  color: #dc8671;
+}
+.check-bottom-right text:nth-child(3){
+  color: #ffffa0;
+}

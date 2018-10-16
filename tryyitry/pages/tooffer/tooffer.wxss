@@ -1,0 +1,23 @@
+/* pages/tooffer/tooffer.wxss */
+page{
+  height: 100%;
+  background: #f2f2f2
+}
+textarea{
+  margin: 50rpx auto;
+  background: #ffffff;
+  padding: 25rpx;
+  width: 85%;
+  font-size: 32rpx;
+  color: #999;
+  display: block;
+  border-radius: 30rpx;
+}
+.phcolor{
+  color: #999;
+}
+button{
+  width: 85%;
+  background: #47b2d6;
+  color: #ffffff
+}

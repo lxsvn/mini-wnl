@@ -1,8 +1,6 @@
 <!--pages/search/search.wxml-->
-
-
 <view class='search'>
-  <view class='index-recommend-man-top-list' wx:for="{{books1}}" data-text="{{item._id}}" bindtap='center'>
+  <view class='index-recommend-man-top-list' wx:for="{{books1}}" data-text="{{item._id}}" bindtap='center' wx:key="{{books1}}">
     <view class='index-recommend-man-top-list-left'>
       <image src='{{cover[index]}}' lazy-load="true"></image>
     </view>

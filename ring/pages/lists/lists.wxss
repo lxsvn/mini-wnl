@@ -1,0 +1,138 @@
+/* pages/lists/lists.wxss */
+
+page {
+  height: 100%;
+  z-index: -1;
+  position: relative;
+}
+
+.blu {
+  filter: blur(30px) brightness(0.8);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  transform: scale(1.2);
+  background-color: #aaa;
+}
+
+.page {
+  overflow: hidden;
+  width: 100%;
+  height: 60%;
+  position: relative;
+  z-index: 10;
+}
+
+.page-img {
+  width: 500rpx;
+  height: 500rpx;
+  border-radius: 50%;
+  border: 10rpx solid #4a4449;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  margin-left: -35%;
+  top: 50%;
+  margin-top: -30%;
+}
+
+.page image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.son-name text {
+  display: block;
+  text-align: center;
+  margin: 20rpx 0;
+}
+
+.son-name text:nth-child(1) {
+  color: #3dcc7a;
+  font-size: 40rpx;
+}
+
+.son-name text:nth-child(2) {
+  font-size: 40rpx;
+  color: #4a4449;
+}
+
+.son-name text:nth-child(3) {
+  font-size: 32rpx;
+  color: #fff;
+}
+
+.open {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 60rpx auto 0;
+  position: relative;
+  position: fixed;
+  bottom: 80rpx;
+  left: 50%;
+  margin-left: -50rpx;
+}
+
+.music-right-ok {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  
+}
+.son{
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: #aaa;
+   filter: blur(30px) brightness(0.8);
+}
+.music-right-ok image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2
+}
+
+.cuu {
+  z-index: 10
+}
+.sos{
+  display: none
+}
+
+.page-lry {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 10%;
+  margin-top: 11%;
+  z-index: 10;
+}
+
+.page-lry text {
+  text-align: center;
+  color: #fff;
+  display: block;
+  font-size: 32rpx;
+  line-height: 70rpx;
+  z-index: 2
+}

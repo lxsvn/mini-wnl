@@ -1,0 +1,54 @@
+<!--pages/check/check.wxml-->
+
+<view>
+  <view class='check-title'>
+    <view class='check-top'>
+    <view class='check-top-left'>
+      <picker mode="date" value="{{date}}" start="2010-07-16" end="2055-07-16" bindchange="changeDate">
+            <view class="index-top-left1">
+            {{ccc}}
+            </view>
+          </picker>
+    <image src='../../assets/imgs/down.png'></image>
+    <text>至</text>
+    <picker mode="date" value="{{date}}" start="2010-07-16" end="2055-07-16" bindchange="changeDate2">
+            <view class="index-top-left2">
+            {{aaa}}
+            </view>
+          </picker>
+          <image src='../../assets/imgs/down.png'></image>
+    </view>
+    <view class='check-top-right'>
+      <!-- <image class='check-top-right1'></image>
+      <image class='check-top-right2'></image> -->
+    </view>
+  </view>
+  <view class='check-type'>
+    <text>收支</text>
+    <text>类别</text>
+    <text>金额</text>
+    <text>日期</text>
+  </view>
+  </view>
+  <view class='check-useing'>
+  <block wx:for="{{index}}" wx:key="{{item.key}}" >
+    <view class='check-use' bindlongpress="deletediv" data-index="{{index}}">
+    <text style='color:{{item.co}}'>{{item.name}}</text>
+    <text >{{item.lx}}</text>
+    <text>{{item.money}}</text>
+    <text>{{item.sj}}</text>
+    <text>{{item.sm}}</text>
+  </view>
+  </block>
+  </view>
+  <view class='check-bottom'>
+    <view class='check-bottom-left'>
+      合计：
+    </view>
+    <scroll-view scroll-x="true" style="height: 100rpx;white-space: nowrap; display:flex" class='check-bottom-right' >
+    <text>收入{{newbrr}}（{{c}}次)</text>
+    <text>花费{{newarr}}（{{b}}次)</text>
+    <text>余额 {{acc}}</text>
+  </scroll-view>
+  </view>
+</view> 

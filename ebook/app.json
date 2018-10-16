@@ -1,7 +1,6 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/ccc/ccc",
     "pages/search/search",
     "pages/center/center",
     "pages/content/content"

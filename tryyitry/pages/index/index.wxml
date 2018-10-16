@@ -1,0 +1,91 @@
+<view>
+  <view class='index-tap'>
+    <view class="idenx-tap-btn   {{_num==1?'index-tap-btn-active':''}}" data-num="1" bindtap="menuClick"><text>花费</text></view>
+    <view class="idenx-tap-btn {{_num==2?'index-tap-btn-active ':''}}" data-num="2" bindtap="menuClick"><text>收入</text></view>
+  </view>
+  <view class='index-from-tap'>
+  <view class="index-form {{_num==2?'cur':''}}" data-num="2">
+    <view class='index-form-money'>
+      <image src='../../assets/imgs/money.png'></image>
+      <text>金额</text>
+      <input placeholder='0.0' placeholder-class="phcolor" type='digit' bindinput="bindKeyInput" value='{{obccca}}'></input>
+      <view class='index-form-btn' bindtap='compute'>算一算</view>
+    </view>
+    <view class='index-form-cate'>
+      <image src='../../assets/imgs/cate.png'></image>
+      <text>类别</text>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class='index-form-cate-pic'>
+      {{index}}
+    </view>
+  </picker>
+      <!-- <view class='index-form-btn'>管理类别</view> -->
+    </view>
+    <view class='index-form-data'>
+      <image src='../../assets/imgs/datae.png'></image>
+      <text>日期</text>
+      <picker mode="date" value="{{date}}" start="2010-07-16" end="2055-07-16" bindchange="changeDate">
+            <view class="tui-picker-detail">
+            {{aaa}}
+            </view>
+          </picker>
+    </view>
+    <view class='index-form-state'>
+      <image src='../../assets/imgs/state.png'></image>
+      <text>说明</text>
+      <textarea placeholder='请输入备注' placeholder-class="phcolor" value='{{remark}}' bindinput="text"></textarea>
+    </view>
+    <view class='index-bottom'>
+    <button bindtap='obcccb'>确定</button>
+    
+  </view>
+
+  </view>
+
+
+  <view class="index-form2 index-form {{_num==1?'cur ':''}}"  data-num="1">
+    <view class='index-form-money'>
+      <image src='../../assets/imgs/money.png'></image>
+      <text>金额ss</text>
+      <input placeholder='0.0' placeholder-class="phcolor" type='digit' bindinput="bindKeyInput" value='{{obccca}}'></input>
+      <view class='index-form-btn'bindtap='compute' >算一算</view>
+    </view>
+    <view class='index-form-cate'>
+      <image src='../../assets/imgs/cate.png'></image>
+      <text>类别</text>
+      <picker bindchange="bindPickerChangee" value="{{index}}" range="{{arrayy}}">
+      <view class='index-form-cate-pic'>
+      {{indexx}}
+    </view>
+  </picker>
+      <!-- <view class='index-form-btn'>管理类别</view> -->
+    </view>
+    <view class='index-form-data'>
+      <image src='../../assets/imgs/datae.png'></image>
+      <text>日期</text>
+      <picker mode="date" value="{{date}}" start="2010-07-16" end="2055-07-16" bindchange="changeDate">
+            <view class="tui-picker-detail">
+            {{aaa}}
+            </view>
+          </picker>
+    </view>
+    <view class='index-form-state'>
+      <image src='../../assets/imgs/state.png'></image>
+      <text>说明</text>
+      <textarea placeholder='请输入备注' placeholder-class="phcolor" value='{{remark}}' bindinput="text"></textarea>
+    </view>
+    <view class='index-bottom'>
+    <button bindtap='obccca'>确定</button>
+    
+  </view>
+  </view>
+  
+
+  </view>
+  
+
+
+
+
+  
+</view>

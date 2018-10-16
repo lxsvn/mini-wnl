@@ -12,12 +12,6 @@ Page({
     a:100,
     
   },
-  mmmm:function(e){
-    wx.navigateTo({
-      title: "goback",
-      url: '../ccc/ccc?ccc=' + JSON.stringify(this.data.book)
-    })
-  },
   nowmore:function(e){
     if (this.data.more==4){
       this.setData({

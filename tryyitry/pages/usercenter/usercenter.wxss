@@ -1,0 +1,46 @@
+/* pages/usercenter/usercenter.wxss */
+page{
+  height: 100%;
+  background: #2a7f9e;
+  overflow: hidden;
+}
+.usercenter-me{
+  width: 100%;
+  height: 150rpx;
+  overflow: hidden;
+  background: #5599b0;
+  margin: 30rpx 0 57rpx;
+}
+.usercenter-me-img{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  float: left;
+  margin: 30rpx 60rpx;
+  overflow: hidden
+}
+.usercenter-me-name{
+  line-height: 150rpx;
+  color: #ffffff;
+  font-size: 32rpx;
+}
+.usercenter-lists{
+  width: 100%;
+  height: 120rpx;
+  background: #5599b0;
+  margin: 20rpx 0;
+}
+.usercenter-lists image{
+  width: 60rpx;
+  height: 60rpx;
+  float: left;
+  margin: 30rpx 60rpx;
+}
+.usercenter-lists text{
+  line-height: 120rpx;
+   color: #ffffff;
+  font-size: 32rpx;
+}
+.usercenter-lists:last-child text{
+   color: #fffca9;
+}

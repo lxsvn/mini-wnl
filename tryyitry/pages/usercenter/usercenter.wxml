@@ -1,0 +1,27 @@
+<!--pages/usercenter/usercenter.wxml-->
+<view>
+  <view class='usercenter-me'>
+    <view class='usercenter-me-img'>
+    <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class='usercenter-me-name'>
+    <open-data type="userNickName" lang="zh_TW"></open-data>
+    </view>
+  </view>
+  <view class='usercenter-lists'>
+    <image src='../../assets/imgs/wang.png'></image>
+    <text>特权</text>
+  </view>
+  <view class='usercenter-lists' bindtap='tooffer'>
+    <image src='../../assets/imgs/state.png'></image>
+    <text>意见建议及合作</text>
+  </view>
+  <view class='usercenter-lists'>
+    <image src='../../assets/imgs/down2.png'></image>
+    <text>日常记账App(安卓版)下载</text>
+  </view>
+  <view class='usercenter-lists'>
+    <image src='../../assets/imgs/love.png'></image>
+    <text>免费使用,且用且珍惜</text>
+  </view>
+</view>

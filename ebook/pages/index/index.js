@@ -82,6 +82,14 @@ Page({
     })
     console.log(e.currentTarget.dataset)
   },
+  tjlb:function(e){
+    wx.showToast({
+      title: '暂时无法使用~',
+      image: '../../imgs/sorry.png',
+      duration: 2000
+    })
+
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -90,12 +98,15 @@ Page({
     wx: wx.request({
       url: 'https://www.apiopen.top/novelApi',
       success: (msg) => {
+        console.log(msg)
         this.setData({
           books: msg.data.data
         })
       }
     })
+
     
+
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -145,7 +156,6 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function() {
-    console.log(2)
   },
 
   /**

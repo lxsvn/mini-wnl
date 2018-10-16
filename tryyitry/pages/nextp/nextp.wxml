@@ -1,0 +1,2 @@
+<!--pages/nextp/nextp.wxml-->
+<canvas canvas-id="columnCanvas" disable-scroll="true" class="canvas"  bindtouchstart="touchHandler"></canvas>

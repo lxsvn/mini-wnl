@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/check/check",
+    "pages/report/report",
+    "pages/usercenter/usercenter",
+    "pages/compute/compute",
+    "pages/tooffer/tooffer",
+    "pages/nextp/nextp"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "日常记账",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#ffffff"
+  },
+  "tabBar": {
+    "selectedColor": "#0090ff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "记账",
+        "iconPath": "/assets/imgs/index1.png",
+        "selectedIconPath": "/assets/imgs/index.png"
+      },
+      {
+        "pagePath": "pages/check/check",
+        "text": "查看流水",
+        "iconPath": "/assets/imgs/check2.png",
+        "selectedIconPath": "/assets/imgs/check.png"
+      },
+      {
+        "pagePath": "pages/report/report",
+        "text": "分析报告",
+        "iconPath": "/assets/imgs/report1.png",
+        "selectedIconPath": "/assets/imgs/report.png"
+      },
+      {
+        "pagePath": "pages/usercenter/usercenter",
+        "text": "用户中心",
+        "iconPath": "/assets/imgs/center1.png",
+        "selectedIconPath": "/assets/imgs/center.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,194 @@
+/**index.wxss**/
+.index-top{
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1rpx solid #d3d3d3;
+  position: fixed;
+  background: #ffffff;
+  top: 0;
+  z-index: 100;
+}
+.idnex-top-lists{
+  width: 20%;
+  height: 100%;
+  float: left;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #919191;
+}
+.index-tap-btn-active{
+  color: #3dcc7a;
+  border-bottom: 8rpx solid #3dcc7a;
+  box-sizing:border-box;
+}
+.lists{
+  width: 100%;
+  position: relative;
+  margin-top: 105rpx;
+}
+.index-lists{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  margin-bottom: 130rpx;
+}
+.cur{
+  display: block
+}
+.index-lists-lists{
+  width: 95%;
+  height: 150rpx;
+  float: right;
+  border-bottom:4rpx solid #e5e5e5;
+  font-size: 32rpx;
+}
+.index-lists-lists-nun{
+  float: left;
+  width: 15%;
+  height: 100%;
+  text-align: center;
+  line-height: 150rpx;
+  color: #3dcc7a;
+  font-size: 36rpx;
+}
+.index-lists-lists-center{
+  float: left;
+  width: 60%;
+  height: 100%;
+}
+.index-lists-lists-center-top{
+  margin-top: 15rpx;
+  font-size: 30rpx;
+  color: #333333;
+  text-overflow: -o-ellipsis-lastline;  overflow: hidden;  text-overflow: ellipsis;  display: -webkit-box;  -webkit-line-clamp: 2;  -webkit-box-orient: vertical;  align-content: center;
+}
+.index-lists-lists-center-bottom{
+  overflow: hidden;
+  margin-top: 15rpx;
+  font-size: 26rpx;
+  color: #999999
+}
+.news{
+  float: left;
+  width: 26rpx;
+  height: 26rpx;
+  border: 1rpx solid #3dcc7a;
+  color: #3dcc7a;
+  font-size: 22rpx;
+  margin-right: 10rpx;
+  text-align: center;
+  line-height: 26rpx;
+}
+.index-lists-lists-center-bottom text{
+  float: left
+}
+.open{
+  float: left;
+  margin-left: 25rpx;
+}
+.open image{
+  width: 26rpx;
+  height: 26rpx;
+  margin-right: 10rpx;
+}
+.index-lists-lists-right{
+  float: right;
+  width: 25%;
+  height: 150rpx;
+  position: relative
+
+}
+.search-lists-open-btn{
+  width: 140rpx;
+  font-size: 28rpx;
+  height: 60rpx;
+  border: 1rpx solid #3dcc7a;
+  border-radius:15rpx; 
+  color: #3dcc7a;
+  background: #ffffff;
+  text-align: center;
+  line-height: 60rpx;
+  position: absolute;
+  top: 50%;
+  margin-top: -30rpx;
+}
+.music{
+  width: 100%;
+  height: 120rpx;
+  background: #f4f5f9;
+  position: fixed;
+  bottom: 0;
+}
+.music-play{
+  width: 20%;
+  float: left;
+  height: 100%;
+}
+.music-play-photo{
+  width: 100rpx;
+  height: 100rpx;
+  background: #00d58d;
+  margin-left: 35rpx;
+  margin-top: 10rpx;
+  border-radius: 15rpx;
+  overflow: hidden;
+}
+.music-play-photo image{
+  width: 100%;
+  height: 100%;
+}
+.music-center{
+  width: 60%;
+  float: left;
+  height: 100%;
+  font-size: 34rpx;
+}
+.music-center-name{
+  text-overflow: -o-ellipsis-lastline;  overflow: hidden;  text-overflow: ellipsis;  display: -webkit-box;  -webkit-line-clamp: 1;  -webkit-box-orient: vertical;  align-content: center;
+  margin-top: 25rpx;
+  color: #333333
+}
+.music-center-bottom{
+  font-size: 28rpx;
+  color: #999999
+}
+.zero{
+  width: 100%;
+  height: 130rpx;
+}
+
+.search-lists-center-bottom-author {
+  float: left;
+  max-width: 243rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.music-right{
+  width: 100rpx;
+  height: 100rpx;
+  float: right;
+  margin-right: 35rpx;
+  margin-top: 10rpx;
+  position: relative;
+}
+.music-right-ok{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background: #ffffff
+}
+.music-right-ok image{
+  width: 100%;
+  height: 100%;
+}
+.cuu{
+ z-index: 10
+}

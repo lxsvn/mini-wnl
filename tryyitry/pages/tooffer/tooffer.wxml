@@ -1,0 +1,3 @@
+<!--pages/tooffer/tooffer.wxml-->
+<textarea placeholder='请输入您的建议反馈' placeholder-class="phcolor" value='{{text}}' bindinput="text"></textarea>
+<button bindtap='btn'>提交</button>

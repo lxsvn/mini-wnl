@@ -1,5 +1,6 @@
 <!--pages/content/content.wxml-->
-<view class='all' wx:if="{{iftrue}}">
+<view class='page' style="background-color:{{pageBackgroundColor}} ">
+  <view class='all' wx:if="{{iftrue}}">
   <view class='view'>
     <view class='view-lists'></view>
     <view class='view-lists'></view>
@@ -7,8 +8,11 @@
   </view>
   <text>加载中</text>
 </view>
-<view class='text1'>{{title}}</view>
-  <view class='text' wx:for="{{content}}">{{item}}</view>
+<view id='myDIV' bindtap='tach' >
+  <view class='text1'>{{title}}</view>
+  <view class='text' wx:for="{{content}}" wx:key="{{content}}" style='font-size: {{size}}rpx;'>{{item}}</view>
+  <view>{{sorry}}</view>
+</view>
 
 <view class='index-tap'>
   <view class='index-tap-next' bindtap='next'>
@@ -23,17 +27,41 @@
     </view>
   </view>
 </view>
-<view class='catalog' wx:if="{{ifif}}">
-    <view  class='catalog-catalog'>
-      目录（共{{chapters.length}}章）
-    </view>
-  <scroll-view scroll-y="true" class='catalog-scroll'>
-    
-    <view class='catalog-lists' wx:for="{{chapters}}" wx:key="{{chapters}}" data-text='{{item.link}}'data-id="{{item.title}}" data-index='{{index}}' bindtap='cataloglists'>
+<view class='zero'></view>
+<view class='catalog' wx:if="{{ifif}}" style="background-color:{{pageBackgroundColor}} ">
+  <view class='catalog-catalog'>
+    目录（共{{chapters.length}}章）
+  </view>
+  <scroll-view scroll-y="true" class='catalog-scroll' scroll-into-view="{{scrolltop}}">
+
+    <view class='catalog-lists' id='a{{index}}' wx:for="{{chapters}}" wx:key="{{chapters}}" data-text='{{item.link}}' data-id="{{item.title}}" data-index='{{index}}' bindtap='cataloglists'>
       {{index+1}}.{{item.title}}
     </view>
   </scroll-view>
   <view class='catalog-close' bindtap='catalogclose'>
     关闭
   </view>
+</view>
+<view class='bottom' wx:if="{{bottom}}">
+    <view class='bottom-top'>
+      <view class='bottom-top-add' bindtap='sizeacc'>Aa-</view>
+      <view class='bottom-top-pro'><progress percent="{{percent}}"stroke-width="3" activeColor="#fd4745" backgroundColor="#6d6d6d" class='bottom-top-pro-son' /></view>
+      <view class='bottom-top-acc' bindtap='sizeadd'>Aa+</view>
+    </view>
+    <view class='bottom-center'>
+      <view class="bottom-center-lists {{_num==1?'bottom-center-lists-active':''}}" data-num="1" bindtap="menuClick">默认</view>
+      <view class="bottom-center-lists">
+        <view class="bottom-center-lists-son night {{_num==2?'bottom-center-lists-active':''}}"  data-num="2" bindtap="menuClick">夜间</view>
+      </view>
+      <view class="bottom-center-lists aegis {{_num==3?'bottom-center-lists-active':''}}" data-num="3" bindtap="menuClick">护眼</view>
+    </view>
+    <view class='bottom-center'>
+      <view class='bottom-center-lists' bindtap='last'>上一章</view>
+      <view class='bottom-center-lists'>
+        <view class='bottom-center-lists-son' bindtap='catalog'>目录</view>
+      </view>
+      <view class='bottom-center-lists' bindtap='next'>下一章</view>
+    </view>
+    
+</view>
 </view>

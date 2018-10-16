@@ -1,0 +1,29 @@
+<!--pages/lists/lists.wxml-->
+<view class='blu'></view>
+<view class='page' >
+  <view class="page-img {{_num==1?'sos':''}}" data-num="1" bindtap='ccc'>
+    <image src='{{index.songinfo.album_500_500}}' animation="{{animationData}}"></image>
+  </view>
+  <view class="page-lry {{_num==2?'sos':''}}"  data-num="2" bindtap='ccc'>
+    <scroll-view scroll-y style="height: 100%;" class='lry-son'>
+      <view class=''></view>
+      <text>{{lyricArr}}</text>
+    </scroll-view>
+  </view>
+
+</view>
+<view class='son-name'>
+  <text>{{index.songinfo.album_title}}</text>
+  <text>{{index.songinfo.aliasname}}</text>
+  <text>{{index.songinfo.author}}</text>
+</view>
+<view class='open' bindtap='changeDate'>
+  <view class='music-right-ok  ' wx:if="{{!ifshow}}" bindtap='bcaa'>
+    <view class='son'></view>
+    <image src='../imgs/stopp.png'></image>
+  </view>
+  <view class='music-right-ok cuu' wx:if="{{ifture}}" bindtap='bccc'>
+    <view class='son'></view>
+    <image src='../imgs/openn.png'></image>
+  </view>
+</view>

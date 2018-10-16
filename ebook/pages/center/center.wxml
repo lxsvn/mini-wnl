@@ -61,10 +61,10 @@
   </view>
 </view>
 <view class='bottom'>
-  <view class='bottom-add'>
+  <!-- <view class='bottom-add'>
     
     <view bindtap='mmmm'>加入书架</view>
-  </view>
+  </view> -->
   <view class='bottom-add' >
   <view bindtap='content' data-text='{{books._id}}'>开始阅读</view>
     
