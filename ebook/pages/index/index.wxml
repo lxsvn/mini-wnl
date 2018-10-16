@@ -27,7 +27,7 @@
         <image src='{{item.img}}'></image>
         <text>{{item.title}}</text>
       </view>
-      
+      <view wx:if="{{cc<1}}" class="none">什么都没有哦~</view>
     </view>
 
     <view class="index-bookrack index-recommend {{_num==2?'bookrack':''}}" data-num="2">

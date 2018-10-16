@@ -269,3 +269,6 @@
   width: 100%;
   height: 100rpx;
 }
+.active{
+  color: #cb4e4b
+}

@@ -18,6 +18,7 @@
       </view>
     </view>
   </view>
+  <view wx:if="{{books1<1}}" class="none">什么都没有哦~</view>
 </view>
 <view class='all' wx:if="{{iftrue}}">
   <view class='view'>

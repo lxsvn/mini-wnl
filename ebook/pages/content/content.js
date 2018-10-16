@@ -12,7 +12,7 @@ Page({
     _num: 1,
     percent:50,
     size: 36,
-    pageBackgroundColor:"#eeeeee"
+    pageBackgroundColor:"#eeeeee",
   },
   //目录按钮
   catalog: function(e) {
@@ -23,10 +23,22 @@ Page({
     })
     var value = wx.getStorageSync(this.data.id)
     var list = value.value;
-    list = "a" + list
+    var lists = "a" + list
     this.setData({
-      scrolltop: list
+      scrolltop: lists
     })
+    var chapters = this.data.chapters;
+    console.log(chapters)
+    
+    chapters.forEach(item=>{
+      return item.cor="#999999"
+    })
+    chapters[list].cor = "#cb4e4b",
+      this.setData({
+        chapters: chapters,
+      chapters: chapters
+      })
+    
   },
   menuClick:function(e){
     var num=e.currentTarget.dataset.num;
@@ -92,6 +104,7 @@ Page({
         })
         var body = msg.data.chapter.body
         body = body.split("\n");
+        
         this.setData({
           content: "",
           content: body,
@@ -260,6 +273,9 @@ Page({
       //由于传的文字 需要转成对象
       let data = JSON.parse(options.storage)
       console.log(data)
+      this.setData({
+        data: data
+      })
       //设置动态标题
       wx.setNavigationBarTitle({
         title: data.title, //页面标题
@@ -278,10 +294,11 @@ Page({
               console.log(msg.data.chapters[zhangjie])
 
               let code = encodeURIComponent(msg.data.chapters[zhangjie].link)
-
+              var chapters = msg.data.chapters;
+              chapters[zhangjie].cor = "#cb4e4b",
               this.setData({
                 title: msg.data.chapters[zhangjie].title,
-                chapters: msg.data.chapters
+                chapters: chapters
               })
               wx: wx.request({
                 url: 'http://chapter2.zhuishushenqi.com/chapter/' + code + '?k=2124b73d7e2e1945&t=1468223717',
@@ -347,10 +364,11 @@ Page({
                 console.log(msg)
 
                 let code = encodeURIComponent(msg.data.chapters[(zhangjie)].link)
-
+                var chapters = msg.data.chapters;
+                chapters[zhangjie].cor = "#cb4e4b",
                 this.setData({
                   title: msg.data.chapters[zhangjie].title,
-                  chapters: msg.data.chapters
+                  chapters: chapters
                 })
 
                 wx: wx.request({
@@ -408,10 +426,11 @@ Page({
                 console.log(msg.data.chapters)
 
                 let code = encodeURIComponent(msg.data.chapters[zhangjie].link)
-
+                var chapters = msg.data.chapters;
+                chapters[zhangjie].cor = "#cb4e4b",
                 this.setData({
                   title: msg.data.chapters[zhangjie].title,
-                  chapters: msg.data.chapters
+                  chapters: chapters
                 })
                 wx: wx.request({
                   url: 'http://chapter2.zhuishushenqi.com/chapter/' + code + '?k=2124b73d7e2e1945&t=1468223717',
@@ -458,6 +477,7 @@ Page({
    */
   onShow: function() {
     console.log(this.data)
+    
   },
 
   /**

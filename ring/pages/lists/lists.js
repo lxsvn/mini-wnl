@@ -48,11 +48,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options, id, cb) {
+   
     console.log(options.result)
     wx: wx.request({
       url: 'http://tingapi.ting.baidu.com/v1/restserver/ting?format=json&method=baidu.ting.song.playAAC&songid='+ options.result,
       success: (msg) => {
-
         console.log(msg.data)
         this.setData({
           index: msg.data
