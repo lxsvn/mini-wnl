@@ -671,7 +671,7 @@ Page({
     this.setData({
       newobj: mewobj11
     })
-    
+
     var windowWidth = '', windowHeight = '';    //定义宽高
     try {
       var res = wx.getSystemInfoSync();    //试图获取屏幕宽高数据
@@ -709,6 +709,7 @@ Page({
       dataLabel: true,
       animation: true,
     });
+
     new wxCharts({
       canvasId: 'lineCanvass',
       type: 'pie',

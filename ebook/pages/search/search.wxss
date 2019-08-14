@@ -120,9 +120,3 @@ animation-delay: 0s;
   font-size: 32rpx;
   color: #fff
 }
-.none{
-  color: #999;
-  text-align: center;
-  margin-top: 450rpx;
-  overflow: hidden
-}

@@ -198,9 +198,3 @@ image{
   border: 1rpx solid #666;
   border-radius: 50rpx;
 }
-.none{
-  color: #999;
-  text-align: center;
-  margin-top: 250rpx;
-  overflow: hidden
-}
